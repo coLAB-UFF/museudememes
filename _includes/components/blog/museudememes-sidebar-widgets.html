@@ -1,0 +1,45 @@
+{% include components/blog/sidebar/search-widget.html %}
+{% include components/blog/sidebar/criador-widget.html %}
+{% include components/blog/sidebar/ano-origem-widget.html %}
+{% include components/blog/sidebar/plataforma-widget.html %}
+{% include components/blog/sidebar/formato-widget.html %}
+{% include components/blog/sidebar/categoria-widget.html %}
+{% include components/blog/sidebar/tema-widget.html %}
+{% include components/blog/sidebar/palavras-chaves-widget.html %}
+
+<style>
+  .widget-expand-btn {
+    text-decoration: none !important;
+    color: #6b617f !important;
+    font-weight: 500;
+  }
+  .widget-expand-btn:hover { color: #433f62 !important; }
+  .widget-expand-btn .uil-angle-down {
+    display: inline-block;
+    transition: transform .22s ease;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  .widget-expand-btn[aria-expanded="true"] .uil-angle-down {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+(function () {
+  /* Troca o texto "ver mais" ↔ "ver menos" ao abrir/fechar */
+  document.querySelectorAll('.widget-expand-btn').forEach(function (btn) {
+    var targetSel = btn.getAttribute('data-bs-target');
+    var target = targetSel ? document.querySelector(targetSel) : null;
+    if (!target) return;
+    var span = btn.querySelector('span');
+    if (!span) return;
+    target.addEventListener('show.bs.collapse', function () {
+      span.textContent = span.dataset.less;
+    });
+    target.addEventListener('hide.bs.collapse', function () {
+      span.textContent = span.dataset.more;
+    });
+  });
+})();
+</script>

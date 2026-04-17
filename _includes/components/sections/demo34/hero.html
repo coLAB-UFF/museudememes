@@ -1,0 +1,49 @@
+<section class="wrapper {{ page.hero34.background }}">
+  <div class="container pt-10 pt-md-14 pb-10">
+    <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
+
+      <!-- Left: text -->
+      <div class="col-md-10 col-lg-6 col-xl-5 mx-auto mx-lg-0 text-center text-lg-start order-2 order-lg-1">
+        <h1 class="display-1 ls-sm mb-4">
+          {{ page.hero34.title }}<br>
+          <span style="display: block; height: 1.25em; overflow: hidden;">
+            <span class="typer text-primary" data-delay="100" data-words="{{ page.hero34.typed_text | join: ',' }}"></span>
+            <span class="cursor text-primary" data-owner="typer"></span>
+          </span>
+        </h1>
+        <p class="lead fs-lg mb-8">{{ page.hero34.subtitle }}</p>
+        <a href="{{ page.hero34.button.url }}" class="{{ page.hero34.button.class }}">{{ page.hero34.button.label }}</a>
+      </div>
+
+      <!-- Right: 3-column image grid -->
+      {% if page.hero34.images %}
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="row gx-md-4 gy-4">
+          <div class="col-4 mt-8" data-cue="slideInDown" data-delay="900">
+            {% for img in page.hero34.images limit:3 %}
+            <figure class="rounded shadow-lg mb-4">
+              <img src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            </figure>
+            {% endfor %}
+          </div>
+          <div class="col-4" data-cue="slideInDown" data-delay="0">
+            {% for img in page.hero34.images limit:3 offset:3 %}
+            <figure class="rounded shadow-lg mb-4">
+              <img src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            </figure>
+            {% endfor %}
+          </div>
+          <div class="col-4 mt-8" data-cue="slideInDown" data-delay="600">
+            {% for img in page.hero34.images limit:3 offset:6 %}
+            <figure class="rounded shadow-lg mb-4">
+              <img src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            </figure>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>

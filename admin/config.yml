@@ -1,0 +1,571 @@
+# ──────────────────────────────────────────────────────────────────────────────
+#  Sveltia CMS — #MUSEUdeMEMES
+#  Documentação: https://github.com/sveltia/sveltia-cms
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Backend local (desenvolvimento sem GitHub) ─────────────────────────────
+# Requer: npm run cms (decap-server rodando na porta 8081)
+local_backend: true
+
+# ── Backend produção (preencher quando repositório GitHub existir) ──────────
+# git-gateway NÃO é suportado pelo Sveltia CMS — usar github, gitlab ou gitea
+backend:
+  name: github
+  repo: museudememes/site        # substituir pelo repo real quando existir
+  branch: main
+
+# ── Mídia ──────────────────────────────────────────────────────────────────
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+# ── Interface ──────────────────────────────────────────────────────────────
+locale: pt
+site_url: "http://localhost:4001"
+
+# ──────────────────────────────────────────────────────────────────────────────
+#  COLEÇÕES
+# ──────────────────────────────────────────────────────────────────────────────
+collections:
+
+  # ── 1. VERBETES — Acervo de Memes ────────────────────────────────────────
+  - name: "memes"
+    label: "Verbetes — Acervo"
+    label_singular: "Verbete"
+    folder: "_memes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/museudememes/colecoes/{{filename}}/"
+    fields:
+
+      # Metadados principais
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Data de publicação"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Última modificação"
+        name: "last_modified"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+
+      - label: "Curador(a)"
+        name: "author"
+        widget: "string"
+
+      - label: "Excerto"
+        name: "excerpt"
+        widget: "text"
+        required: false
+        hint: "Resumo curto exibido nos cards de listagem"
+
+      # Ficha técnica
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        options:
+          - "Meme Político"
+          - "Meme de Humor"
+          - "Meme Técnico"
+          - "Meme Estético"
+          - "Meme Cultural"
+          - "Meme Comportamental"
+          - "Meme de Subcultura"
+          - "Outro"
+
+      - label: "Tema"
+        name: "tema"
+        widget: "string"
+
+      - label: "Ano de Origem"
+        name: "ano_origem"
+        widget: "string"
+        hint: "Ex: 2019"
+
+      - label: "Formato"
+        name: "formato"
+        widget: "select"
+        options:
+          - "Imagem"
+          - "GIF"
+          - "Vídeo"
+          - "Áudio"
+          - "Texto"
+          - "Sticker"
+          - "Misto"
+          - "Outro"
+
+      - label: "Criador / Origem"
+        name: "criador"
+        widget: "string"
+        hint: "Ex: Anônimo, Comunidade Reddit, @usuario"
+
+      - label: "Plataforma"
+        name: "plataforma"
+        widget: "select"
+        options:
+          - "WhatsApp"
+          - "Twitter / X"
+          - "Facebook"
+          - "Instagram"
+          - "TikTok"
+          - "Reddit"
+          - "YouTube"
+          - "Telegram"
+          - "4chan"
+          - "Orkut"
+          - "Tumblr"
+          - "Pinterest"
+          - "LinkedIn"
+          - "Outro"
+
+      - label: "Palavras-Chave"
+        name: "palavras_chaves"
+        widget: "list"
+        field:
+          label: "Palavra"
+          name: "palavra"
+          widget: "string"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"
+
+      # Imagens
+      - label: "Imagem Destacada"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        hint: "Usada nos cards de listagem e no header"
+
+      - label: "Imagem Hero (banner)"
+        name: "hero_image"
+        widget: "image"
+        required: false
+
+      # Galeria de variações
+      - label: "Galeria de Variações"
+        name: "gallery"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - label: "Imagem"
+            name: "url"
+            widget: "image"
+          - label: "Legenda / Alt"
+            name: "alt"
+            widget: "string"
+            required: false
+
+      # Conteúdo
+      - label: "Conteúdo do Verbete"
+        name: "body"
+        widget: "markdown"
+        hint: "Use os títulos ## Descrição Geral / ## Origens / ## Disseminação / ## Estética e Linguagem / ## Impacto Social e Cultural"
+
+      # Campo oculto
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "meme/verbete"
+
+
+  # ── 2. ENSAIOS E ARTIGOS — Blog ──────────────────────────────────────────
+  - name: "posts"
+    label: "Ensaios e Artigos"
+    label_singular: "Artigo"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/museudememes/blog/{{slug}}/"
+    fields:
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Última modificação"
+        name: "last_modified"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+
+      - label: "Linha de autoria (exibida no site)"
+        name: "authors_line"
+        widget: "string"
+        hint: "Ex: Jane Smith e João Souza"
+
+      - label: "Autores (lista interna)"
+        name: "authors"
+        widget: "list"
+        required: false
+        field:
+          label: "Nome"
+          name: "nome"
+          widget: "string"
+
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        options:
+          - "Cultura Digital"
+          - "Memética"
+          - "Pesquisa"
+          - "Crítica"
+          - "Análise"
+          - "Evento"
+          - "Entrevista"
+          - "Opinião"
+          - "Outro"
+
+      - label: "Excerto"
+        name: "excerpt"
+        widget: "text"
+        required: false
+
+      - label: "Imagem Destacada"
+        name: "featured_image"
+        widget: "image"
+        required: false
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"
+
+      - label: "Galeria do Post"
+        name: "galeria_post"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        hint: "Inserida no corpo do artigo via {% include components/blog/gallery.html id=\"galeria_post\" cols=2 %}"
+        fields:
+          - label: "Imagem"
+            name: "url"
+            widget: "image"
+          - label: "Legenda / Alt"
+            name: "alt"
+            widget: "string"
+            required: false
+
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "museudememes/artigo"
+
+
+  # ── 3. EXPOSIÇÕES ────────────────────────────────────────────────────────
+  - name: "exposicoes"
+    label: "Exposições"
+    label_singular: "Exposição"
+    folder: "_exposicoes"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/museudememes/exposicoes/{{slug}}/"
+    fields:
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Descrição"
+        name: "description"
+        widget: "text"
+
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Período de Realização"
+        name: "data_realizacao"
+        widget: "string"
+        hint: "Ex: Outubro a Dezembro de 2024"
+
+      - label: "Local"
+        name: "local"
+        widget: "string"
+
+      - label: "Equipe Curatorial"
+        name: "equipe_curatorial"
+        widget: "list"
+        field:
+          label: "Nome e Cargo"
+          name: "membro"
+          widget: "string"
+          hint: "Ex: Gabriela Gruszynski — Curadoria Geral"
+
+      - label: "Imagem Portrait (single page)"
+        name: "portrait_image"
+        widget: "image"
+        required: false
+        hint: "Exibida à direita do texto na página da exposição"
+
+      - label: "Thumbnail (listagem)"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+
+      # Embeds
+      - label: "Catálogos — SlideShare"
+        name: "slideshare"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - label: "ID do SlideShare"
+            name: "id"
+            widget: "string"
+            hint: "Apenas a chave do embed, ex: iNiTf2eM7sl9NO"
+          - label: "Título do catálogo"
+            name: "title"
+            widget: "string"
+            required: false
+
+      - label: "Trilha Sonora — ID da playlist Spotify"
+        name: "spotify"
+        widget: "string"
+        required: false
+        hint: "Apenas o ID, ex: 37i9dQZF1DXcBWIGoYBM5M"
+
+      # Galeria da vernissage
+      - label: "Galeria da Vernissage"
+        name: "galeria_vernissage"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - label: "Imagem"
+            name: "url"
+            widget: "image"
+          - label: "Legenda / Alt"
+            name: "alt"
+            widget: "string"
+            required: false
+
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "museudememes/exposicao"
+
+
+  # ── 4. PERFIS DE AUTORES ─────────────────────────────────────────────────
+  - name: "authors"
+    label: "Perfis de Autores"
+    label_singular: "Autor"
+    folder: "_authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+
+      - label: "Nome"
+        name: "name"
+        widget: "string"
+
+      - label: "Slug (URL)"
+        name: "slug"
+        widget: "string"
+        hint: "Ex: jane-smith (letras minúsculas, sem acentos, hífens no lugar de espaços)"
+
+      - label: "Cargo / Função"
+        name: "position"
+        widget: "string"
+
+      - label: "Email"
+        name: "email"
+        widget: "string"
+        required: false
+
+      - label: "Localidade"
+        name: "location"
+        widget: "string"
+        required: false
+
+      - label: "Avatar"
+        name: "avatar"
+        widget: "image"
+        required: false
+
+      - label: "Bio resumida"
+        name: "bio"
+        widget: "text"
+        hint: "Aparece nos cards e metadados dos artigos"
+
+      - label: "Redes Sociais"
+        name: "social"
+        widget: "list"
+        required: false
+        summary: "{{fields.icon}}"
+        fields:
+          - label: "Rede"
+            name: "icon"
+            widget: "select"
+            options:
+              - "twitter"
+              - "facebook-f"
+              - "linkedin"
+              - "instagram"
+              - "github"
+              - "youtube"
+              - "globe"
+          - label: "URL"
+            name: "url"
+            widget: "string"
+
+      - label: "Bio completa"
+        name: "body"
+        widget: "markdown"
+        required: false
+
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "blog/author"
+
+
+  # ── 5. EQUIPE DO MUSEU (arquivos YAML em _data/) ─────────────────────────
+  - name: "team"
+    label: "Equipe do Museu"
+    files:
+
+      - label: "Conselho / Board"
+        name: "team_board"
+        file: "_data/team_board.yml"
+        fields:
+          - label: "Membros"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - label: "Nome"
+                name: "name"
+                widget: "string"
+              - label: "Ativo no site"
+                name: "active"
+                widget: "boolean"
+                default: true
+              - label: "Cargo"
+                name: "role"
+                widget: "string"
+              - label: "Bio"
+                name: "bio"
+                widget: "text"
+              - label: "Avatar (1×)"
+                name: "avatar_image"
+                widget: "image"
+                required: false
+              - label: "Avatar (2×, retina)"
+                name: "avatar_image2x"
+                widget: "image"
+                required: false
+              - label: "Redes Sociais"
+                name: "social"
+                widget: "list"
+                required: false
+                fields:
+                  - label: "URL"
+                    name: "url"
+                    widget: "string"
+                  - label: "Ícone"
+                    name: "icon"
+                    widget: "select"
+                    options:
+                      - label: "Instagram"
+                        value: "uil uil-instagram"
+                      - label: "Twitter / X"
+                        value: "uil uil-twitter"
+                      - label: "LinkedIn"
+                        value: "uil uil-linkedin"
+                      - label: "Facebook"
+                        value: "uil uil-facebook-f"
+                      - label: "YouTube"
+                        value: "uil uil-youtube"
+                      - label: "Site / Globe"
+                        value: "uil uil-globe"
+
+      - label: "Membros da Equipe"
+        name: "team_members"
+        file: "_data/team_members.yml"
+        fields:
+          - label: "Membros"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - label: "Nome"
+                name: "name"
+                widget: "string"
+              - label: "Ativo no site"
+                name: "active"
+                widget: "boolean"
+                default: true
+              - label: "Cargo"
+                name: "role"
+                widget: "string"
+              - label: "Bio"
+                name: "bio"
+                widget: "text"
+              - label: "Avatar (1×)"
+                name: "avatar_image"
+                widget: "image"
+                required: false
+              - label: "Avatar (2×, retina)"
+                name: "avatar_image2x"
+                widget: "image"
+                required: false
+              - label: "Redes Sociais"
+                name: "social"
+                widget: "list"
+                required: false
+                fields:
+                  - label: "URL"
+                    name: "url"
+                    widget: "string"
+                  - label: "Ícone"
+                    name: "icon"
+                    widget: "select"
+                    options:
+                      - label: "Instagram"
+                        value: "uil uil-instagram"
+                      - label: "Twitter / X"
+                        value: "uil uil-twitter"
+                      - label: "LinkedIn"
+                        value: "uil uil-linkedin"
+                      - label: "Facebook"
+                        value: "uil uil-facebook-f"
+                      - label: "YouTube"
+                        value: "uil uil-youtube"
+                      - label: "Site / Globe"
+                        value: "uil uil-globe"

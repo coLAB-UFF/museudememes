@@ -1,0 +1,49 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">Criador</h4>
+  {% assign criador_values = "" | split: "" %}
+  {% for post in site.memes %}
+    {% if post.criador %}
+      {% if post.criador.first %}
+        {% for val in post.criador %}
+          {% unless criador_values contains val %}
+            {% assign criador_values = criador_values | push: val %}
+          {% endunless %}
+        {% endfor %}
+      {% else %}
+        {% unless criador_values contains post.criador %}
+          {% assign criador_values = criador_values | push: post.criador %}
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% assign criador_values = criador_values | sort %}
+  {% if criador_values.size > 0 %}
+  <ul class="list-unstyled tag-list mb-0">
+    {% for val in criador_values %}
+      {% if forloop.index <= 6 %}
+      <li><a href="/museudememes/acervo/criador/{{ val | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill">{{ val }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  {% if criador_values.size > 6 %}
+  <div class="collapse" id="criador-widget-more">
+    <ul class="list-unstyled tag-list mt-2 mb-0">
+      {% for val in criador_values %}
+        {% if forloop.index > 6 %}
+        <li><a href="/museudememes/acervo/criador/{{ val | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill">{{ val }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <button class="widget-expand-btn btn btn-link p-0 fs-xs mt-2 d-flex align-items-center gap-1"
+          type="button" data-bs-toggle="collapse"
+          data-bs-target="#criador-widget-more"
+          aria-expanded="false" aria-controls="criador-widget-more">
+    <i class="uil uil-angle-down"></i>
+    <span data-more="ver mais" data-less="ver menos">ver mais</span>
+  </button>
+  {% endif %}
+  {% else %}
+  <p class="text-muted small">Nenhum criador cadastrado.</p>
+  {% endif %}
+</div>

@@ -1,0 +1,22 @@
+<section class="wrapper bg-light">
+  <div class="container pb-13 pb-md-15">
+    {% if page.cta4.bg_image %}
+    <div class="card image-wrapper bg-full bg-image bg-overlay {{ page.cta4.bg_overlay }}" data-image-src="{{ page.cta4.bg_image }}">
+    {% else %}
+    <div class="card {{ page.cta4.bg_class | default: 'bg-dark' }}">
+    {% endif %}
+      <div class="card-body p-10 p-xl-12">
+        <div class="row text-center">
+          <div class="col-xl-11 col-xxl-9 mx-auto">
+            <h2 class="fs-16 text-uppercase text-white mb-3">{{ page.cta4.subtitle }}</h2>
+            <h3 class="display-3 mb-8 px-lg-8 text-white">{{ page.cta4.title }} <span class="{{ page.cta4.highlight_style }}">{{ page.cta4.title_highlight }}</span>{% if page.cta4.title_end %} {{ page.cta4.title_end }}{% endif %}</h3>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <span><a href="{{ page.cta4.button.url }}" class="{{ page.cta4.button.style }}">{{ page.cta4.button.label }}</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->

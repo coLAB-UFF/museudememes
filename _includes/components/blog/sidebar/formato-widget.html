@@ -1,0 +1,21 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">Formato</h4>
+  {% assign formato_values = "" | split: "" %}
+  {% for post in site.memes %}
+    {% if post.formato %}
+      {% unless formato_values contains post.formato %}
+        {% assign formato_values = formato_values | push: post.formato %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign formato_values = formato_values | sort %}
+  {% if formato_values.size > 0 %}
+  <ul class="unordered-list bullet-primary text-reset">
+    {% for val in formato_values %}
+    <li><a href="/museudememes/acervo/formato/{{ val | slugify }}/">{{ val }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-muted small">Nenhum formato cadastrado.</p>
+  {% endif %}
+</div>

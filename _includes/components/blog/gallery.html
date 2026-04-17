@@ -1,0 +1,51 @@
+{% comment %}
+  Galeria de imagens no miolo do post.
+
+  PARÂMETROS
+    id    → chave no front matter que contém o array de imagens (obrigatório)
+    cols  → colunas por linha: 1 | 2 | 3 | 4 | 5  (padrão: 2)
+            em mobile sempre máximo 2 colunas
+
+  LAYOUTS SUPORTADOS (rows × cols)
+    1×2 → cols=2 + 2 imagens      3×2 → cols=2 + 6 imagens
+    2×2 → cols=2 + 4 imagens      3×3 → cols=3 + 9 imagens
+    2×4 → cols=4 + 8 imagens      3×4 → cols=4 + 12 imagens
+    2×5 → cols=5 + 10 imagens     4×4 → cols=4 + 16 imagens
+    3×1 → cols=1 + 3 imagens      4×5 → cols=5 + 20 imagens
+
+  FRONT MATTER DO POST
+    minha_galeria:
+      - url: /assets/img/foto1.webp
+        alt: "Descrição da imagem"
+      - url: /assets/img/foto2.webp
+        alt: "Outra descrição"
+
+  USO NO CORPO DO POST (markdown ou html)
+    {% include components/blog/gallery.html id="minha_galeria" cols=3 %}
+{% endcomment %}
+
+{% assign gallery_images = page[include.id] %}
+{% assign cols = include.cols | default: 2 %}
+{% assign gallery_id = include.id | default: "gallery" %}
+
+{% if gallery_images and gallery_images.size > 0 %}
+<div class="blog-gallery my-8">
+  <div class="blog-gallery-grid" style="--gcols:{{ cols }}">
+    {% for image in gallery_images %}
+    <figure class="blog-gallery-thumb rounded-3 overflow-hidden">
+      <a href="{{ image.url | relative_url }}"
+         data-glightbox
+         data-gallery="{{ gallery_id }}"
+         {% if image.alt %}data-glightbox-title="{{ image.alt }}"{% endif %}>
+        <img src="{{ image.url | relative_url }}"
+             alt="{{ image.alt | default: '' }}"
+             loading="lazy">
+      </a>
+    </figure>
+    {% endfor %}
+  </div>
+  {% if include.caption %}
+  <p class="text-muted fs-sm mt-2 mb-0 text-center">{{ include.caption }}</p>
+  {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,36 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-4">
+        {% if page.team2.subtitle %}<h2 class="fs-15 text-uppercase text-line text-primary text-center mb-3">{{ page.team2.subtitle }}</h2>{% endif %}
+        <h3 class="display-5 mb-5">{{ page.team2.title }}</h3>
+        <p>{{ page.team2.description }}</p>
+        {% if page.team2.button %}
+        <a href="{{ page.team2.button.url }}" class="btn btn-primary rounded-pill mt-3">{{ page.team2.button.label }}</a>
+        {% endif %}
+      </div>
+      <div class="col-lg-8">
+        <div class="swiper-container text-center mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% assign active_board = site.data.team_board.members | where_exp: "m", "m.active != false" %}
+              {% for member in active_board %}
+              <div class="swiper-slide">
+                <img class="rounded-circle w-20 mx-auto mb-4" src="{{ member.avatar_image }}" srcset="{{ member.avatar_image2x }} 2x" alt="{{ member.name }}" />
+                <h4 class="mb-1">{{ member.name }}</h4>
+                <div class="meta mb-2">{{ member.role }}</div>
+                <p class="mb-2">{{ member.bio }}</p>
+                <nav class="nav social justify-content-center text-center mb-0">
+                  {% for social in member.social %}
+                  <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                  {% endfor %}
+                </nav>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

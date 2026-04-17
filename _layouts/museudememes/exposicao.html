@@ -1,0 +1,197 @@
+---
+layout: default
+custom_color: museudememes
+---
+<div class="content-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="wrapper bg-soft-primary">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+
+  <!-- HEADER: título à esquerda (sem portrait) -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-10 pt-md-14 pb-md-12">
+      <div class="row">
+        <div class="col-lg-8">
+          {% if page.category %}
+          <div class="post-category text-line mb-3">
+            <span>{{ page.category }}</span>
+          </div>
+          {% endif %}
+          <h1 class="display-1 mb-4" style="color:#433f62;">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead fs-lg mb-0" style="color:#6b617f;">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPO: texto (esq) + portrait (dir) + metadados -->
+  <section class="wrapper bg-white">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-lg-10 gx-xl-14 gy-10 align-items-start">
+
+        <!-- COLUNA ESQUERDA: descrição + metadados -->
+        <div class="col-lg-7">
+          <div class="exposicao-content fs-lg mb-8" style="color:#2d2d3a;">
+            {{ content }}
+          </div>
+
+          <!-- Metadados: data, local, equipe -->
+          <div class="exposicao-meta p-6 rounded-3"
+               style="background:#f9f7fe; border-left:4px solid #433f62;">
+            {% if page.data_realizacao %}
+            <div class="mb-3">
+              <p class="fs-sm fw-bold mb-0" style="color:#433f62; text-transform:uppercase; letter-spacing:.06em;">Realização</p>
+              <p class="fs-sm mb-0" style="color:#555;">{{ page.data_realizacao }}</p>
+            </div>
+            {% endif %}
+            {% if page.local %}
+            <div class="mb-3">
+              <p class="fs-sm fw-bold mb-0" style="color:#433f62; text-transform:uppercase; letter-spacing:.06em;">Local</p>
+              <p class="fs-sm mb-0" style="color:#555;">{{ page.local }}</p>
+            </div>
+            {% endif %}
+            {% if page.equipe_curatorial %}
+            <div class="mb-0">
+              <p class="fs-sm fw-bold mb-1" style="color:#433f62; text-transform:uppercase; letter-spacing:.06em;">Equipe Curatorial</p>
+              {% for membro in page.equipe_curatorial %}
+              <p class="fs-sm mb-0" style="color:#555;">{{ membro }}</p>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <!-- /col esquerda -->
+
+        <!-- COLUNA DIREITA: portrait -->
+        {% if page.portrait_image %}
+        <div class="col-lg-5">
+          <figure class="rounded-4 overflow-hidden shadow-lg mb-0 sticky-lg-top" style="top:2rem;">
+            <img src="{{ page.portrait_image | relative_url }}"
+                 alt="{{ page.title }}"
+                 style="width:100%; display:block; object-fit:cover; aspect-ratio:3/4;">
+          </figure>
+        </div>
+        {% endif %}
+        <!-- /col portrait -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATÁLOGO DA EXPOSIÇÃO — embeds SlideShare (opcional)
+  ============================================================ -->
+  {% if page.slideshare %}
+  <section class="wrapper" style="background:#f9f7fe;">
+    <div class="container py-14 py-md-16">
+      <div class="row mb-10">
+        <div class="col-12 text-center">
+          <h2 class="display-5" style="color:#433f62;">
+            Catálogo da <span class="underline-3 style-1 primary"><em>Exposição</em></span>
+          </h2>
+        </div>
+      </div>
+      {% for item in page.slideshare %}
+      <div class="row justify-content-center {% unless forloop.last %}mb-10{% endunless %}">
+        <div class="col-lg-10">
+          {% if item.title %}
+          <h5 class="mb-4 text-center" style="color:#433f62;">{{ item.title }}</h5>
+          {% endif %}
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+            <iframe src="https://www.slideshare.net/slideshow/embed_code/key/{{ item.id }}"
+                    frameborder="0" marginwidth="0" marginheight="0"
+                    scrolling="no" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ============================================================
+       TRILHA SONORA INCIDENTAL — embed Spotify (opcional)
+  ============================================================ -->
+  {% if page.spotify %}
+  <section class="wrapper bg-white">
+    <div class="container py-14 py-md-16">
+      <div class="row mb-10">
+        <div class="col-12 text-center">
+          <h2 class="display-5" style="color:#433f62;">
+            Trilha Sonora <span class="underline-3 style-1 primary"><em>Incidental</em></span>
+          </h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="rounded-4 overflow-hidden shadow">
+            <iframe src="https://open.spotify.com/embed/playlist/{{ page.spotify }}?utm_source=generator&theme=0"
+                    width="100%" height="380" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ============================================================
+       IMAGENS DA VERNISSAGE — grade 4 colunas
+  ============================================================ -->
+  {% if page.galeria_vernissage and page.galeria_vernissage.size > 0 %}
+  <section class="wrapper" style="background:#f9f7fe;">
+    <div class="container py-14 py-md-16">
+      <div class="row mb-10">
+        <div class="col-12 text-center">
+          <h2 class="display-5" style="color:#433f62;">
+            Imagens da <span class="underline-3 style-1 primary"><em>Vernissage</em></span>
+          </h2>
+        </div>
+      </div>
+      <div class="blog-gallery-grid" style="--gcols:4">
+        {% for image in page.galeria_vernissage %}
+        <figure class="blog-gallery-thumb rounded-2 overflow-hidden">
+          <a href="{{ image.url | relative_url }}"
+             data-glightbox
+             data-gallery="vernissage-{{ page.slug | default: page.title | slugify }}"
+             {% if image.alt and image.alt != '' %}data-glightbox-title="{{ image.alt }}"{% endif %}>
+            <img src="{{ image.url | relative_url }}"
+                 alt="{{ image.alt | default: '' }}"
+                 loading="lazy">
+          </a>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-primary"
+      text_color="text-white"
+      widget_title_class="text-white"
+      container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+      cta=false
+  %}
+
+</div>
+<!-- /.content-wrapper -->

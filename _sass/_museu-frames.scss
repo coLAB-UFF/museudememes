@@ -1,0 +1,427 @@
+// ==========================================================
+// #MUSEUdeMEMES — Molduras de Acervo
+// Esquema de cores: violeta (#433f62) + âmbar (#FFb351)
+// ==========================================================
+
+$frame-violet:       #433f62;
+$frame-violet-light: #6b5f9e;   // aresta iluminada (topo/esq)
+$frame-violet-dark:  #2a2740;   // aresta em sombra (baixo/dir)
+$frame-amber:        #FFb351;
+$frame-amber-dark:   #c97f1a;
+$frame-soft:         #ede9f8;   // mat board lilás suave
+$frame-cream:        #fdf8ef;   // mat board creme (clássica/rococó)
+
+// Sombra de parede — como quadros reais em exposição
+$wall-shadow:
+  0 2px 4px rgba(0,0,0,.06),
+  0 8px 20px rgba(67, 63, 98, .18),
+  0 28px 60px rgba(67, 63, 98, .22),
+  0 60px 100px rgba(0,0,0,.08);
+
+$frame-h: 520px;
+
+// ----------------------------------------------------------
+// Cordão/fio — wrapper SVG
+// ----------------------------------------------------------
+.frame-cord-wrapper {
+  display: block;
+  width: 100%;
+  height: 70px;
+
+  svg { display: block; width: 100%; height: 100%; }
+}
+
+// ----------------------------------------------------------
+// Base compartilhada
+// ----------------------------------------------------------
+.museu-frame {
+  position: relative;
+  width: 100%;
+
+  .frame-body {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: $frame-h;
+      object-fit: cover;
+    }
+  }
+}
+
+// ----------------------------------------------------------
+// 1. Retangular  (moldura de museu — bisotado 4 lados)
+// ----------------------------------------------------------
+.moldura-retangular .frame-body {
+  // Borda bisotada: topo/esq mais claro, baixo/dir mais escuro
+  border-style: solid;
+  border-width: 18px;
+  border-top-color:    $frame-violet-light;
+  border-left-color:   $frame-violet-light;
+  border-bottom-color: $frame-violet-dark;
+  border-right-color:  $frame-violet-dark;
+
+  // Reflexo interno (verniz) + sombra de parede
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.12),   // filete branco interno
+    inset 0 0 0 2px rgba(0,0,0,.18),         // linha escura interna
+    $wall-shadow;
+}
+
+// ----------------------------------------------------------
+// 2. Clássica  (mat board + filete âmbar + cantos em L)
+// ----------------------------------------------------------
+.moldura-classica .frame-body {
+  // Borda externa bisotada
+  border-style: solid;
+  border-width: 20px;
+  border-top-color:    $frame-violet-light;
+  border-left-color:   $frame-violet-light;
+  border-bottom-color: $frame-violet-dark;
+  border-right-color:  $frame-violet-dark;
+
+  // Mat board: creme com filete âmbar
+  padding: 10px;
+  background-color: $frame-amber;
+
+  // Cantos ornamentais: 4 × "L" âmbar → violeta usando linear-gradient
+  // Cada canto: dois retângulos perpendiculares de 14×4 px
+  $lw: 18px;   // comprimento do "L"
+  $lt: 4px;    // espessura do "L"
+  $lo: 10px;   // offset desde a borda do padding
+
+  background-image:
+    // — canto sup-esq (horizontal)
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    // — canto sup-dir (horizontal)
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    // — canto inf-esq
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    // — canto inf-dir
+    linear-gradient($frame-violet-dark, $frame-violet-dark),
+    linear-gradient($frame-violet-dark, $frame-violet-dark);
+
+  background-size:
+    $lw $lt, $lt $lw,
+    $lw $lt, $lt $lw,
+    $lw $lt, $lt $lw,
+    $lw $lt, $lt $lw;
+
+  background-position:
+    $lo $lo, $lo $lo,
+    calc(100% - #{$lo}) $lo, calc(100% - #{$lo}) $lo,
+    $lo calc(100% - #{$lo}), $lo calc(100% - #{$lo}),
+    calc(100% - #{$lo}) calc(100% - #{$lo}), calc(100% - #{$lo}) calc(100% - #{$lo});
+
+  background-repeat: no-repeat;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.15),
+    $wall-shadow;
+
+  img { height: $frame-h - 20px; }
+}
+
+// ----------------------------------------------------------
+// 3. Oval  (máscara elíptica elegante)
+// ----------------------------------------------------------
+.moldura-oval {
+  .frame-cord-wrapper { height: 54px; }
+
+  .frame-body {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 18px;
+    border-top-color:    $frame-violet-light;
+    border-left-color:   $frame-violet-light;
+    border-bottom-color: $frame-violet-dark;
+    border-right-color:  $frame-violet-dark;
+
+    aspect-ratio: 1 / 1;
+    max-width: 540px;
+    margin: 0 auto;
+
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,.10),
+      $wall-shadow;
+
+    img {
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+// ----------------------------------------------------------
+// 4. Arredondada  (moderna, borda fina + filete âmbar interno)
+// ----------------------------------------------------------
+.moldura-arredondada .frame-body {
+  border-radius: 32px;
+  border-style: solid;
+  border-width: 14px;
+  border-top-color:    $frame-violet-light;
+  border-left-color:   $frame-violet-light;
+  border-bottom-color: $frame-violet-dark;
+  border-right-color:  $frame-violet-dark;
+
+  // Filete âmbar via inset box-shadow
+  box-shadow:
+    inset 0 0 0 3px $frame-amber,         // anel âmbar interno
+    inset 0 0 0 4px rgba(0,0,0,.12),      // sombra sobre o âmbar
+    $wall-shadow;
+
+  img {
+    height: $frame-h;
+    border-radius: 18px;
+  }
+}
+
+// ----------------------------------------------------------
+// 5. Rococó  (triple-layer: violeta | âmbar | violeta | âmbar)
+// ----------------------------------------------------------
+.moldura-rococo .frame-body {
+  // Borda externa bisotada larga
+  border-style: solid;
+  border-width: 22px;
+  border-top-color:    $frame-violet-light;
+  border-left-color:   $frame-violet-light;
+  border-bottom-color: $frame-violet-dark;
+  border-right-color:  $frame-violet-dark;
+
+  // Mat board âmbar
+  padding: 8px;
+  background-color: $frame-amber;
+
+  // Camadas internas via box-shadow inset:
+  //  1) filete violeta (4px)
+  //  2) gap branco translúcido (2px)
+  //  3) sombra escura interna
+  box-shadow:
+    inset 0 0 0 4px $frame-violet,            // anel violeta interno
+    inset 0 0 0 6px rgba(255,255,255,.18),    // filete nacarado
+    inset 0 0 0 8px rgba(0,0,0,.10),          // profundidade
+    $wall-shadow;
+
+  // Ornamento de canto: pseudo-elemento com borda dupla
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 3px solid $frame-violet;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Segundo ornamento: miolo
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 13px;
+    border: 1px solid rgba($frame-amber, .6);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  img {
+    height: $frame-h;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+// ----------------------------------------------------------
+// 6. Minimalista  (linha fina elegante, sem cordão)
+// ----------------------------------------------------------
+.moldura-minimalista .frame-body {
+  border-style: solid;
+  border-width: 2px;
+  border-top-color:    rgba($frame-violet-light, .7);
+  border-left-color:   rgba($frame-violet-light, .7);
+  border-bottom-color: $frame-violet-dark;
+  border-right-color:  $frame-violet-dark;
+
+  border-radius: 2px;
+
+  // Filete âmbar muito fino + sombra suave
+  box-shadow:
+    inset 0 0 0 4px rgba($frame-amber, .25),
+    0 4px 16px rgba(67, 63, 98, .12),
+    0 12px 40px rgba(67, 63, 98, .14);
+
+  img { height: $frame-h; }
+}
+
+// ==========================================================
+// FEATURE-IMAGE COM MOLDURA SVG
+//
+// Arquitetura de camadas (SVG por cima):
+//   z-index 1 → .fmi-photo-layer  — foto preenche inset:0 do wrapper
+//   z-index 2 → .fmi-frame-svg    — SVG por cima com mix-blend-mode:multiply
+//
+// O multiply torna áreas brancas/cinza-claro do SVG transparentes,
+// deixando a foto aparecer. As cores da moldura ficam visíveis por cima.
+// isolation:isolate confina o blend ao contexto do wrapper (não vaza
+// para o fundo lilás da página).
+//
+// Além do blend, a foto é clipada via clip-path para cada moldura,
+// evitando que a foto sangre pelas bordas onde o SVG não pinta nada.
+// Coordenadas obtidas por análise de pixels renderizados (inset: top right bottom left).
+// ==========================================================
+
+.fmi-moldura-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  isolation: isolate; // confina o mix-blend-mode dentro do wrapper
+
+  // Foto — preenche o wrapper inteiro; clip-path define a janela visível
+  .fmi-photo-layer {
+    position: absolute;
+    inset: 0;           // resolve contra o wrapper (cujo tamanho vem do SVG em fluxo)
+    z-index: 1;
+
+    .fmi-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // SVG — em fluxo normal (determina a altura do wrapper) + por cima via z-index
+  .fmi-frame-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: multiply; // branco/cinza-claro → transparente; moldura → visível
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_circle — viewBox 362×398
+// Elipse: cx=172 cy=217, stroke-width=20 → borda interna em rx=127.5 ry=140
+// clip-path: ellipse(rx% ry% at cx% cy%)
+// ----------------------------------------------------------
+.fmi-moldura_circle {
+  .fmi-photo-layer {
+    clip-path: ellipse(35.22% 35.18% at 47.51% 54.52%);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_laranja — viewBox 247×337 · clip: inset(top right bottom left)
+// ----------------------------------------------------------
+.fmi-moldura_laranja {
+  .fmi-photo-layer {
+    clip-path: inset(34.29% 27.35% 22.57% 27.35% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_lilas — viewBox 258×338
+// ----------------------------------------------------------
+.fmi-moldura_lilas {
+  .fmi-photo-layer {
+    clip-path: inset(30.81% 25.63% 20.93% 23.53% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_landscape_verde — viewBox 574×493 (janela ampla)
+// ----------------------------------------------------------
+.fmi-moldura_landscape_verde {
+  .fmi-photo-layer {
+    clip-path: inset(24.17% 12.72% 14.90% 12.72% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_landscape_paspatur_verde — viewBox 574×493 (paspatur interno)
+// ----------------------------------------------------------
+.fmi-moldura_landscape_paspatur_verde {
+  .fmi-photo-layer {
+    clip-path: inset(31.79% 21.97% 22.52% 21.97% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_landscape_rosa — viewBox 574×493
+// ----------------------------------------------------------
+.fmi-moldura_landscape_rosa {
+  .fmi-photo-layer {
+    clip-path: inset(28.05% 15.80% 19.47% 15.80% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_landscape_amarela — viewBox 775×658
+// ----------------------------------------------------------
+// moldura_landscape_amarela — viewBox 775×658
+// ----------------------------------------------------------
+.fmi-moldura_landscape_amarela {
+  .fmi-photo-layer {
+    clip-path: inset(24.59% 16.07% 18.36% 15.79% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_landscape_vermelha — viewBox 775×610
+// ----------------------------------------------------------
+.fmi-moldura_landscape_vermelha {
+  .fmi-photo-layer {
+    clip-path: inset(26.46% 21.07% 23.71% 22.75% round 3px);
+  }
+}
+
+// ----------------------------------------------------------
+// moldura_portrait_rustica — viewBox 574×493
+// ----------------------------------------------------------
+.fmi-moldura_portrait_rustica {
+  .fmi-photo-layer {
+    clip-path: inset(27.61% 27.73% 22.90% 29.83% round 3px);
+  }
+}
+
+// Sem moldura — imagem simples
+.fmi-simple {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+// ----------------------------------------------------------
+// Responsividade
+// ----------------------------------------------------------
+@media (max-width: 767px) {
+  $frame-h-sm: 280px;
+
+  .museu-frame .frame-body img          { height: $frame-h-sm; }
+  .moldura-classica .frame-body img    { height: $frame-h-sm - 20px; }
+  .moldura-arredondada .frame-body img { height: $frame-h-sm; }
+  .moldura-rococo .frame-body img      { height: $frame-h-sm; }
+  .moldura-minimalista .frame-body img { height: $frame-h-sm; }
+  .moldura-oval .frame-body            { max-width: 320px; }
+
+  .frame-cord-wrapper { height: 48px; }
+  .moldura-oval .frame-cord-wrapper { height: 36px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  $frame-h-md: 400px;
+
+  .museu-frame .frame-body img          { height: $frame-h-md; }
+  .moldura-classica .frame-body img    { height: $frame-h-md - 20px; }
+  .moldura-arredondada .frame-body img { height: $frame-h-md; }
+  .moldura-rococo .frame-body img      { height: $frame-h-md; }
+  .moldura-minimalista .frame-body img { height: $frame-h-md; }
+}

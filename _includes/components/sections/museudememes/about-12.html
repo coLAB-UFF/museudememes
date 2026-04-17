@@ -1,0 +1,40 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row text-center">
+      <div class="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative">
+        <img src="{{ page.about12.doodles.top.image }}" class="h-11 position-absolute d-none d-lg-block" style="top: {{ page.about12.doodles.top.position.top }}; right: {{ page.about12.doodles.top.position.right }}" alt="">
+        <img src="{{ page.about12.doodles.bottom.image }}" class="h-17 position-absolute d-none d-lg-block" style="bottom: {{ page.about12.doodles.bottom.position.bottom }}; left: {{ page.about12.doodles.bottom.position.left }}" alt="">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.about12.subtitle }}</h2>
+        <h3 class="display-3 mb-12">{{ page.about12.title.before }} <span class="text-gradient gradient-7">{{ page.about12.title.highlight }}</span> {{ page.about12.title.after }}</h3>
+      </div>
+    </div>
+    <!-- /.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <figure class="rounded shadow-lg">
+          <img class="img-fluid" src="{{ page.about12.main_image }}" srcset="{{ page.about12.main_image2x }} 2x" alt="" />
+        </figure>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6">
+        {% for feature in page.about12.features %}
+        <div class="d-flex flex-row {% unless forloop.last %}mb-8{% endunless %}">
+          <div>
+            <div class="svg-bg svg-bg-lg {{ feature.bg_class }} rounded-xl me-5">
+              <img src="{{ feature.icon }}" class="svg-inject icon-svg solid text-primary" alt="" />
+            </div>
+          </div>
+          <div>
+            <h4 class="fs-20">{{ feature.title }}</h4>
+            <p class="mb-0">{{ feature.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

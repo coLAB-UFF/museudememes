@@ -1,0 +1,21 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">Tema</h4>
+  {% assign tema_values = "" | split: "" %}
+  {% for post in site.memes %}
+    {% if post.tema %}
+      {% unless tema_values contains post.tema %}
+        {% assign tema_values = tema_values | push: post.tema %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign tema_values = tema_values | sort %}
+  {% if tema_values.size > 0 %}
+  <ul class="unordered-list bullet-primary text-reset">
+    {% for val in tema_values %}
+    <li><a href="/museudememes/acervo/tema/{{ val | slugify }}/">{{ val }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-muted small">Nenhum tema cadastrado.</p>
+  {% endif %}
+</div>

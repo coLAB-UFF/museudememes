@@ -1,0 +1,35 @@
+@import "../bootstrap/scss/functions";
+
+// Theme colors
+@import "../theme-colors";
+
+// User variables
+@import '../user-variables';
+
+$primary-color-name: museudememes;
+$primary: #433f62;
+$yellow: #FFb351;
+
+// Theme variables
+@import "../variables";
+
+// Color styles
+@import "../theme/colors";
+
+// Molduras de acervo
+@import "../museu-frames";
+
+// Blog artigo — galeria, embeds, tags, tipografia
+@import "../museudememes-blog";
+
+// Override soft/pale to pastel lilac and warm cream (overrides styles.css global values)
+:root {
+  --bs-soft-museudememes:       #ede9f8;
+  --bs-soft-primary:            #ede9f8;
+  --bs-pale-museudememes:       #e2dcf3;
+  --bs-pale-primary:            #e2dcf3;
+  --bs-bullet-soft-museudememes:#ddd7f0;
+  --bs-bullet-soft-primary:     #ddd7f0;
+  --bs-soft-yellow:             #fff8ec;
+  --bs-pale-yellow:             #fff2d4;
+}

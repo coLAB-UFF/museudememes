@@ -1,0 +1,127 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+  <!-- /header -->
+
+  <!-- HEADER VERBETE: título esquerda + feature image direita -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-10 pt-md-14 pb-md-12">
+      <div class="row align-items-center gx-lg-8">
+
+        <!-- TÍTULO (esquerda) -->
+        <div class="col-lg-7">
+          <div class="post-header">
+            {% if page.categoria %}
+            <div class="post-category text-line">
+              <a href="{{ site.baseurl }}/museudememes/acervo/categoria/{{ page.categoria | slugify }}/" class="hover">{{ page.categoria }}</a>
+            </div>
+            {% endif %}
+            <h1 class="display-1 mb-3">{{ page.title }}</h1>
+            {% if page.description %}
+            <p class="lead">{{ page.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+        <!-- /col -->
+
+        <!-- FEATURE MEME IMAGE (direita) — com ou sem moldura SVG -->
+        {% assign fmi_check = page.feature_meme_image | default: page.hero_image | default: page.featured_image %}
+        {% if fmi_check %}
+        <div class="col-lg-5 mt-8 mt-lg-0">
+          {% include components/meme/feature-image.html %}
+        </div>
+        {% endif %}
+        <!-- /col -->
+
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /header verbete -->
+
+  <!-- ARTIGO PRINCIPAL -->
+  <section class="wrapper bg-light wrapper-border">
+    <div class="container pb-14 pb-md-16">
+      <div class="row">
+        <div class="col-12">
+          <article class="mt-4">
+
+            <!-- VERBETE + FICHA TÉCNICA -->
+            <div class="row gx-lg-8 gx-xl-12">
+              <!-- TEXTO DO VERBETE -->
+              <div class="col-lg-8">
+                <div class="verbete-content">
+                  {{ content }}
+                </div>
+              </div>
+              <!-- /column -->
+
+              <!-- FICHA TÉCNICA (sticky) -->
+              <aside class="col-lg-4 mt-8 mt-lg-0">
+                {% include components/meme/ficha-tecnica.html %}
+              </aside>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+
+            <!-- GALERIA -->
+            {% if page.gallery %}
+            <div class="row mt-8 gx-md-6 gy-6">
+              {% for image in page.gallery %}
+              <div class="item col-md-6">
+                <figure class="hover-scale rounded cursor-dark">
+                  <a href="{{ image.url | relative_url }}" data-glightbox data-gallery="meme-{{ page.slug }}">
+                    <img src="{{ image.url | relative_url }}" alt="{{ image.alt | default: page.title }}" />
+                  </a>
+                </figure>
+              </div>
+              <!-- /column -->
+              {% endfor %}
+            </div>
+            <!-- /.row gallery -->
+            {% endif %}
+
+          </article>
+          <!-- /.verbete -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+  {% include components/meme/curador.html %}
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+    style="default"
+    bg_color="bg-primary"
+    text_color="text-inverse"
+    widget_title_class="text-white"
+    container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+    cta=false
+  %}
+  <!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

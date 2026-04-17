@@ -1,0 +1,95 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-soft-primary">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-14 pt-md-14 pb-md-17 text-center">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead text-muted mb-1">{{ page.taxonomy_label }}</p>
+          <h1 class="display-1 mb-3">{{ page.taxonomy_value }}</h1>
+          <a href="/museudememes/acervo/" class="btn btn-soft-primary btn-sm rounded-pill">← Voltar ao Journal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper bg-light">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-lg-8 gx-xl-12">
+        <!-- Sidebar (left) -->
+        <aside class="col-lg-4 sidebar mt-8 mt-lg-0 order-lg-1">
+          {% include components/blog/museudememes-sidebar-widgets.html %}
+        </aside>
+
+        <!-- Filtered Posts (right) -->
+        <div class="col-lg-8 order-lg-2">
+          {% assign filtered_posts = site.posts | where: page.taxonomy_field, page.taxonomy_value %}
+          {% if filtered_posts.size > 0 %}
+          <div class="blog classic-view">
+            {% for post in filtered_posts %}
+            <article class="post">
+              <div class="card">
+                {% if post.featured_image %}
+                <figure class="card-img-top overlay overlay-1 hover-scale">
+                  <a href="{{ post.url | relative_url }}">
+                    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" />
+                  </a>
+                  <figcaption><h5 class="from-top mb-0">Read More</h5></figcaption>
+                </figure>
+                {% endif %}
+                <div class="card-body">
+                  <div class="post-header">
+                    {% if post.categoria %}<div class="post-category text-line"><a href="/museudememes/acervo/categoria/{{ post.categoria | slugify }}/">{{ post.categoria }}</a></div>{% endif %}
+                    <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                    {% if post.author %}<li class="post-author"><i class="uil uil-user"></i><span>{{ post.authors_line | default: post.author }}</span></li>{% endif %}
+                  </ul>
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <div class="alert alert-soft-primary" role="alert">
+            Nenhum post encontrado para <strong>{{ page.taxonomy_value }}</strong> em {{ page.taxonomy_label }}.
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-soft-primary"
+      text_color="text-dark"
+      widget_title_class="text-dark"
+      container_padding="pt-22 pb-13 pt-md-24 pb-md-15"
+      cta=false
+  %}
+</div>

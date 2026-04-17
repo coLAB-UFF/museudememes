@@ -1,0 +1,111 @@
+{% comment %}
+Post footer component — Self-contained version using page.* variables directly
+{% endcomment %}
+
+{% assign has_hier = false %}
+{% if page.categoria or page.tema or page.ano_origem or page.formato %}
+  {% assign has_hier = true %}
+{% endif %}
+
+{% assign has_tags_custom = false %}
+{% if page.criador or page.plataforma or page.palavras_chaves %}
+  {% assign has_tags_custom = true %}
+{% endif %}
+
+{% if has_hier or has_tags_custom %}
+<div class="post-taxonomies border-top pt-5 mt-5 mb-5">
+  {% if has_hier %}
+  <div class="mb-4">
+    <h6 class="text-uppercase fw-bold mb-3" style="font-size:.7rem;letter-spacing:.08em;color:var(--bs-primary);">Classificação Hierárquica</h6>
+    <dl class="row gx-3 gy-2 mb-0">
+      {% if page.categoria %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Categoria</dt>
+      <dd class="col-sm-9 mb-0">
+        <a href="/museudememes/acervo/categoria/{{ page.categoria | slugify }}/" class="btn btn-soft-primary btn-sm rounded-pill me-1">{{ page.categoria }}</a>
+      </dd>
+      {% endif %}
+      {% if page.tema %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Tema</dt>
+      <dd class="col-sm-9 mb-0">
+        <a href="/museudememes/acervo/tema/{{ page.tema | slugify }}/" class="btn btn-soft-yellow btn-sm rounded-pill me-1">{{ page.tema }}</a>
+      </dd>
+      {% endif %}
+      {% if page.ano_origem %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Ano de Origem</dt>
+      <dd class="col-sm-9 mb-0">
+        <a href="/museudememes/acervo/ano-origem/{{ page.ano_origem | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill me-1">{{ page.ano_origem }}</a>
+      </dd>
+      {% endif %}
+      {% if page.formato %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Formato</dt>
+      <dd class="col-sm-9 mb-0">
+        <a href="/museudememes/acervo/formato/{{ page.formato | slugify }}/" class="btn btn-soft-leaf btn-sm rounded-pill me-1">{{ page.formato }}</a>
+      </dd>
+      {% endif %}
+    </dl>
+  </div>
+  {% endif %}
+
+  {% if has_tags_custom %}
+  <div>
+    <h6 class="text-uppercase fw-bold mb-3" style="font-size:.7rem;letter-spacing:.08em;color:var(--bs-primary);">Tags</h6>
+    <dl class="row gx-3 gy-2 mb-0">
+      {% if page.criador %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Criador</dt>
+      <dd class="col-sm-9 mb-0">
+        {% if page.criador.first %}
+          {% for val in page.criador %}<a href="/museudememes/acervo/criador/{{ val | slugify }}/" class="btn btn-soft-violet btn-sm rounded-pill me-1 mb-1">{{ val }}</a>{% endfor %}
+        {% else %}
+          <a href="/museudememes/acervo/criador/{{ page.criador | slugify }}/" class="btn btn-soft-violet btn-sm rounded-pill me-1">{{ page.criador }}</a>
+        {% endif %}
+      </dd>
+      {% endif %}
+      {% if page.plataforma %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Plataforma</dt>
+      <dd class="col-sm-9 mb-0">
+        {% if page.plataforma.first %}
+          {% for val in page.plataforma %}<a href="/museudememes/acervo/plataforma/{{ val | slugify }}/" class="btn btn-soft-grape btn-sm rounded-pill me-1 mb-1">{{ val }}</a>{% endfor %}
+        {% else %}
+          <a href="/museudememes/acervo/plataforma/{{ page.plataforma | slugify }}/" class="btn btn-soft-grape btn-sm rounded-pill me-1">{{ page.plataforma }}</a>
+        {% endif %}
+      </dd>
+      {% endif %}
+      {% if page.palavras_chaves %}
+      <dt class="col-sm-3 text-muted small fw-normal pt-1">Palavras-Chaves</dt>
+      <dd class="col-sm-9 mb-0">
+        {% if page.palavras_chaves.first %}
+          {% for val in page.palavras_chaves %}<a href="/museudememes/acervo/palavras-chaves/{{ val | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill me-1 mb-1">{{ val }}</a>{% endfor %}
+        {% else %}
+          <a href="/museudememes/acervo/palavras-chaves/{{ page.palavras_chaves | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill me-1">{{ page.palavras_chaves }}</a>
+        {% endif %}
+      </dd>
+      {% endif %}
+    </dl>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+<div class="post-footer d-md-flex flex-md-row justify-content-md-between align-items-center mt-5">
+  <div>
+    <ul class="list-unstyled tag-list mb-0">
+      {% for tag in page.tags %}
+      <li>
+        <a href="/blog/tag/{{ tag | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill mb-0">{{ tag }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="mb-0 mb-md-2">
+    <div class="dropdown share-dropdown btn-group">
+      <button class="btn btn-sm btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0 me-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="uil uil-share-alt"></i> Share
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}" target="_blank"><i class="uil uil-twitter"></i>Twitter</a>
+        <a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank"><i class="uil uil-facebook-f"></i>Facebook</a>
+        <a class="dropdown-item" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><i class="uil uil-linkedin"></i>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7 order-lg-2">
+        <figure class="rounded">
+          <img class="img-fluid"
+               src="{{ page.features6.image.src }}"
+               {% if page.features6.image.srcset != "" %}srcset="{{ page.features6.image.srcset }}"{% endif %}
+               alt="{{ page.features6.image.alt }}" />
+        </figure>
+      </div>
+      <div class="col-lg-5">
+        <h3 class="display-4 mb-5">{{ page.features6.title }}</h3>
+        <p class="mb-6">{{ page.features6.description }}</p>
+        <div class="row gy-3">
+          {% for list in page.features6.lists %}
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-{{ page.features6.list_color }} mb-0">
+              {% for item in list.items %}
+              <li{% unless forloop.first %} class="mt-3"{% endunless %}>
+                <span><i class="{{ page.features6.list_icon }}"></i></span>
+                <span>{{ item }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

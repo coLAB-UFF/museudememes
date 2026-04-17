@@ -1,0 +1,21 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">Categoria</h4>
+  {% assign cat_values = "" | split: "" %}
+  {% for post in site.memes %}
+    {% if post.categoria %}
+      {% unless cat_values contains post.categoria %}
+        {% assign cat_values = cat_values | push: post.categoria %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign cat_values = cat_values | sort %}
+  {% if cat_values.size > 0 %}
+  <ul class="unordered-list bullet-primary text-reset">
+    {% for val in cat_values %}
+    <li><a href="/museudememes/acervo/categoria/{{ val | slugify }}/">{{ val }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-muted small">Nenhuma categoria cadastrada.</p>
+  {% endif %}
+</div>

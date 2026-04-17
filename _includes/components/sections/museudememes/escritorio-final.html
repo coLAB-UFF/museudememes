@@ -1,0 +1,28 @@
+<section class="wrapper bg-gradient-reverse-primary">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.escritorio_final.subtitle }}</h2>
+        <h3 class="display-3 mb-6 pe-xxl-5">{{ page.escritorio_final.title }}</h3>
+        <p class="lead fs-lg pe-lg-10 mb-7">{{ page.escritorio_final.description }}</p>
+        <a href="{{ page.escritorio_final.button.url }}" class="{{ page.escritorio_final.button.class }}">{{ page.escritorio_final.button.label }}</a>
+      </div>
+      <div class="col-lg-5">
+        <div class="row g-6">
+          {% for item in page.escritorio_final.features %}
+          <div class="col-6">
+            <div class="card shadow-lg">
+              <div class="card-body p-5 text-center">
+                <div class="svg-bg bg-pale-primary rounded-xl mb-3 mx-auto" style="width:3rem;height:3rem;">
+                  <img src="{{ item.icon }}" class="svg-inject icon-svg solid text-primary" alt="" />
+                </div>
+                <p class="fs-14 lh-sm mb-0">{{ item.label }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<div class="row text-center">
+  <div class="col-lg-10 col-xxl-8 mx-auto mb-12">
+    <h2 class="{{ page.projects.title_class }}">{{ page.projects.title }}</h2>
+    <h3 class="{{ page.projects.main_title_class }}">{{ page.projects.main_title }}</h3>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% for post in sorted_posts limit: 3 %}
+<div class="row gy-10 align-items-center {% unless forloop.last %}mb-15 mb-md-17{% endunless %}">
+  {% assign reverse = forloop.index | modulo: 2 %}
+  {% if reverse == 0 %}
+  <div class="col-lg-7 order-lg-2">
+    <div class="card bg-soft-primary">
+      <div class="card-body p-11 overflow-hidden">
+        <figure>
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.featured_image | relative_url }}"
+                 alt="{{ post.title }}" />
+          </a>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-4 me-auto">
+  {% else %}
+  <div class="col-lg-7">
+    <div class="card bg-soft-primary">
+      <div class="card-body p-11 overflow-hidden">
+        <figure>
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.featured_image | relative_url }}"
+                 alt="{{ post.title }}" />
+          </a>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-4 ms-auto">
+  {% endif %}
+    {% if post.category %}
+    <div class="post-category text-line mb-2">
+      <a href="{{ site.baseurl }}/museudememes/blog/category/{{ post.category | slugify }}/" class="hover">{{ post.category }}</a>
+    </div>
+    {% endif %}
+    <h3 class="h1 post-title ls-sm mb-2">{{ post.title }}</h3>
+    {% assign author_display = post.authors_line | default: post.author %}
+    {% if author_display %}
+    <p class="mb-2 fs-sm" style="color:#6b617f;"><i class="uil uil-user me-1"></i>{{ author_display }}</p>
+    {% endif %}
+    <p class="mb-6">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+    <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">Ler Artigo</a>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+{% endfor %}
+
+<div class="text-center mt-12">
+  <a href="{{ page.projects.view_all_url | default: '/museudememes/blog/' | relative_url }}" class="btn btn-primary rounded-pill">
+    {{ page.projects.view_all_text | default: "Ver Todos os Ensaios" }}
+  </a>
+</div>

@@ -1,0 +1,133 @@
+---
+layout: default
+custom_color: museudememes
+---
+<div class="content-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="wrapper bg-soft-primary">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+
+  <!-- HEADER -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-14 pt-md-14 pb-md-17 text-center">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="display-1 mb-3">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead fs-lg px-md-10">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO: posts + sidebar -->
+  <section class="wrapper bg-white">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-lg-8 gx-xl-12">
+
+        <!-- Sidebar (esquerda) -->
+        <aside class="col-lg-4 sidebar mt-8 mt-lg-0 order-lg-1">
+          {% include components/blog/museudememes-sidebar-widgets.html %}
+        </aside>
+
+        <!-- Posts (direita) -->
+        <div class="col-lg-8 order-lg-2">
+          <div class="blog classic-view">
+            {% for post in paginator.posts %}
+            <article class="post mb-8">
+              <div class="card border-0 shadow-sm">
+
+                {% if post.featured_image %}
+                <figure class="card-img-top overlay overlay-1 hover-scale rounded-top mb-0">
+                  <a href="{{ post.url | relative_url }}">
+                    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" />
+                  </a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Ler Mais</h5>
+                  </figcaption>
+                </figure>
+                {% endif %}
+
+                <div class="card-body p-6">
+                  <div class="post-header">
+                    <div class="post-category text-line mb-2">
+                      {% if post.categoria %}
+                      <a href="/museudememes/blog/category/{{ post.categoria | slugify }}/" class="hover" rel="category">{{ post.categoria }}</a>
+                      {% elsif post.category %}
+                      <a href="/museudememes/blog/category/{{ post.category | slugify }}/" class="hover" rel="category">{{ post.category }}</a>
+                      {% endif %}
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3">
+                      <a class="link-dark" href="{{ post.url | relative_url }}"
+                         style="text-decoration:none; transition:color .2s;"
+                         onmouseover="this.style.color='#433f62'" onmouseout="this.style.color=''">
+                        {{ post.title }}
+                      </a>
+                    </h2>
+                  </div>
+                  <div class="post-content">
+                    <p class="mb-0">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                  </div>
+                </div>
+
+                <div class="card-footer bg-pale-primary border-0 px-6 py-3">
+                  <ul class="post-meta d-flex mb-0 align-items-center">
+                    <li class="post-date me-4">
+                      <i class="uil uil-calendar-alt me-1" style="color:#433f62;"></i>
+                      <span class="fs-sm">{{ post.date | date: "%d %b %Y" }}</span>
+                    </li>
+                    {% assign display_author = post.authors_line | default: post.author %}
+                    {% if display_author %}
+                    <li class="post-author">
+                      <i class="uil uil-user me-1" style="color:#433f62;"></i>
+                      <span class="fs-sm">{{ display_author }}</span>
+                    </li>
+                    {% endif %}
+                    <li class="ms-auto">
+                      <a href="{{ post.url | relative_url }}"
+                         class="btn btn-sm btn-primary rounded-pill">
+                        Ler Artigo
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          <!-- /.blog -->
+          {% include components/blog/pagination.html alignment="center" %}
+        </div>
+        <!-- /column posts -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-primary"
+      text_color="text-white"
+      widget_title_class="text-white"
+      container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+      cta=false
+  %}
+
+</div>

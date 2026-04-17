@@ -1,0 +1,145 @@
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+#permalink: /museudememes/blog/:year/:month/:day/:title/
+permalink: /museudememes/blog/:title/
+sass:
+  style: compressed
+  sass_dir: _sass
+  # Enable source maps in development, disable in production
+  sourcemap: never # Valid values: 'development' (default), 'always', 'never'
+  
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-watch
+  - jekyll-toc   #Documentation TOC 
+
+# TOC Settings for documentation
+toc:
+  min_level: 2
+  max_level: 3
+  list_class: 'list-unstyled fs-sm lh-sm text-reset'
+  sublist_class: 'list-unstyled pt-2 ps-2 fs-sm lh-sm text-reset'
+  item_class: 'nav-link scroll'
+  item_prefix: 'snippet-'
+  ordered: false
+  no_toc_section_class: 'no-toc'
+  numbered_items: true
+  auto_ids: true
+  sanitize: false
+
+# Pagination
+pagination:
+  enabled: true
+  debug: true
+  collections:
+    - name: 'projects'
+      per_page: 9
+      permalink: '/projects/page:num/'
+      title: ':title - Page :num'
+    - name: 'posts'
+      per_page: 6
+      permalink: '/museudememes/blog/page:num/'
+      title: ':title - Page :num'
+    - name: 'memes'
+      per_page: 12
+      permalink: '/museudememes/acervo/page:num/'
+      title: ':title - Página :num'
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /projects/:path/
+  memes:
+    output: true
+    permalink: /museudememes/colecoes/:path/
+  exposicoes:
+    output: true
+    permalink: /museudememes/exposicoes/:path/
+  authors:
+    output: true
+    permalink: /authors/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "museudememes/artigo"
+      custom_color: museudememes
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "memes"
+    values:
+      layout: "meme/verbete"
+      custom_color: museudememes
+      custom_font: space
+  - scope:
+      path: ""
+      type: "exposicoes"
+    values:
+      layout: "museudememes/exposicao"
+      custom_color: museudememes
+      
+
+# Exclude from processing and watching
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - tmp
+  - .git
+  - .github
+  - .vscode
+
+# LiveReload settings
+livereload_max_delay: 5
+livereload_min_delay: 2.5
+
+# Tags settings
+tag_page_layout: blog/tag_page
+tag_page_dir: tag
+
+# Archive settings
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+    - categories
+  layouts:
+    year: blog/archive-year
+    month: blog/archive-month
+    tag: blog/archive-tag
+    category: blog/archive-category
+  permalinks:
+    year: '/museudememes/blog/:year/'
+    month: '/museudememes/blog/:year/:month/'
+    tag: '/museudememes/blog/tag/:name/'
+    category: '/museudememes/blog/category/:name/'

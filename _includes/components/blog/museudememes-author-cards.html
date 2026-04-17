@@ -1,0 +1,81 @@
+{% comment %}
+  Cards de autores do artigo do blog.
+  Lê page.authors (array de nomes).
+  Busca dados em site.data.team_members + site.data.team_board.
+  Se o autor não for encontrado nos dados, exibe ícone genérico + nome.
+
+  Layouts:
+    1 autor  → col-12 (largura total)
+    2 autores → col-md-6 (lado a lado)
+    3+ autores → col-md-4 (três por linha)
+{% endcomment %}
+
+{% assign all_members = site.data.team_members.members | concat: site.data.team_board.members %}
+
+{% comment %}
+  Normaliza page.authors para array uniforme via split trick.
+{% endcomment %}
+{% if page.authors %}
+  {% if page.authors.first %}
+    {% assign author_list = page.authors %}
+  {% else %}
+    {% assign author_list = page.authors | split: "||NEVER||" %}
+  {% endif %}
+{% else %}
+  {% assign author_list = "" | split: "" %}
+{% endif %}
+
+{% if author_list.size == 1 %}
+  {% assign col_class = "col-12" %}
+{% elsif author_list.size > 2 %}
+  {% assign col_class = "col-md-4" %}
+{% else %}
+  {% assign col_class = "col-md-6" %}
+{% endif %}
+
+{% if author_list.size > 0 %}
+
+<p class="fs-12 text-uppercase text-primary fw-bold mb-4" style="letter-spacing:.08em;">
+  {% if author_list.size > 1 %}Autores{% else %}Autor{% endif %}
+</p>
+
+<div class="row gy-4">
+  {% for author_name in author_list %}
+  {% assign autor = all_members | where: "name", author_name | first %}
+  <div class="{{ col_class }}">
+    <div class="bg-white rounded shadow-sm p-4 h-100">
+      {% if autor %}
+      <div class="d-flex align-items-center gap-3 mb-3">
+        {% if autor.avatar_image %}
+        <img src="{{ autor.avatar_image | relative_url }}"
+             {% if autor.avatar_image2x %}srcset="{{ autor.avatar_image2x | relative_url }} 2x"{% endif %}
+             class="rounded-circle"
+             width="68" height="68"
+             alt="{{ autor.name }}"
+             style="object-fit:cover; border:3px solid var(--bs-primary,#433f62); flex-shrink:0;">
+        {% endif %}
+        <div>
+          <h5 class="mb-0">{{ autor.name }}</h5>
+          {% if autor.role %}
+          <p class="mb-0 fs-sm" style="color:#6b617f;">{{ autor.role }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% if autor.bio %}
+      <p class="fs-sm mb-0" style="color:#4a4560;">{{ autor.bio }}</p>
+      {% endif %}
+      {% else %}
+      <div class="d-flex align-items-center gap-3">
+        <div class="rounded-circle bg-pale-primary d-flex align-items-center justify-content-center"
+             style="width:68px;height:68px;flex-shrink:0;border:3px solid var(--bs-primary,#433f62);">
+          <i class="uil uil-user fs-20 text-primary"></i>
+        </div>
+        <h5 class="mb-0">{{ author_name }}</h5>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endif %}

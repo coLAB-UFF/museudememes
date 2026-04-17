@@ -1,0 +1,253 @@
+---
+layout: default
+custom_color: museudememes
+---
+
+{%- comment -%}
+  Coletamos categorias e tags de site.posts uma única vez —
+  usadas tanto pelo <datalist> quanto pelo JS de roteamento.
+{%- endcomment -%}
+
+{% assign blog_cats = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign pc = post.categoria | default: post.category %}
+  {% if pc and pc != "" %}
+    {% unless blog_cats contains pc %}
+      {% assign blog_cats = blog_cats | push: pc %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+{% assign blog_cats = blog_cats | sort %}
+
+{% assign blog_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% if tag and tag != "" %}
+      {% unless blog_tags contains tag %}
+        {% assign blog_tags = blog_tags | push: tag %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign blog_tags = blog_tags | sort %}
+
+<div class="content-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="wrapper bg-soft-primary">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+
+  <!-- HEADER + SEARCH com autocomplete -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-14 pt-md-14 pb-md-17 text-center">
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <h1 class="display-1 mb-3">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead fs-lg px-md-8 mb-7">{{ page.description }}</p>
+          {% endif %}
+
+          <form id="blog-search-form" action="/search.html" method="get">
+            <div class="input-group rounded-pill overflow-hidden shadow" style="max-width:520px; margin:0 auto;">
+              <input id="blog-search-input"
+                     type="text" name="query"
+                     class="form-control border-0 ps-4"
+                     placeholder="Buscar por título, categoria ou tag…"
+                     autocomplete="off"
+                     spellcheck="false"
+                     aria-label="Buscar artigos">
+              <button class="btn btn-primary px-4" type="submit" aria-label="Pesquisar">
+                <i class="uil uil-search fs-16"></i>
+              </button>
+            </div>
+            <p class="fs-xs mt-2 mb-0" style="color:#6b617f; opacity:.7;">
+              Complete com Tab · Enter para pesquisar
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS: cartões horizontais centralizados -->
+  <section class="wrapper bg-white">
+    <div class="container py-14 py-md-16">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+
+          {% for post in paginator.posts %}
+          <article class="card border-0 shadow-sm mb-5 overflow-hidden"
+                   style="border-radius:.6rem;">
+
+            <!-- Imagem no topo, proporção controlada (sem distorção) -->
+            {% assign post_img = post.featured_image | default: post.hero_image %}
+            {% if post_img %}
+            <figure class="card-img-top overlay overlay-1 hover-scale mb-0"
+                    style="aspect-ratio:21/9; overflow:hidden;">
+              <a href="{{ post.url | relative_url }}">
+                <img src="{{ post_img | relative_url }}"
+                     alt="{{ post.title }}"
+                     style="width:100%; height:100%; object-fit:cover; display:block;">
+              </a>
+              <figcaption>
+                <h5 class="from-top mb-0">Ler Mais</h5>
+              </figcaption>
+            </figure>
+            {% endif %}
+
+            <!-- Conteúdo -->
+            <div class="card-body p-5 pb-3">
+
+              <!-- Categoria -->
+              <div class="post-category text-line mb-2">
+                {% assign display_cat = post.categoria | default: post.category %}
+                {% if display_cat %}
+                <a href="/museudememes/blog/category/{{ display_cat | slugify }}/"
+                   class="hover" rel="category">{{ display_cat }}</a>
+                {% endif %}
+              </div>
+
+              <!-- Título -->
+              <h2 class="h4 mt-1 mb-2 lh-sm">
+                <a class="link-dark" href="{{ post.url | relative_url }}"
+                   style="text-decoration:none; transition:color .2s;"
+                   onmouseover="this.style.color='#433f62'"
+                   onmouseout="this.style.color=''">
+                  {{ post.title }}
+                </a>
+              </h2>
+
+              <!-- Excerto -->
+              <p class="fs-sm mb-0 text-muted lh-base">
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+              </p>
+
+            </div>
+
+            <!-- Meta: data, autor, link -->
+            <div class="card-footer bg-pale-primary border-0 px-5 py-3">
+              <ul class="post-meta d-flex mb-0 align-items-center">
+                <li class="post-date me-4">
+                  <i class="uil uil-calendar-alt me-1" style="color:#433f62;"></i>
+                  <span class="fs-xs">{{ post.date | date: "%d %b %Y" }}</span>
+                </li>
+                {% assign display_author = post.authors_line | default: post.author %}
+                {% if display_author %}
+                <li class="post-author">
+                  <i class="uil uil-user me-1" style="color:#433f62;"></i>
+                  <span class="fs-xs">{{ display_author }}</span>
+                </li>
+                {% endif %}
+                <li class="ms-auto">
+                  <a href="{{ post.url | relative_url }}"
+                     class="btn btn-sm btn-primary rounded-pill">
+                    Ler Artigo
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </article>
+          {% endfor %}
+
+          <!-- Paginação -->
+          {% include components/blog/pagination.html alignment="center" %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-primary"
+      text_color="text-white"
+      widget_title_class="text-white"
+      container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+      cta=false
+  %}
+
+</div>
+
+<!-- JS: autocomplete inline (type-ahead) + roteamento categoria/tag -->
+<script>
+(function () {
+  var form  = document.getElementById('blog-search-form');
+  var input = document.getElementById('blog-search-input');
+  if (!form || !input) return;
+
+  /* ── Sugestões geradas pelo Liquid ── */
+  var suggestions = [
+    {% for cat in blog_cats %}
+    { label: "{{ cat }}", url: "/museudememes/blog/category/{{ cat | slugify }}/" }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    {% if blog_cats.size > 0 and blog_tags.size > 0 %},{% endif %}
+    {% for tag in blog_tags %}
+    { label: "{{ tag }}", url: "/museudememes/blog/tag/{{ tag | slugify }}/" }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  /* ── Estado: detecta tecla de apagar para não completar ao deletar ── */
+  var erasing = false;
+  input.addEventListener('keydown', function (e) {
+    erasing = (e.key === 'Backspace' || e.key === 'Delete');
+
+    /* Tab: aceita a sugestão visível e impede a mudança de foco */
+    if (e.key === 'Tab' && input.selectionStart < input.value.length) {
+      e.preventDefault();
+      input.setSelectionRange(input.value.length, input.value.length);
+    }
+  });
+
+  /* ── Evento de digitação: completa inline ── */
+  input.addEventListener('input', function () {
+    if (erasing) return;
+
+    var typed = this.value;
+    if (!typed) return;
+
+    var typedLow = typed.toLowerCase();
+    var match = null;
+    for (var i = 0; i < suggestions.length; i++) {
+      if (suggestions[i].label.toLowerCase().startsWith(typedLow)) {
+        match = suggestions[i];
+        break;
+      }
+    }
+
+    if (match) {
+      /* preenche o campo com o label completo e seleciona a parte acrescentada */
+      this.value = match.label;
+      this.setSelectionRange(typed.length, match.label.length);
+    }
+  });
+
+  /* ── Submit: se o valor bater com categoria/tag, redireciona direto ── */
+  form.addEventListener('submit', function (e) {
+    var val = input.value.toLowerCase().trim();
+    for (var i = 0; i < suggestions.length; i++) {
+      if (suggestions[i].label.toLowerCase() === val) {
+        e.preventDefault();
+        window.location.href = suggestions[i].url;
+        return;
+      }
+    }
+    /* senão, deixa o form ir para /search.html com o query normal */
+  });
+})();
+</script>

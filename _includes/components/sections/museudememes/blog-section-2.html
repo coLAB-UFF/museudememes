@@ -1,0 +1,46 @@
+{% if page.blog2.enable %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+      <div class="col-lg-4 mt-lg-2">
+        <h2 class="display-4 mb-3">{{ page.blog2.title }}</h2>
+        <p class="lead fs-lg mb-6 pe-xxl-5">{{ page.blog2.description }}</p>
+        <a href="{{ page.blog2.button_url | relative_url }}" class="btn btn-soft-primary rounded-pill">{{ page.blog2.button_text }}</a>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-8">
+        <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for post in site.memes limit:8 %}
+              <div class="swiper-slide">
+                <article>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                    <a href="{{ post.url | relative_url }}">
+                      <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" />
+                    </a>
+                    <figcaption>
+                      <h5 class="from-top mb-0">Ver Mais</h5>
+                    </figcaption>
+                  </figure>
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                  </div>
+                </article>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+{% endif %}

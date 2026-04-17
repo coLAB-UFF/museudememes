@@ -1,0 +1,21 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <h2 class="display-4 mb-3">{{ page.process2.title }}</h2>
+    <p class="lead fs-lg mb-8">{{ page.process2.description }}</p>
+    <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+      {% for step in page.process2.steps %}
+      <div class="col-md-6 col-lg-3">
+        <span class="icon btn btn-circle btn-lg {% if forloop.index == 2 %}btn-primary{% else %}btn-soft-primary{% endif %} pe-none mb-4">
+          <span class="number">{{ step.number }}</span>
+        </span>
+        <h4 class="mb-1">{{ step.title }}</h4>
+        <p class="mb-0">{{ step.text }}</p>
+      </div>
+      <!-- /column -->
+      {% endfor %}
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

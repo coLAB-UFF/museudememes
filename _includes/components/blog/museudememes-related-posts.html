@@ -1,0 +1,75 @@
+{% comment %}
+  Posts relacionados — "Você Pode Curtir Também"
+  Busca em site.posts por tags e categoria em comum com o post atual.
+  Exibe autor (não data). Grid 2x2 desktop, 1 coluna mobile.
+  Máximo 4 posts.
+{% endcomment %}
+
+{% assign related_pool = site.posts | where_exp: "post", "post.url != page.url" %}
+{% assign related_by_tags = "" | split: "" %}
+
+{% for post in related_pool %}
+  {% assign common_tags = post.tags | intersection: page.tags %}
+  {% if common_tags.size > 0 %}
+    {% assign related_by_tags = related_by_tags | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign still_needed = 4 | minus: related_by_tags.size %}
+{% if still_needed > 0 %}
+  {% assign related_by_cat = related_pool | where: "category", page.category | limit: still_needed %}
+  {% assign final_related = related_by_tags | concat: related_by_cat %}
+{% else %}
+  {% assign final_related = related_by_tags %}
+{% endif %}
+{% assign final_related = final_related | uniq | slice: 0, 4 %}
+
+{% if final_related.size > 0 %}
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+
+        <h3 class="mb-8">Você Pode <span class="underline-3 style-1 primary">Curtir Também</span></h3>
+
+        <div class="row gx-md-6 gy-8">
+          {% for rpost in final_related %}
+          <div class="col-md-6">
+            <article>
+              {% if rpost.featured_image %}
+              <figure class="rounded-3 overflow-hidden mb-4" style="aspect-ratio:16/9;">
+                <a href="{{ rpost.url | relative_url }}" class="d-block h-100 artigo-related-thumb">
+                  <img src="{{ rpost.featured_image | relative_url }}"
+                       alt="{{ rpost.title }}"
+                       class="img-fluid w-100 h-100"
+                       style="object-fit:cover;"
+                       loading="lazy">
+                </a>
+              </figure>
+              {% endif %}
+              <div class="post-header">
+                {% if rpost.category %}
+                <div class="post-category text-line mb-2">
+                  <a href="{{ site.baseurl }}/blog/category/{{ rpost.category | slugify }}/" class="hover">{{ rpost.category }}</a>
+                </div>
+                {% endif %}
+                <h4 class="post-title mb-2">
+                  <a class="link-dark" href="{{ rpost.url | relative_url }}">{{ rpost.title }}</a>
+                </h4>
+              </div>
+              {% assign _rauthor = rpost.authors_line | default: rpost.author %}
+              {% if _rauthor %}
+              <p class="mb-0 fs-sm" style="color:#6b617f;">
+                <i class="uil uil-user me-1"></i>{{ _rauthor }}
+              </p>
+              {% endif %}
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

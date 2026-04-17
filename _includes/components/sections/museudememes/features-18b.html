@@ -1,0 +1,34 @@
+{% if page.features18b.enable %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    {% if page.features18b.subtitle or page.features18b.title %}
+    <div class="row text-center">
+      <div class="col-md-10 col-lg-9 col-xxl-7 mx-auto mb-12">
+        {% if page.features18b.subtitle %}<h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.features18b.subtitle }}</h2>{% endif %}
+        {% if page.features18b.title %}
+        <h3 class="display-2 ls-sm px-xxl-8">{{ page.features18b.title.before }} <span class="underline-3 style-1 primary"><em>{{ page.features18b.title.highlight }}</em></span> {{ page.features18b.title.after }}</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+    {% for service in page.features18b.services %}
+    <div class="row gy-10 align-items-center {% unless forloop.last %}mb-15 mb-md-17{% endunless %}">
+      <div class="col-lg-7 {% if service.image_right %}order-lg-2{% endif %}">
+        <figure><img class="img-fluid rounded" src="{{ service.image }}" srcset="{{ service.image_2x }} 2x" alt="{{ service.alt }}" /></figure>
+      </div>
+      <div class="col-lg-4 {% if service.image_right %}me-auto{% else %}ms-auto{% endif %}">
+        <div class="svg-bg {{ service.icon_bg }} rounded mb-5">
+          <img src="{{ service.icon }}" class="svg-inject icon-svg solid {{ service.icon_color }}" alt="" />
+        </div>
+        <h3 class="h1 post-title ls-sm mb-3">{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <ul class="icon-list bullet-bg {{ service.list_color }}">
+          {% for item in service.list_items %}<li><i class="uil uil-check"></i>{{ item }}</li>{% endfor %}
+        </ul>
+        <a href="{{ service.button.url }}" class="more hover {{ service.button.class }}">{{ service.button.text }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

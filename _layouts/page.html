@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+  <!-- /navbar -->
+
+  <!-- HEADER LILÁS -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-12 pt-md-14 pb-md-14">
+      <div class="row">
+        <div class="col-md-10 col-lg-8">
+          {% if page.category %}
+          <div class="post-category text-line mb-3">
+            <span class="hover">{{ page.category }}</span>
+          </div>
+          {% endif %}
+          <h1 class="display-1 mb-3">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /header -->
+
+  <!-- CONTEÚDO -->
+  <section class="wrapper bg-white wrapper-border">
+    <div class="container py-14 py-md-16">
+      {{ content }}
+    </div>
+  </section>
+  <!-- /conteúdo -->
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-primary"
+      text_color="text-inverse"
+      widget_title_class="text-white"
+      container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+      cta=false
+  %}
+  <!-- /footer -->
+
+</div>
+<!-- /.content-wrapper -->

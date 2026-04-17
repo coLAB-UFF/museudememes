@@ -1,0 +1,48 @@
+members:
+  - name: Gabriela Gruszynski Sanseverino
+    active: true
+    role: Diretora e Fundadora
+    bio: Professora e pesquisadora da FAFICH/UFMG. Coordena o #MUSEUdeMEMES desde sua fundação, liderando pesquisas sobre memética digital e cultura de internet.
+    avatar_image: /assets/img/avatars/te1.webp
+    avatar_image2x: /assets/img/avatars/te1@2x.webp
+    social:
+      - url: "#"
+        icon: uil uil-instagram
+      - url: "#"
+        icon: uil uil-twitter
+
+  - name: Lorena Tárcia
+    active: true
+    role: Coordenadora de Acervo
+    bio: Especialista em curadoria digital e preservação de memória cultural. Responsável pela política de gestão do acervo e catalogação de memes.
+    avatar_image: /assets/img/avatars/te2.webp
+    avatar_image2x: /assets/img/avatars/te2@2x.webp
+    social:
+      - url: "#"
+        icon: uil uil-instagram
+      - url: "#"
+        icon: uil uil-linkedin
+
+  - name: Felipe Souza
+    active: true
+    role: Coordenador de Pesquisa
+    bio: Pesquisador em comunicação e cultura digital. Lidera os projetos do Escritório Modelo de Memes e as parcerias acadêmicas do museu.
+    avatar_image: /assets/img/avatars/te3.webp
+    avatar_image2x: /assets/img/avatars/te3@2x.webp
+    social:
+      - url: "#"
+        icon: uil uil-twitter
+      - url: "#"
+        icon: uil uil-linkedin
+
+  - name: Mariana Alves
+    active: true
+    role: Coordenadora de Exposições
+    bio: Museóloga com foco em cultura digital. Concebe e executa as exposições do #MUSEUdeMEMES, presenciais e virtuais.
+    avatar_image: /assets/img/avatars/te4.webp
+    avatar_image2x: /assets/img/avatars/te4@2x.webp
+    social:
+      - url: "#"
+        icon: uil uil-instagram
+      - url: "#"
+        icon: uil uil-linkedin

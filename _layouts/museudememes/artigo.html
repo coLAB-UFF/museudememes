@@ -1,0 +1,191 @@
+---
+layout: default
+custom_color: museudememes
+---
+<div class="content-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded"
+        otherLink=true
+        otherLinkText="Sign In"
+        otherLinkModal="modal-signin"
+        otherBtnText="Sign Up"
+        otherBtnModal="modal-signup"
+    %}
+  </header>
+
+  <!-- HEADER: categoria + título + nome do(s) autor(es) -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-12 pt-md-14 pb-md-14">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          {% if page.category %}
+          <div class="post-category text-line mb-4">
+            <a href="{{ site.baseurl }}/blog/category/{{ page.category | slugify }}/" class="hover">{{ page.category }}</a>
+          </div>
+          {% endif %}
+          <h1 class="display-1 mb-4">{{ page.title }}</h1>
+          {% if page.authors_line %}
+          <p class="lead mb-0" style="color:#6b617f;">{{ page.authors_line }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO DO POST -->
+  <section class="wrapper bg-white">
+    <div class="container py-14 py-md-16">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <!-- Featured image (opcional) -->
+          {% if page.featured_image %}
+          <figure class="rounded-4 overflow-hidden mb-10 shadow-sm">
+            <img src="{{ page.featured_image | relative_url }}"
+                 alt="{{ page.title }}"
+                 class="img-fluid w-100"
+                 style="max-height:520px; object-fit:cover;"
+                 loading="eager">
+          </figure>
+          {% endif %}
+
+          <!-- TEXTO -->
+          <div class="post-content">
+            {{ content }}
+          </div>
+
+          <!-- TAGS (pílulas coloridas — ao fim do texto) -->
+          {% if page.tags and page.tags.size > 0 %}
+          <div class="post-tags d-flex flex-wrap gap-2 pt-6 mt-8 border-top">
+            {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/blog/tag/{{ tag | slugify }}/"
+               class="artigo-tag-pill badge rounded-pill text-decoration-none">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE + ÚLTIMA ATUALIZAÇÃO + AUTORES -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container py-10">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <!-- Linha: última atualização + compartilhar -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-6">
+            <p class="mb-0 fs-sm" style="color:#6b617f;">
+              <i class="uil uil-history me-1"></i>
+              Última atualização:
+              <strong class="text-dark">{{ page.last_modified | default: page.date | date: "%d %b %Y" }}</strong>
+            </p>
+            <div class="dropdown share-dropdown btn-group">
+              <button class="btn btn-primary rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0"
+                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="uil uil-share-alt"></i> Compartilhar
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item"
+                   href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}"
+                   target="_blank" rel="noopener">
+                  <i class="uil uil-facebook-f"></i> Facebook
+                </a>
+                <a class="dropdown-item"
+                   href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}"
+                   target="_blank" rel="noopener">
+                  <i class="uil uil-twitter"></i> Twitter
+                </a>
+                <a class="dropdown-item"
+                   href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}"
+                   target="_blank" rel="noopener">
+                  <i class="uil uil-whatsapp"></i> WhatsApp
+                </a>
+                <a class="dropdown-item" href="#" onclick="memeShare('instagram', event)">
+                  <i class="uil uil-instagram"></i> Instagram
+                </a>
+                <a class="dropdown-item"
+                   href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">
+                  <i class="uil uil-envelope"></i> Email
+                </a>
+                <a class="dropdown-item" href="#" onclick="memeShare('copy', event)">
+                  <i class="uil uil-link"></i> Copiar link
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divisor violeta -->
+          <hr class="mt-0 mb-8" style="border-color:var(--bs-primary,#433f62); border-width:2px; opacity:1;">
+
+          <!-- CARDS DE AUTORES -->
+          {% include components/blog/museudememes-author-cards.html %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOCÊ PODE CURTIR TAMBÉM -->
+  {% include components/blog/museudememes-related-posts.html %}
+
+  <!-- TOAST DE COMPARTILHAMENTO -->
+  <div id="meme-share-toast" aria-live="assertive" style="
+    position:fixed; bottom:2rem; left:50%;
+    transform:translateX(-50%) translateY(1rem);
+    z-index:9999; background:#433f62; color:#fff;
+    padding:.6rem 1.4rem; border-radius:100px;
+    font-size:.85rem; opacity:0; pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+    white-space:nowrap;
+  "></div>
+  <script>
+  (function(){
+    var toast = document.getElementById('meme-share-toast'), timer;
+    function show(msg) {
+      clearTimeout(timer);
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      timer = setTimeout(function() {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(1rem)';
+      }, 2500);
+    }
+    window.memeShare = function(type, e) {
+      e.preventDefault();
+      var url = window.location.href;
+      if (type === 'instagram') {
+        navigator.clipboard.writeText(url)
+          .then(function() { show('Link copiado! Cole no Instagram.'); })
+          .catch(function() { show('Copie o link na barra do navegador.'); });
+      } else {
+        navigator.clipboard.writeText(url)
+          .then(function() { show('Link copiado!'); })
+          .catch(function() { show('Copie o link na barra do navegador.'); });
+      }
+    };
+  }());
+  </script>
+
+  <!-- FOOTER -->
+  {% include components/footer/footer.html
+      style="default"
+      bg_color="bg-primary"
+      text_color="text-inverse"
+      widget_title_class="text-white"
+      container_padding="pt-14 pb-13 pt-md-16 pb-md-15"
+      cta=false
+  %}
+
+</div>

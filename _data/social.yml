@@ -1,0 +1,19 @@
+social_accounts:
+  title: "Redes Sociais"
+  links_shown: 4
+  links:
+    - url: "https://instagram.com/museudememes"
+      icon: "uil uil-instagram"
+      text: "Instagram"
+
+    - url: "https://facebook.com/museudememes"
+      icon: "uil uil-facebook-f"
+      text: "Facebook"
+
+    - url: "https://twitter.com/museudememes"
+      icon: "uil uil-twitter"
+      text: "Twitter"
+
+    - url: "https://youtube.com/@museudememes"
+      icon: "uil uil-youtube"
+      text: "Youtube"

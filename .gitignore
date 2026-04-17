@@ -1,0 +1,16 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.bundle
+*.gem
+Gemfile.lock
+node_modules
+.DS_Store
+*.log
+tmp/
+.vscode/
+sandbox htm/
+# Prevent large files
+*.zip
+sandbox\ htm/sandbox340/dev/*.zip

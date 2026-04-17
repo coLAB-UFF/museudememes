@@ -1,0 +1,54 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-md-8 gx-xl-12 gy-6 align-items-center">
+      <div class="col-md-8 col-lg-6 order-lg-2 mx-auto">
+        <div class="img-mask mask-3">
+          <img src="{{ page.about11.image }}" srcset="{{ page.about11.image2x }} 2x" alt="" />
+        </div>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6">
+        <h2 class="display-5 mb-3">{{ page.about11.title }}</h2>
+        <p class="lead fs-lg">{{ page.about11.lead }}</p>
+        {% for paragraph in page.about11.description %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+        <a href="{{ page.about11.button.url }}" class="btn btn-primary rounded-pill mt-2">{{ page.about11.button.text }}</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gx-xl-12 mt-10 mt-md-13">
+      <div class="col-lg-4">
+        <h2 class="display-5 mb-3">{{ page.about11.process.title }}</h2>
+        <p>{{ page.about11.process.description }}</p>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-8">
+        <div class="row gy-6 gx-md-8 gx-xl-12">
+          {% for step in page.about11.process.steps %}
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-primary pe-none me-4">
+                  <span class="number fs-18">{{ forloop.index }}</span>
+                </span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ step.title }}</h4>
+                <p class="mb-0">{{ step.description }}</p>
+              </div>
+            </div>
+          </div>
+          <!-- /column -->
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

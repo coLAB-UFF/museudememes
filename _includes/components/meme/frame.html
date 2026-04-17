@@ -1,0 +1,63 @@
+{% comment %}
+  Moldura de acervo do #MUSEUdeMEMES
+  Parâmetros:
+    include.src  — URL da imagem (obrigatório)
+    include.alt  — texto alternativo (opcional)
+  Front matter do verbete:
+    moldura: retangular | classica | oval | arredondada | rococo | minimalista
+  Padrão: retangular
+{% endcomment %}
+{% assign moldura = page.moldura | default: 'retangular' %}
+{% assign frame_src = include.src | default: page.hero_image | default: page.featured_image %}
+
+<div class="museu-frame moldura-{{ moldura }}">
+
+  {% unless moldura == 'minimalista' %}
+  {{- '' -}}
+  <!--
+    Cordinha em V — âmbar (#FFb351) com gancho violeta ornamentado no topo.
+    preserveAspectRatio="none" faz os pontos de ancoragem escalarem com a
+    largura real da moldura.  Âncoras: 20% / 80% para ângulo suave e realista.
+  -->
+  <div class="frame-cord-wrapper" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 600 70"
+         preserveAspectRatio="none"
+         role="presentation">
+
+      <!-- Fio esquerdo — sombra -->
+      <line x1="122" y1="68" x2="300" y2="14"
+            stroke="rgba(67,63,98,.22)" stroke-width="4" stroke-linecap="round"/>
+      <!-- Fio direito — sombra -->
+      <line x1="478" y1="68" x2="300" y2="14"
+            stroke="rgba(67,63,98,.22)" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Fio esquerdo -->
+      <line x1="120" y1="68" x2="300" y2="12"
+            stroke="#FFb351" stroke-width="3" stroke-linecap="round"/>
+      <!-- Fio direito -->
+      <line x1="480" y1="68" x2="300" y2="12"
+            stroke="#FFb351" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Gancho ornamentado: anel externo + anel médio + ponto central -->
+      <!-- Anel externo (violeta escuro — sombra) -->
+      <circle cx="300" cy="12" r="13"
+              fill="#2a2740"/>
+      <!-- Anel externo (violeta principal) -->
+      <circle cx="300" cy="11" r="12"
+              fill="#433f62" stroke="#FFb351" stroke-width="2.5"/>
+      <!-- Ponto central âmbar -->
+      <circle cx="300" cy="11" r="4"
+              fill="#FFb351"/>
+    </svg>
+  </div>
+  {% endunless %}
+
+  <!-- Moldura + imagem -->
+  <div class="frame-body">
+    <img src="{{ frame_src | relative_url }}"
+         alt="{{ include.alt | default: page.title }}"
+         loading="eager" />
+  </div>
+
+</div>

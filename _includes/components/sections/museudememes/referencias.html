@@ -1,0 +1,409 @@
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-17">
+
+    <div class="row mb-8">
+      <div class="col-md-10 col-lg-8 col-xxl-7 mx-auto text-center">
+        {% if page.referencias.subtitle %}<h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.referencias.subtitle }}</h2>{% endif %}
+        <h3 class="display-4 mb-0">{{ page.referencias.title }}</h3>
+      </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="card shadow-lg mb-6">
+      <div class="card-body p-6">
+        <form id="ref-filters" autocomplete="off">
+
+          <!-- Busca geral -->
+          <div class="mb-5">
+            <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-1">Busca Geral</label>
+            <input id="filter-geral" class="form-control" type="text"
+                   placeholder="Buscar em todos os campos..." autocomplete="off">
+          </div>
+
+          <!-- Checkboxes + Período -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-2">Área Temática</label>
+              <div id="filter-area" class="border rounded p-3" style="max-height:168px;overflow-y:auto;"></div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-2">Categoria</label>
+              <div id="filter-categoria" class="border rounded p-3" style="max-height:168px;overflow-y:auto;"></div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-2">Período</label>
+              <div class="input-group input-group-sm">
+                <select id="filter-ano-de" class="form-select">
+                  <option value="">De…</option>
+                </select>
+                <span class="input-group-text px-2 text-muted">—</span>
+                <select id="filter-ano-ate" class="form-select">
+                  <option value="">Até…</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Autocompletes -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-1">Autor</label>
+              <div class="ac-wrapper position-relative">
+                <input id="filter-autor" class="form-control" type="text"
+                       placeholder="Buscar por autor..." autocomplete="off">
+                <div id="ac-autor" class="list-group position-absolute w-100 shadow-sm d-none"
+                     style="z-index:999;top:100%;left:0;"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-1">Título</label>
+              <div class="ac-wrapper position-relative">
+                <input id="filter-titulo" class="form-control" type="text"
+                       placeholder="Buscar por título..." autocomplete="off">
+                <div id="ac-titulo" class="list-group position-absolute w-100 shadow-sm d-none"
+                     style="z-index:999;top:100%;left:0;"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label fs-sm fw-bold text-muted text-uppercase mb-1">Publicação</label>
+              <div class="ac-wrapper position-relative">
+                <input id="filter-publicacao" class="form-control" type="text"
+                       placeholder="Buscar por publicação..." autocomplete="off">
+                <div id="ac-publicacao" class="list-group position-absolute w-100 shadow-sm d-none"
+                     style="z-index:999;top:100%;left:0;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" id="btn-limpar" class="btn btn-soft-ash btn-sm rounded px-3">
+              <i class="uil uil-times me-1"></i>Limpar filtros
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Contagem + estado -->
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <p id="ref-count" class="mb-0 text-muted fs-sm"></p>
+      <div id="ref-loading" class="text-muted fs-sm">
+        <span class="spinner-border spinner-border-sm me-2" role="status"></span>Carregando referências...
+      </div>
+      <div id="ref-error" class="d-none text-danger fs-sm">
+        <i class="uil uil-exclamation-triangle me-1"></i>Erro ao carregar os dados. Verifique se a planilha é pública.
+      </div>
+    </div>
+
+    <!-- Ordenação -->
+    <div id="sort-bar" class="d-none d-flex align-items-center justify-content-end gap-3 mb-5 flex-wrap">
+      <span class="text-muted fs-sm fw-bold text-uppercase">Ordenar:</span>
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-soft-ash sort-btn active" data-sort="titulo">Título</button>
+        <button class="btn btn-soft-ash sort-btn" data-sort="autor">Autor</button>
+        <button class="btn btn-soft-ash sort-btn" data-sort="ano">Ano</button>
+      </div>
+      <button id="btn-sort-dir" class="btn btn-soft-ash btn-sm">
+        <i class="uil uil-arrow-up me-1"></i>Crescente
+      </button>
+    </div>
+
+    <!-- Cards -->
+    <div id="ref-list"></div>
+
+  </div>
+</section>
+
+<script>
+(function() {
+  var SHEET_ID = '1hBXejeFBPMGAhKx028zAgcgTje5ln35l75npiI7Mfjs';
+  var CSV_URL  = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/export?format=csv';
+
+  var AREA_MAP = {
+    'Comunidades e Subculturas':  { icon: '/assets/img/icons/solid/team.svg',        bg: 'bg-pale-purple',  color: 'text-purple'  },
+    'Emoções e Afeto':            { icon: '/assets/img/icons/solid/love.svg',         bg: 'bg-pale-pink',    color: 'text-pink'    },
+    'Imagem e Cultura Vernacular':{ icon: '/assets/img/icons/solid/image.svg',        bg: 'bg-pale-yellow',  color: 'text-yellow'  },
+    'Internet e Política':        { icon: '/assets/img/icons/solid/bullhorn.svg',     bg: 'bg-pale-red',     color: 'text-red'     },
+    'Marketing e Consumo':        { icon: '/assets/img/icons/solid/shopping-bag.svg', bg: 'bg-pale-orange',  color: 'text-orange'  },
+    'Media Literacy e Educação':  { icon: '/assets/img/icons/solid/clipboard.svg',    bg: 'bg-pale-green',   color: 'text-green'   },
+    'Narrativa e Linguagem':      { icon: '/assets/img/icons/solid/chatting.svg',     bg: 'bg-pale-violet',  color: 'text-violet'  },
+    'Outros':                     { icon: '/assets/img/icons/solid/note.svg',         bg: 'bg-pale-ash',     color: 'text-muted'   },
+    'Psicologia e Cognição':      { icon: '/assets/img/icons/solid/bulb.svg',         bg: 'bg-pale-sky',     color: 'text-sky'     },
+    'Redes Sociais e Viralidade': { icon: '/assets/img/icons/solid/sharing.svg',      bg: 'bg-pale-fuchsia', color: 'text-fuchsia' },
+    'Sociobiologia e Filosofia':  { icon: '/assets/img/icons/solid/layers.svg',       bg: 'bg-pale-navy',    color: 'text-navy'    }
+  };
+
+  var allRefs   = [];
+  var sortField = 'titulo';
+  var sortDir   = 'asc';
+
+  // ── Normaliza chave de cabeçalho ──
+  function normalizeKey(h) {
+    return h.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
+  }
+
+  // ── CSV parser robusto ──
+  function parseLine(line) {
+    var result = [], current = '', inQuotes = false;
+    for (var i = 0; i < line.length; i++) {
+      var ch = line[i];
+      if (ch === '"') {
+        if (inQuotes && line[i+1] === '"') { current += '"'; i++; }
+        else inQuotes = !inQuotes;
+      } else if (ch === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+      else { current += ch; }
+    }
+    result.push(current.trim());
+    return result;
+  }
+
+  function parseCSV(text) {
+    var lines = text.replace(/\r/g,'').split('\n').filter(function(l){ return l.trim(); });
+    if (lines.length < 2) return [];
+    var headers = parseLine(lines[0]).map(normalizeKey);
+    return lines.slice(1).map(function(line) {
+      var vals = parseLine(line), obj = {};
+      headers.forEach(function(h,i){ obj[h] = (vals[i]||'').trim(); });
+      // Autores individuais (separados por vírgula)
+      obj.autores_arr = (obj.autor||'').split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+      return obj;
+    }).filter(function(r){ return r.titulo; });
+  }
+
+  // ── Badge NOVO ──
+  function isNovo(r) { return r.novo && r.novo.toLowerCase().includes('novo'); }
+
+  // ── Publicação ──
+  function getPub(r) { return r.in || r.editora || r.instituicao || ''; }
+
+  // ── "Outros" sempre no fim ──
+  function sortOutrosLast(arr) {
+    var outros = arr.filter(function(v){ return v.toLowerCase()==='outros'; });
+    var rest   = arr.filter(function(v){ return v.toLowerCase()!=='outros'; }).sort();
+    return rest.concat(outros);
+  }
+
+  // ── Unique helper ──
+  function unique(arr) { return [...new Set(arr.filter(Boolean))]; }
+
+  // ── Checkboxes ──
+  function buildCheckboxList(containerId, values) {
+    var el = document.getElementById(containerId);
+    values.forEach(function(v) {
+      var safeId = containerId + '-' + v.replace(/[^a-zA-Z0-9]/g,'_');
+      el.insertAdjacentHTML('beforeend',
+        '<div class="form-check mb-1">' +
+          '<input class="form-check-input ref-checkbox" type="checkbox" value="' + v + '" id="' + safeId + '">' +
+          '<label class="form-check-label fs-sm" for="' + safeId + '">' + v + '</label>' +
+        '</div>');
+    });
+  }
+
+  // ── Autocomplete customizado ──
+  function initAutocomplete(inputId, dropId, getValues) {
+    var inp  = document.getElementById(inputId);
+    var drop = document.getElementById(dropId);
+
+    inp.addEventListener('input', function() {
+      var q = inp.value.toLowerCase().trim();
+      drop.innerHTML = '';
+      if (!q) { drop.classList.add('d-none'); return; }
+      var matches = unique(getValues()).filter(function(v){ return v.toLowerCase().includes(q); }).slice(0,5);
+      if (!matches.length) { drop.classList.add('d-none'); return; }
+      matches.forEach(function(v) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'list-group-item list-group-item-action fs-sm py-2';
+        btn.textContent = v;
+        btn.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          inp.value = v;
+          drop.classList.add('d-none');
+          render();
+        });
+        drop.appendChild(btn);
+      });
+      drop.classList.remove('d-none');
+    });
+    inp.addEventListener('blur',    function(){ setTimeout(function(){ drop.classList.add('d-none'); }, 150); });
+    inp.addEventListener('keydown', function(e){ if(e.key==='Escape') drop.classList.add('d-none'); });
+  }
+
+  // ── Render de um card ──
+  function renderCard(r) {
+    var area  = AREA_MAP[r.area_tematica] || { icon:'/assets/img/icons/solid/note.svg', bg:'bg-pale-ash', color:'text-muted' };
+    var pub   = getPub(r);
+    var meta  = [r.autor, pub, r.ano].filter(Boolean).join(' · ');
+    var link  = r.url || '';
+    var target= link ? ' target="_blank" rel="noopener"' : '';
+    var catBadge  = r.categoria ? '<span class="badge bg-pale-ash text-muted rounded-pill me-1">'  + r.categoria + '</span>' : '';
+    var novoBadge = isNovo(r)   ? '<span class="badge bg-primary rounded-pill me-1">NOVO</span>'   : '';
+    var arrow     = link        ? '<i class="uil uil-angle-right-b fs-20 text-muted ms-1"></i>'    : '';
+
+    return '<a href="' + (link||'#') + '"' + target + ' class="card mb-3 lift"' + (!link?' style="pointer-events:none;"':'') + '>' +
+      '<div class="card-body p-5">' +
+        '<div class="d-flex align-items-center justify-content-between gap-3">' +
+          '<div class="d-flex align-items-center gap-3 flex-grow-1" style="min-width:0;">' +
+            '<div class="svg-bg ' + area.bg + ' rounded flex-shrink-0 d-flex align-items-center justify-content-center" style="width:44px;height:44px;">' +
+              '<img src="' + area.icon + '" class="svg-inject icon-svg solid ' + area.color + '" style="width:22px;height:22px;" alt="' + r.area_tematica + '">' +
+            '</div>' +
+            '<div style="min-width:0;">' +
+              '<h5 class="mb-1" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + r.titulo + '</h5>' +
+              '<p class="mb-0 text-muted fs-sm">' + meta + '</p>' +
+            '</div>' +
+          '</div>' +
+          '<div class="d-flex align-items-center flex-shrink-0">' + catBadge + novoBadge + arrow + '</div>' +
+        '</div>' +
+      '</div>' +
+    '</a>';
+  }
+
+  // ── Filtrar ──
+  function getFilteredRefs() {
+    var areas = Array.from(document.querySelectorAll('#filter-area input:checked')).map(function(o){ return o.value; });
+    var cats  = Array.from(document.querySelectorAll('#filter-categoria input:checked')).map(function(o){ return o.value; });
+    var anoDe = parseInt(document.getElementById('filter-ano-de').value)  || 0;
+    var anoAte= parseInt(document.getElementById('filter-ano-ate').value) || 9999;
+    var autor = document.getElementById('filter-autor').value.toLowerCase();
+    var titulo= document.getElementById('filter-titulo').value.toLowerCase();
+    var pub   = document.getElementById('filter-publicacao').value.toLowerCase();
+    var geral = document.getElementById('filter-geral').value.toLowerCase().trim();
+
+    return allRefs.filter(function(r) {
+      if (areas.length && !areas.includes(r.area_tematica)) return false;
+      if (cats.length  && !cats.includes(r.categoria))      return false;
+      var ano = parseInt(r.ano) || 0;
+      if (anoDe   && ano < anoDe)   return false;
+      if (anoAte < 9999 && ano > anoAte) return false;
+      if (autor  && !r.autores_arr.some(function(a){ return a.toLowerCase().includes(autor); })) return false;
+      if (titulo && !r.titulo.toLowerCase().includes(titulo)) return false;
+      if (pub    && !getPub(r).toLowerCase().includes(pub))   return false;
+      if (geral  && !Object.values(r).join(' ').toLowerCase().includes(geral)) return false;
+      return true;
+    });
+  }
+
+  // ── Render ──
+  function render() {
+    var filtered = getFilteredRefs();
+    // Ordenar
+    var sorted = filtered.slice().sort(function(a, b) {
+      var va, vb, cmp;
+      if (sortField === 'ano') {
+        va = parseInt(a.ano) || 0; vb = parseInt(b.ano) || 0;
+        cmp = va - vb;
+      } else if (sortField === 'autor') {
+        va = (a.autores_arr[0]||'').toLowerCase(); vb = (b.autores_arr[0]||'').toLowerCase();
+        cmp = va.localeCompare(vb, 'pt');
+      } else {
+        va = (a.titulo||'').toLowerCase(); vb = (b.titulo||'').toLowerCase();
+        cmp = va.localeCompare(vb, 'pt');
+      }
+      return sortDir === 'asc' ? cmp : -cmp;
+    });
+
+    var list  = document.getElementById('ref-list');
+    var count = document.getElementById('ref-count');
+    list.innerHTML = sorted.length
+      ? sorted.map(renderCard).join('')
+      : '<p class="text-muted text-center py-8">Nenhuma referência encontrada com os filtros selecionados.</p>';
+    count.textContent = sorted.length + ' referência' + (sorted.length!==1?'s':'') +
+                        ' encontrada' + (sorted.length!==1?'s':'');
+    if (window.SVGInject) window.SVGInject(document.querySelectorAll('#ref-list img.svg-inject'));
+  }
+
+  // ── Popular filtros ──
+  function populate(refs) {
+    // Áreas
+    buildCheckboxList('filter-area',
+      sortOutrosLast(unique(refs.map(function(r){ return r.area_tematica; }))));
+    // Categorias
+    buildCheckboxList('filter-categoria',
+      sortOutrosLast(unique(refs.map(function(r){ return r.categoria; }))));
+    // Anos (crescente para ambos os selects)
+    var anos = unique(refs.map(function(r){ return r.ano; })).sort(function(a,b){ return a-b; });
+    ['filter-ano-de','filter-ano-ate'].forEach(function(id) {
+      var sel = document.getElementById(id);
+      anos.forEach(function(v) {
+        var o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o);
+      });
+    });
+  }
+
+  // ── Eventos ──
+  function initEvents(refs) {
+    // Checkboxes
+    document.querySelectorAll('.ref-checkbox').forEach(function(cb){
+      cb.addEventListener('change', render);
+    });
+    // Anos
+    ['filter-ano-de','filter-ano-ate'].forEach(function(id){
+      document.getElementById(id).addEventListener('change', render);
+    });
+    // Texto
+    ['filter-geral','filter-autor','filter-titulo','filter-publicacao'].forEach(function(id){
+      document.getElementById(id).addEventListener('input', render);
+    });
+
+    // Autocomplete
+    var allAutores = refs.flatMap(function(r){ return r.autores_arr; });
+    var allTitulos = refs.map(function(r){ return r.titulo; });
+    var allPubs    = refs.map(function(r){ return getPub(r); });
+    initAutocomplete('filter-autor',     'ac-autor',     function(){ return allAutores; });
+    initAutocomplete('filter-titulo',    'ac-titulo',    function(){ return allTitulos; });
+    initAutocomplete('filter-publicacao','ac-publicacao', function(){ return allPubs; });
+
+    // Limpar
+    document.getElementById('btn-limpar').addEventListener('click', function() {
+      document.getElementById('filter-geral').value      = '';
+      document.getElementById('filter-autor').value     = '';
+      document.getElementById('filter-titulo').value    = '';
+      document.getElementById('filter-publicacao').value= '';
+      document.getElementById('filter-ano-de').value    = '';
+      document.getElementById('filter-ano-ate').value   = '';
+      document.querySelectorAll('.ref-checkbox').forEach(function(cb){ cb.checked = false; });
+      render();
+    });
+
+    // Ordenar
+    document.querySelectorAll('.sort-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.sort-btn').forEach(function(b){ b.classList.remove('active'); });
+        this.classList.add('active');
+        sortField = this.dataset.sort;
+        render();
+      });
+    });
+    document.getElementById('btn-sort-dir').addEventListener('click', function() {
+      sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+      var icon = this.querySelector('i');
+      icon.className = 'uil uil-arrow-' + (sortDir==='asc'?'up':'down') + ' me-1';
+      this.lastChild.textContent = sortDir === 'asc' ? 'Crescente' : 'Decrescente';
+      render();
+    });
+  }
+
+  // ── Fetch ──
+  var loadingEl = document.getElementById('ref-loading');
+  var errorEl   = document.getElementById('ref-error');
+  var sortBar   = document.getElementById('sort-bar');
+
+  fetch(CSV_URL)
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
+    .then(function(csv) {
+      allRefs = parseCSV(csv);
+      loadingEl.classList.add('d-none');
+      sortBar.classList.remove('d-none');
+      populate(allRefs);
+      initEvents(allRefs);
+      render();
+    })
+    .catch(function(err) {
+      console.error('Referências: erro ao carregar planilha', err);
+      loadingEl.classList.add('d-none');
+      errorEl.classList.remove('d-none');
+    });
+})();
+</script>

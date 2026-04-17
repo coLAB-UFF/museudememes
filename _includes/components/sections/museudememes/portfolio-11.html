@@ -1,0 +1,73 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row mb-10">
+      <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5 mx-auto text-center">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.portfolio11.subtitle }}</h2>
+        <h3 class="display-3 mb-0">{{ page.portfolio11.title }}</h3>
+      </div>
+    </div>
+    <!-- /.row -->
+    {% assign expo_projects = site.exposicoes | sort: 'date' | reverse %}
+    {% for project in expo_projects limit: 4 %}
+    {% assign pcolors = "primary,leaf,violet,fuchsia" | split: "," %}
+    {% assign pcolor = pcolors[forloop.index0] %}
+    <div class="project {% unless forloop.last %}mb-10{% endunless %}">
+      <div class="card bg-soft-{{ project.color | default: pcolor }}">
+        <div class="card-body ps-xl-12 py-0 overflow-hidden">
+          <div class="row gx-md-8 gx-xl-12 d-flex align-items-center">
+            <div class="col-lg-7">
+              <div class="row gx-5">
+                {% if project.gallery %}
+                  {% assign gimg = project.gallery | first %}
+                  <div class="col-6 mt-9">
+                    <figure class="rounded shadow-lg">
+                      <a href="{{ project.url | relative_url }}">
+                        <img src="{{ gimg.image }}" alt="{{ project.title }}" />
+                      </a>
+                    </figure>
+                  </div>
+                  {% if project.gallery.size > 1 %}
+                  {% assign gimg2 = project.gallery[1] %}
+                  <div class="col-6">
+                    <figure class="rounded shadow-lg">
+                      <a href="{{ project.url | relative_url }}">
+                        <img src="{{ gimg2.image }}" alt="{{ project.title }}" />
+                      </a>
+                    </figure>
+                  </div>
+                  {% endif %}
+                {% elsif project.thumbnail %}
+                  <div class="col-10 mt-9 mx-auto">
+                    <figure class="rounded shadow-lg">
+                      <a href="{{ project.url | relative_url }}">
+                        <img src="{{ project.thumbnail }}" alt="{{ project.title }}" />
+                      </a>
+                    </figure>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            <!-- /column -->
+            <div class="col-lg-5 d-none d-lg-block py-10">
+              <h2 class="post-title fs-30 mb-4">{{ project.title }}</h2>
+              <p class="mb-5">{{ project.description | default: project.excerpt | truncatewords: 25 }}</p>
+              {% if project.features %}
+              <ul class="icon-list bullet-primary mb-5">
+                {% for feat in project.features limit: 4 %}
+                <li><i class="uil uil-check"></i>{{ feat }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              <a href="{{ project.url | relative_url }}" class="btn btn-sm btn-{{ project.color | default: pcolor }} rounded-pill mt-1">Ver Exposição</a>
+            </div>
+            <!-- /column -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.project -->
+    {% endfor %}
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "museudememes",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "PATH=/opt/homebrew/opt/ruby/bin:$PATH GEM_HOME=$HOME/.gem/ruby/3.2.0 bundle exec jekyll serve --port 4001 2>&1"],
+      "port": 4001
+    }
+  ]
+}

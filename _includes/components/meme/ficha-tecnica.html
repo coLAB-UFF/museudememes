@@ -1,0 +1,73 @@
+<div class="card bg-soft-primary border-0 rounded ficha-tecnica p-5" style="position:sticky;top:84px;">
+  <h4 class="mb-1">Ficha Técnica</h4>
+  <p class="text-muted fs-sm mb-5">{{ page.nome_meme | default: page.title }}</p>
+
+  <ul class="list-unstyled mb-0">
+
+    {% if page.criador %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Criador</h6>
+      {% if page.criador.first %}
+        {% for c in page.criador %}
+        <a href="/museudememes/acervo/criador/{{ c | slugify }}/" class="hover fs-sm">{{ c }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% else %}
+        <a href="/museudememes/acervo/criador/{{ page.criador | slugify }}/" class="hover fs-sm">{{ page.criador }}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+
+    {% if page.ano_origem %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Ano de Origem</h6>
+      <a href="/museudememes/acervo/ano-origem/{{ page.ano_origem | slugify }}/" class="hover fs-sm">{{ page.ano_origem }}</a>
+    </li>
+    {% endif %}
+
+    {% if page.plataforma %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Plataforma</h6>
+      {% if page.plataforma.first %}
+        {% for p in page.plataforma %}
+        <a href="/museudememes/acervo/plataforma/{{ p | slugify }}/" class="hover fs-sm">{{ p }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% else %}
+        <a href="/museudememes/acervo/plataforma/{{ page.plataforma | slugify }}/" class="hover fs-sm">{{ page.plataforma }}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+
+    {% if page.formato %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Formato</h6>
+      <a href="/museudememes/acervo/formato/{{ page.formato | slugify }}/" class="hover fs-sm">{{ page.formato }}</a>
+    </li>
+    {% endif %}
+
+    {% if page.categoria %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Categoria</h6>
+      <a href="/museudememes/acervo/categoria/{{ page.categoria | slugify }}/" class="hover fs-sm">{{ page.categoria }}</a>
+    </li>
+    {% endif %}
+
+    {% if page.tema %}
+    <li class="mb-4">
+      <h6 class="fs-14 text-uppercase text-muted mb-1">Tema</h6>
+      <a href="/museudememes/acervo/tema/{{ page.tema | slugify }}/" class="hover fs-sm">{{ page.tema }}</a>
+    </li>
+    {% endif %}
+
+    {% if page.palavras_chaves %}
+    <li class="mb-0">
+      <h6 class="fs-14 text-uppercase text-muted mb-2">Palavras-Chave</h6>
+      <div class="d-flex flex-wrap gap-1">
+        {% for tag in page.palavras_chaves %}
+        <a href="/museudememes/acervo/palavras-chaves/{{ tag | slugify }}/" class="badge bg-pale-primary text-primary fw-normal text-decoration-none">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {% endif %}
+
+  </ul>
+</div>

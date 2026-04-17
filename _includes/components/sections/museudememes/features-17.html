@@ -1,0 +1,25 @@
+{% if page.features17.enable %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row text-center mb-10">
+      <div class="col-md-10 col-lg-8 col-xxl-6 mx-auto">
+        {% if page.features17.subtitle %}<p class="fs-16 text-uppercase text-muted mb-3">{{ page.features17.subtitle }}</p>{% endif %}
+        {% if page.features17.title %}
+        <h3 class="display-3 ls-sm">{{ page.features17.title.before }} <span class="underline-3 style-1 primary"><em>{{ page.features17.title.highlight }}</em></span> {{ page.features17.title.after }}</h3>
+        {% endif %}
+      </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gy-8 text-center">
+      {% for feature in page.features17.features %}
+      <div class="col">
+        <div class="svg-bg {{ feature.bg_color }} rounded mb-4 mx-auto d-flex align-items-center justify-content-center" style="width:56px;height:56px;">
+          <img src="{{ feature.icon }}" class="svg-inject icon-svg solid {{ feature.icon_color }}" style="width:26px;height:26px;" alt="{{ feature.title }}">
+        </div>
+        <h5 class="fs-15 mb-2">{{ feature.title }}</h5>
+        {% if feature.description %}<p class="mb-0 text-muted fs-sm lh-sm px-2">{{ feature.description }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
