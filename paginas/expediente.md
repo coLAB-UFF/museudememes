@@ -1,7 +1,10 @@
 ---
 layout: default
 title: "Quem Faz o #MUSEUdeMEMES"
-permalink: /museudememes/expediente/
+permalink: /museudememes/quem/
+redirect_from:
+  - /museudememes/expediente/
+  - /museudememes/museu/quem-faz/
 custom_color: museudememes
 custom_font: space
 
@@ -41,19 +44,15 @@ team2:
     url: "/contact/"
 ---
 <div class="content-wrapper">
-  <header class="wrapper bg-light">
+  <header class="wrapper bg-white">
     {% include components/navbar/navbar.html
-        classList="center-nav transparent navbar-light"
+        classList="center-nav navbar-light"
         centerNav=true
-        logoAlt=true
         otherClassList="w-100 d-flex ms-auto"
         otherBtn=true
         otherBtnClassList="btn btn-sm btn-primary rounded"
-        otherLink=true
-        otherLinkText="Sign In"
-        otherLinkModal="modal-signin"
-        otherBtnText="Sign Up"
-        otherBtnModal="modal-signup"
+        otherBtnText="Área Restrita"
+        otherBtnLink="/museudememes/admin"
     %}
   </header>
 

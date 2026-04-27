@@ -1,0 +1,220 @@
+entries:
+  - id: meme
+    title: Meme
+    description: >
+      Unidade de informação cultural que se replica, transforma e propaga entre indivíduos e grupos
+      sociais, em analogia ao gene biológico proposto por Richard Dawkins em 1976. No contexto digital,
+      o meme assume formas visuais, textuais e audiovisuais que condensam referências compartilhadas,
+      operando como veículo de significação coletiva e memória cultural distribuída.
+    category: Memética
+    tags:
+      - replicação cultural
+      - Dawkins
+      - unidade mínima
+      - propagação simbólica
+      - internet
+    image: /assets/img/photos/about10.webp
+    gallery:
+      - url: /assets/img/photos/about11.webp
+        alt: Meme clássico do formato image macro
+      - url: /assets/img/photos/about12.webp
+        alt: Meme derivado com variação textual
+      - url: /assets/img/photos/about13.webp
+        alt: Meme em formato vídeo loop
+      - url: /assets/img/photos/about14.webp
+        alt: Meme adaptado para contexto local
+
+  - id: remix-cultural
+    title: Remix Cultural
+    description: >
+      Prática de reconfigurar, recombinar e ressignificar produtos culturais preexistentes para gerar
+      novos artefatos simbólicos. Na esfera digital, o remix constitui a gramática fundamental da
+      criatividade participativa, dissolindo fronteiras entre autoria e recepção. A cultura do remix
+      coloca em tensão os regimes de propriedade intelectual e os fluxos colaborativos de produção cultural.
+    category: Cultura Digital
+    tags:
+      - apropriação
+      - recombinação
+      - autoria coletiva
+      - criatividade
+      - cultura participativa
+    image: /assets/img/photos/about15.webp
+    gallery:
+      - url: /assets/img/photos/about17.webp
+        alt: Exemplo de remix visual com colagem digital
+      - url: /assets/img/photos/about18.webp
+        alt: Derivação musical com sample
+      - url: /assets/img/photos/about19.webp
+        alt: Paródia como forma de remix crítico
+      - url: /assets/img/photos/about20.webp
+        alt: Remix audiovisual de conteúdo televisivo
+
+  - id: viralidade
+    title: Viralidade
+    description: >
+      Fenômeno de propagação acelerada de conteúdos digitais por meio de redes sociais, impulsionado
+      por mecanismos de compartilhamento e engajamento afetivo. A viralidade não é propriedade intrínseca
+      de um objeto cultural, mas emerge da interação entre características do conteúdo, arquiteturas
+      algorítmicas de plataformas e disposições emocionais de comunidades específicas de usuários.
+    category: Comunicação
+    tags:
+      - compartilhamento
+      - algoritmo
+      - engajamento
+      - redes sociais
+      - propagação
+    image: /assets/img/photos/about21.webp
+
+  - id: template-de-meme
+    title: Template de Meme
+    description: >
+      Estrutura formal recorrente — visual, textual ou multimodal — que funciona como matriz para a
+      produção de variações meméticas. O template opera como convenção semiótica partilhada por uma
+      comunidade interpretativa, estabelecendo expectativas de forma e conteúdo que podem ser
+      confirmadas, subvertidas ou ironizadas. Sua estabilidade estrutural coexiste com alta plasticidade semântica.
+    category: Semiótica
+    tags:
+      - estrutura
+      - convenção
+      - variação
+      - image macro
+      - formato
+    image: /assets/img/photos/about22.webp
+    gallery:
+      - url: /assets/img/photos/about23.webp
+        alt: Template Drake em variação política
+      - url: /assets/img/photos/about24.webp
+        alt: Template Distracted Boyfriend aplicado a debate acadêmico
+      - url: /assets/img/photos/about25.webp
+        alt: Template de texto com fonte Impact
+      - url: /assets/img/photos/about26.webp
+        alt: Template de reação em múltiplos painéis
+
+  - id: intertextualidade-digital
+    title: Intertextualidade Digital
+    description: >
+      Rede de relações explícitas ou implícitas entre textos, imagens e outros artefatos culturais
+      que constitui o substrato semiótico da comunicação em rede. Na cultura digital, a intertextualidade
+      é operacionalizada por hiperlinks, citações, referências cruzadas e remixagens que pressupõem
+      um leitor enciclopédico capaz de ativar repertórios compartilhados. O meme é um dos seus
+      produtos mais condensados e eficazes.
+    category: Semiótica
+    tags:
+      - referência
+      - hiperlink
+      - citação
+      - palimpsesto
+      - leitura enciclopédica
+    image: /assets/img/photos/about27.webp
+
+  - id: cultura-participativa
+    title: Cultura Participativa
+    description: >
+      Configuração cultural caracterizada pela baixa barreira à expressão artística, pelo suporte a
+      criação e partilha, por mentorias informais e pela crença no valor social das contribuições
+      individuais, conforme teorização de Henry Jenkins. Nas plataformas digitais, a cultura participativa
+      estrutura práticas de fandom, produção de memes e colaboração criativa, ainda que mediadas por
+      infraestruturas comerciais que capturam valor desta participação.
+    category: Cultura Digital
+    tags:
+      - Jenkins
+      - fandom
+      - colaboração
+      - prosumidor
+      - plataformas
+    image: /assets/img/photos/about2.webp
+    gallery:
+      - url: /assets/img/photos/about3.webp
+        alt: Comunidade de criadores em fórum de memes
+      - url: /assets/img/photos/about4.webp
+        alt: Fan art como prática participativa
+      - url: /assets/img/photos/about5.webp
+        alt: Wikia colaborativa de cultura popular
+      - url: /assets/img/photos/about6.webp
+        alt: Thread de co-criação em rede social
+
+  - id: mimese-digital
+    title: Mimese Digital
+    description: >
+      Processo de imitação, adaptação e replicação de padrões expressivos em ambientes digitais, que
+      opera tanto na dimensão estética quanto na pragmática da comunicação. A mimese digital vai além
+      da mera cópia: implica uma transformação que negocia entre fidelidade ao modelo e originalidade
+      situacional. Constitui mecanismo central de socialização em comunidades online e de transmissão
+      de competências comunicativas informais.
+    category: Memética
+    tags:
+      - imitação
+      - adaptação
+      - socialização digital
+      - competência comunicativa
+      - replicação
+    image: /assets/img/photos/about7.webp
+
+  - id: hiperironia
+    title: Hiperironia
+    description: >
+      Modalidade discursiva característica da comunicação online em que múltiplas camadas de ironia
+      se sobrepõem de modo a tornar indistinguível o sincero do irônico, o sério do paródico. A
+      hiperironia é um modo de proteção enunciativa que permite a expressão de posições afetivas ou
+      políticas sob o escudo do humor, operando como válvula de negação plausível. Constitui um
+      desafio metodológico central para a análise da comunicação em memes.
+    category: Humor Digital
+    tags:
+      - ironia
+      - paródia
+      - distanciamento
+      - ambiguidade
+      - pós-ironia
+    image: /assets/img/photos/about8.webp
+    gallery:
+      - url: /assets/img/photos/about9.webp
+        alt: Meme de hiperironia com múltiplas leituras possíveis
+      - url: /assets/img/photos/about28.webp
+        alt: Exemplo de pós-ironia em contexto político
+      - url: /assets/img/photos/about29.webp
+        alt: Absurdo como recurso de distanciamento irônico
+      - url: /assets/img/photos/about30.webp
+        alt: Shitposting como prática hiperirônica
+
+  - id: affordances-digitais
+    title: Affordances Digitais
+    description: >
+      Conjunto de possibilidades de ação e expressão oferecidas por plataformas e interfaces digitais
+      aos seus usuários, que moldam as práticas comunicativas sem determiná-las completamente. As
+      affordances — botão de curtida, retweet, campo de comentário, formato de story — não são neutras:
+      configuram ritmos de atenção, padrões de engajamento e hierarquias de visibilidade que
+      condicionam a produção e circulação de memes.
+    category: Comunicação
+    tags:
+      - plataforma
+      - interface
+      - design
+      - interação
+      - Gibson
+    image: /assets/img/photos/about20.webp
+
+  - id: memoria-coletiva-digital
+    title: Memória Coletiva Digital
+    description: >
+      Conjunto de representações, narrativas e artefatos culturais compartilhados por grupos online
+      que constroem e mantêm identidades coletivas e sensos de continuidade histórica. Os memes
+      funcionam como nós de memória coletiva que condensam eventos, figuras e sentimentos em formas
+      altamente comprimidas e afetivamente carregadas, participando ativamente da construção do
+      arquivo cultural informal de uma época.
+    category: Memética
+    tags:
+      - Halbwachs
+      - arquivo
+      - nostalgia
+      - identidade coletiva
+      - história cultural
+    image: /assets/img/photos/about19.webp
+    gallery:
+      - url: /assets/img/photos/about18.webp
+        alt: Meme evocativo de evento histórico recente
+      - url: /assets/img/photos/about17.webp
+        alt: Compilação de memes de uma década
+      - url: /assets/img/photos/about15.webp
+        alt: Meme de nostalgia de cultura pop dos anos 2000
+      - url: /assets/img/photos/about14.webp
+        alt: Arquivo digital de memes políticos

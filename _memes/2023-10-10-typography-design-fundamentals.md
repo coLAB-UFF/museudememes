@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Typography Design Fundamentals: Creating Readable Digital Experiences"
-date: 2025-01-22
-last_modified: 2025-03-06
+date: "2025-01-22"
+last_modified: "2025-03-06"
 author: Jane Smith
 category: Design
 categoria: "Meme de Nicho"

@@ -1,13 +1,13 @@
 ---
 layout: museudememes/artigo
 title: "Memética e Cultura Digital Brasileira: um campo em expansão"
-date: 2025-04-01
-last_modified: 2025-04-10
+date: "2025-04-01"
+last_modified: "2025-04-10"
 authors_line: "Jane Smith & John Doe"
 authors:
   - Jane Smith
   - John Doe
-category: Pesquisa
+categoria: "Pesquisa"
 featured_image: /assets/img/photos/bg5.webp
 excerpt: "Uma reflexão sobre como os memes se consolidaram como objeto de estudo legítimo e o que isso significa para a memória digital brasileira."
 tags:

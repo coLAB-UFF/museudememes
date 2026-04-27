@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Backend Development Best Practices: Building Scalable APIs"
-date: 2025-02-05
-last_modified: 2025-03-11
+date: "2025-02-05"
+last_modified: "2025-03-11"
 author: Jane Smith
 category: Development
 header_style: standard
@@ -23,6 +23,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b10.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

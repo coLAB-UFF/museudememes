@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Standard Post Layout Example"
-date: 2025-02-12
-last_modified: 2025-03-13
+date: "2025-02-12"
+last_modified: "2025-03-13"
 author: John Doe
 category: Teamwork
 header_style: standard
@@ -22,6 +22,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b1.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

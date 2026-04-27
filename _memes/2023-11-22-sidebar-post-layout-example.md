@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Sidebar Post Layout Example"
-date: 2025-02-14
-last_modified: 2025-03-15
+date: "2025-02-14"
+last_modified: "2025-03-15"
 author: Tortoiz Themes
 category: Design
 header_style: overlay
@@ -28,6 +28,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b9.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

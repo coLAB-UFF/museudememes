@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Modern JavaScript Frameworks: Choosing the Right Tool for Your Project"
-date: 2025-02-02
-last_modified: 2025-03-10
+date: "2025-02-02"
+last_modified: "2025-03-10"
 author: John Doe
 category: Development
 header_style: overlay
@@ -23,6 +23,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b6.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

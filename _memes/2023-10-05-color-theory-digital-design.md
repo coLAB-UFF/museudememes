@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Color Theory in Digital Design: Creating Impactful Visual Experiences"
-date: 2025-01-20
-last_modified: 2025-03-05
+date: "2025-01-20"
+last_modified: "2025-03-05"
 author: John Doe
 category: Design
 categoria: "Meme Estético"

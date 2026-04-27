@@ -7,102 +7,6 @@ custom_font: space
 scroll_top_btn:
   enable: true
 
-terms_sections:
-  - id: "apresentacao"
-    title: "1. Apresentação"
-    content: "O Plano Museológico do #MUSEUdeMEMES é o documento institucional que orienta todas as ações da instituição, estabelecendo sua identidade, seus objetivos e os programas por meio dos quais cumpre sua missão social. Ele define o que somos, o que preservamos, como pesquisamos e de que forma nos relacionamos com a sociedade.
-
-    O #MUSEUdeMEMES nasceu como iniciativa de pesquisa vinculada à Faculdade de Filosofia e Ciências Humanas da UFMG (FAFICH/UFMG), com o objetivo de estudar, documentar e difundir os memes como expressão legítima da cultura contemporânea. Ao longo de sua trajetória, consolidou-se como referência nacional em memética digital, reunindo acervo, produção científica e ações educativas de alcance amplo.
-
-    Este plano está estruturado em sete programas que abrangem desde a política de acervo até a gestão institucional, passando pela pesquisa, pela educação, pela comunicação e pela sustentabilidade financeira da instituição."
-
-  - id: "missao-visao-valores"
-    title: "2. Missão, Visão e Valores"
-    content: "A missão do #MUSEUdeMEMES é preservar, pesquisar e difundir os memes como patrimônio imaterial da cultura digital contemporânea, promovendo o acesso ao conhecimento sobre a internet, a comunicação em rede e a memória coletiva das gerações digitais.
-
-    Nossa visão é ser reconhecido como o principal centro de referência em memética digital do Brasil e da América Latina, contribuindo para a valorização da cultura de internet como objeto legítimo de pesquisa acadêmica, preservação cultural e educação midiática."
-    list_items:
-      - text: "Diversidade — valorizar a pluralidade de vozes, comunidades e contextos que produzem e circulam memes."
-      - text: "Rigor acadêmico — articular preservação e pesquisa com responsabilidade científica e metodológica."
-      - text: "Acesso aberto — disponibilizar acervo, publicações e materiais educativos de forma gratuita e acessível."
-      - text: "Inovação — explorar novas formas de documentar, exibir e interpretar a cultura digital."
-      - text: "Colaboração — atuar em rede com pesquisadores, instituições e comunidades de internet."
-
-  - id: "politica-de-acervo"
-    title: "3. Política de Acervo"
-    content: "O acervo do #MUSEUdeMEMES é composto por memes em suas diversas formas — imagens, vídeos, textos, GIFs, áudios e formatos emergentes — coletados, documentados e preservados com critérios arquivísticos adaptados à especificidade do objeto digital.
-
-    A política de acervo orienta a entrada, o tratamento, a descrição e a disponibilização dos itens, garantindo rastreabilidade, contextualização e integridade das coleções. Cada item é acompanhado de metadados que documentam sua origem, circulação, variações e contexto cultural de produção.
-
-    As coleções estão organizadas por eixos temáticos — memes políticos, pandemia, subculturas, humor absurdo, memes regionais, entre outros — e são permanentemente ampliadas por meio de doações, coletas sistemáticas e parcerias com pesquisadores."
-    list_items:
-      - text: "Critérios de seleção baseados em relevância cultural, circulação documentada e representatividade temática."
-      - text: "Preservação em múltiplos formatos para garantir acesso a longo prazo."
-      - text: "Descrição contextualizada com metadados sobre origem, plataforma e período de circulação."
-      - text: "Acesso aberto ao acervo digitalizado, com exceções para itens sensíveis ou de direitos reservados."
-
-  - id: "programa-de-pesquisa"
-    title: "4. Programa de Pesquisa"
-    content: "O programa de pesquisa do #MUSEUdeMEMES estrutura as atividades científicas da instituição, articulando pesquisadores internos, colaboradores externos e estudantes de graduação e pós-graduação em torno de projetos temáticos sobre memética digital.
-
-    As pesquisas desenvolvidas no museu abrangem história dos memes, análise de discurso, comunicação política, humor digital, cultura participativa, desinformação, identidade online e preservação da memória digital. Os resultados são publicados em formato aberto e apresentados em eventos científicos nacionais e internacionais.
-
-    O Escritório Modelo de Memes é o principal laboratório de pesquisa aplicada da instituição, reunindo bolsistas, pesquisadores associados e projetos financiados por agências de fomento."
-    list_items:
-      - text: "Projetos temáticos anuais com equipes multidisciplinares."
-      - text: "Publicação de artigos, capítulos e relatórios em acesso aberto."
-      - text: "Parcerias com grupos de pesquisa nacionais e internacionais."
-      - text: "Programa de bolsas para estudantes de iniciação científica e pós-graduação."
-
-  - id: "programa-educativo"
-    title: "5. Programa Educativo e Cultural"
-    content: "O programa educativo e cultural do #MUSEUdeMEMES tem como objetivo promover a alfabetização midiática, o pensamento crítico sobre a comunicação em rede e o reconhecimento dos memes como objeto cultural legítimo, com ações voltadas a diferentes públicos — estudantes, professores, pesquisadores e cidadãos em geral.
-
-    As ações educativas incluem visitas mediadas às exposições, oficinas de leitura crítica de memes, materiais didáticos para o ensino básico e médio, cursos de extensão universitária e eventos de divulgação científica. As exposições temáticas são o principal instrumento de comunicação pública da instituição, reunindo curadoria, pesquisa e design em experiências imersivas sobre a cultura de internet."
-    list_items:
-      - text: "Exposições temáticas presenciais e virtuais com curadoria científica."
-      - text: "Oficinas de alfabetização midiática para escolas públicas."
-      - text: "Materiais didáticos gratuitos disponíveis para download."
-      - text: "Eventos e seminários abertos à comunidade acadêmica e ao público geral."
-
-  - id: "politica-de-comunicacao"
-    title: "6. Política de Comunicação"
-    content: "A comunicação do #MUSEUdeMEMES é orientada pela transparência institucional, pela produção de conteúdo de qualidade sobre cultura digital e pela manutenção de uma presença ativa nas plataformas onde os próprios memes circulam.
-
-    A política de comunicação abrange a gestão das redes sociais, a produção editorial (site, newsletter, publicações), o relacionamento com a imprensa e a comunicação interna. O museu adota como princípio que sua presença nas redes deve ser coerente com seu objeto de estudo — comunicando de forma criativa, plural e contextualizada."
-    list_items:
-      - text: "Presença ativa no Instagram, Twitter/X, YouTube e plataformas emergentes."
-      - text: "Newsletter mensal com curadoria de pesquisas, memes históricos e agenda cultural."
-      - text: "Relações com a imprensa pautadas pela acessibilidade e pela clareza científica."
-      - text: "Relatórios anuais de atividades disponíveis publicamente."
-
-  - id: "gestao-sustentabilidade"
-    title: "7. Gestão e Sustentabilidade"
-    content: "O #MUSEUdeMEMES é uma iniciativa de pesquisa vinculada institucionalmente à FAFICH/UFMG, operando com financiamento misto — recursos universitários, editais de fomento à pesquisa e parcerias institucionais. A sustentabilidade financeira é gerida de forma transparente, com prestação de contas periódica aos financiadores e à comunidade.
-
-    A governança do museu é exercida por uma coordenação colegiada, composta pela diretoria e pelos coordenadores de programa, que se reúne regularmente para deliberar sobre as ações institucionais, avaliar resultados e planejar ciclos futuros. O presente Plano Museológico é revisado a cada três anos, com possibilidade de atualizações pontuais entre revisões."
-    list_items:
-      - text: "Financiamento por editais CNPq, FAPEMIG e parcerias institucionais."
-      - text: "Prestação de contas anual publicada no site institucional."
-      - text: "Revisão trienal do Plano Museológico com participação da equipe."
-      - text: "Política de acesso aberto a publicações, acervo e materiais educativos."
-
-sidebar_nav:
-  - title: "1. Apresentação"
-    url: "#apresentacao"
-    active: true
-  - title: "2. Missão, Visão e Valores"
-    url: "#missao-visao-valores"
-  - title: "3. Política de Acervo"
-    url: "#politica-de-acervo"
-  - title: "4. Programa de Pesquisa"
-    url: "#programa-de-pesquisa"
-  - title: "5. Programa Educativo"
-    url: "#programa-educativo"
-  - title: "6. Política de Comunicação"
-    url: "#politica-de-comunicacao"
-  - title: "7. Gestão e Sustentabilidade"
-    url: "#gestao-sustentabilidade"
 ---
 <div class="content-wrapper">
 <header class="wrapper bg-white">
@@ -113,11 +17,8 @@ sidebar_nav:
       otherClassList="w-100 d-flex ms-auto"
       otherBtn=true
       otherBtnClassList="btn btn-sm btn-primary rounded"
-      otherLink=true
-      otherLinkText="Sign In"
-      otherLinkModal="modal-signin"
-      otherBtnText="Sign Up"
-      otherBtnModal="modal-signup"
+      otherBtnText="Área Restrita"
+      otherBtnLink="/museudememes/admin"
   %}
 </header>
 
@@ -132,34 +33,221 @@ sidebar_nav:
   </div>
 </section>
 
-<div class="container">
-  <div class="row gx-0">
-    <aside class="col-xl-3 sidebar sticky-sidebar mt-md-0 py-16 d-none d-xl-block">
-      <div class="widget">
-        <nav id="sidebar-nav">
-          <ul class="list-unstyled text-reset">
-            {% for item in page.sidebar_nav %}
-            <li><a class="nav-link scroll{% if item.active %} active{% endif %}" href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about5.webp" alt="Missão do #MUSEUdeMEMES" class="img-fluid">
+        </figure>
       </div>
-    </aside>
-    <div class="col-xl-8">
-      {% for section in page.terms_sections %}
-      {% include components/sections/terms/section.html
-        id=section.id
-        title=section.title
-        content=section.content
-        list_items=section.list_items
-        index=forloop.index
-        last=forloop.last
-        py="6"
-      %}
-      {% endfor %}
+      <div class="col-lg-6">
+        <h2 class="display-4 mb-3">Missão, Visão <br class="d-none d-xl-block">e Valores</h2>
+        <p class="lead fs-lg">Preservar, pesquisar e difundir os memes como patrimônio imaterial da cultura digital contemporânea.</p>
+        <p class="mb-6">Nossa visão é ser reconhecido como o principal centro de referência em memética digital do Brasil e da América Latina, contribuindo para a valorização da cultura de internet como objeto legítimo de pesquisa acadêmica, preservação cultural e educação midiática.</p>
+        <div class="row gx-xl-10 gy-6">
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/team.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+              <div>
+                <h4 class="mb-1">Diversidade</h4>
+                <p class="mb-0">Valorizar a pluralidade de vozes, comunidades e contextos que produzem e circulam memes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+              <div>
+                <h4 class="mb-1">Rigor Acadêmico</h4>
+                <p class="mb-0">Articular preservação e pesquisa com responsabilidade científica e metodológica.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/certificate.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+              <div>
+                <h4 class="mb-1">Acesso Aberto</h4>
+                <p class="mb-0">Disponibilizar acervo, publicações e materiais educativos de forma gratuita e acessível.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/handshake.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+              <div>
+                <h4 class="mb-1">Colaboração</h4>
+                <p class="mb-0">Atuar em rede com pesquisadores, instituições e comunidades de internet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- ── Bloco 2: Política de Acervo — imagem à esquerda ── -->
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about11.webp" srcset="/assets/img/photos/about11@2x.webp 2x" alt="Política de Acervo" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 ms-auto">
+        <div class="d-flex flex-row mb-5">
+          <div><img src="/assets/img/icons/lineal/files.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">Preservação digital</h4>
+            <p class="mb-0">Múltiplos formatos e checksums garantem a integridade do acervo a longo prazo.</p>
+          </div>
+        </div>
+        <h2 class="display-4 mb-3">Política de Acervo</h2>
+        <p class="lead fs-lg">Critérios rigorosos para coleta, catalogação e preservação dos memes como objetos culturais digitais.</p>
+        <p class="mb-6">O acervo do #MUSEUdeMEMES é composto por memes em suas diversas formas — imagens, vídeos, textos, GIFs, áudios e formatos emergentes — coletados, documentados e preservados com critérios arquivísticos adaptados à especificidade do objeto digital. Cada item é acompanhado de metadados que documentam sua origem, circulação, variações e contexto cultural de produção.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Critérios de seleção baseados em relevância cultural e circulação documentada.</li>
+          <li><i class="uil uil-check"></i>Preservação em múltiplos formatos para garantir acesso a longo prazo.</li>
+          <li><i class="uil uil-check"></i>Descrição contextualizada com metadados sobre origem, plataforma e período de circulação.</li>
+          <li><i class="uil uil-check"></i>Acesso aberto ao acervo digitalizado, com exceções para itens sensíveis.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Bloco 3: Programa de Pesquisa — imagem à direita ── -->
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about12.webp" srcset="/assets/img/photos/about12@2x.webp 2x" alt="Programa de Pesquisa" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 me-auto">
+        <div class="d-flex flex-row mb-5">
+          <div><img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">Pesquisa multidisciplinar</h4>
+            <p class="mb-0">Equipes de comunicação, educação, história e ciência da computação atuam juntas.</p>
+          </div>
+        </div>
+        <h2 class="display-4 mb-3">Programa de Pesquisa</h2>
+        <p class="lead fs-lg">Projetos temáticos que articulam acervo, análise e publicação científica em memética digital.</p>
+        <p class="mb-6">O programa de pesquisa estrutura as atividades científicas da instituição, articulando pesquisadores internos, colaboradores externos e estudantes de graduação e pós-graduação em torno de projetos sobre memética digital. Os resultados são publicados em formato aberto e apresentados em eventos científicos nacionais e internacionais.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Projetos temáticos anuais com equipes multidisciplinares.</li>
+          <li><i class="uil uil-check"></i>Publicação de artigos, capítulos e relatórios em acesso aberto.</li>
+          <li><i class="uil uil-check"></i>Parcerias com grupos de pesquisa nacionais e internacionais.</li>
+          <li><i class="uil uil-check"></i>Programa de bolsas para iniciação científica e pós-graduação.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Bloco 4: Programa Educativo — imagem à esquerda ── -->
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about13.webp" srcset="/assets/img/photos/about13@2x.webp 2x" alt="Programa Educativo" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 ms-auto">
+        <div class="d-flex flex-row mb-5">
+          <div><img src="/assets/img/icons/lineal/crayons.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">Alfabetização midiática</h4>
+            <p class="mb-0">Oficinas e materiais didáticos gratuitos para escolas públicas e universidades.</p>
+          </div>
+        </div>
+        <h2 class="display-4 mb-3">Programa Educativo e Cultural</h2>
+        <p class="lead fs-lg">Ações voltadas a estudantes, professores e cidadãos para promover o pensamento crítico sobre a comunicação em rede.</p>
+        <p class="mb-6">O programa educativo tem como objetivo promover a alfabetização midiática e o reconhecimento dos memes como objeto cultural legítimo. As exposições temáticas são o principal instrumento de comunicação pública da instituição, reunindo curadoria, pesquisa e design em experiências imersivas sobre a cultura de internet.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Exposições temáticas presenciais e virtuais com curadoria científica.</li>
+          <li><i class="uil uil-check"></i>Oficinas de alfabetização midiática para escolas públicas.</li>
+          <li><i class="uil uil-check"></i>Materiais didáticos gratuitos disponíveis para download.</li>
+          <li><i class="uil uil-check"></i>Eventos e seminários abertos à comunidade acadêmica e ao público geral.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Bloco 5: Política de Comunicação — imagem à direita ── -->
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about14.webp" srcset="/assets/img/photos/about14@2x.webp 2x" alt="Política de Comunicação" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 me-auto">
+        <div class="d-flex flex-row mb-5">
+          <div><img src="/assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">Presença nas redes</h4>
+            <p class="mb-0">Comunicação coerente com o objeto de estudo — criativa, plural e contextualizada.</p>
+          </div>
+        </div>
+        <h2 class="display-4 mb-3">Política de Comunicação</h2>
+        <p class="lead fs-lg">Transparência institucional e produção de conteúdo de qualidade sobre cultura digital.</p>
+        <p class="mb-6">A comunicação do #MUSEUdeMEMES é orientada pela transparência institucional e pela manutenção de uma presença ativa nas plataformas onde os próprios memes circulam. A política abrange a gestão das redes sociais, a produção editorial, o relacionamento com a imprensa e a comunicação interna.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Presença ativa no Instagram, Twitter/X, YouTube e plataformas emergentes.</li>
+          <li><i class="uil uil-check"></i>Newsletter mensal com curadoria de pesquisas, memes históricos e agenda cultural.</li>
+          <li><i class="uil uil-check"></i>Relações com a imprensa pautadas pela acessibilidade e pela clareza científica.</li>
+          <li><i class="uil uil-check"></i>Relatórios anuais de atividades disponíveis publicamente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Bloco 6: Gestão e Sustentabilidade — imagem à esquerda ── -->
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-md-8 col-lg-6 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+        <figure class="rounded">
+          <img src="/assets/img/photos/about15.webp" srcset="/assets/img/photos/about15@2x.webp 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 ms-auto">
+        <div class="d-flex flex-row mb-5">
+          <div><img src="/assets/img/icons/lineal/balance.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div>
+            <h4 class="mb-1">Governança colegiada</h4>
+            <p class="mb-0">Coordenação transparente com prestação de contas periódica à comunidade.</p>
+          </div>
+        </div>
+        <h2 class="display-4 mb-3">Gestão e Sustentabilidade</h2>
+        <p class="lead fs-lg">Financiamento misto e governança colegiada para garantir a continuidade e a independência institucional.</p>
+        <p class="mb-6">O #MUSEUdeMEMES é uma iniciativa de pesquisa vinculada à FAFICH/UFMG, operando com financiamento misto — recursos universitários, editais de fomento à pesquisa e parcerias institucionais. A sustentabilidade financeira é gerida de forma transparente, com prestação de contas periódica aos financiadores e à comunidade. O presente Plano Museológico é revisado a cada três anos.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Financiamento por editais CNPq, FAPEMIG e parcerias institucionais.</li>
+          <li><i class="uil uil-check"></i>Prestação de contas anual publicada no site institucional.</li>
+          <li><i class="uil uil-check"></i>Revisão trienal do Plano Museológico com participação da equipe.</li>
+          <li><i class="uil uil-check"></i>Política de acesso aberto a publicações, acervo e materiais educativos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% include components/footer/footer.html
     style="default"

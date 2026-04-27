@@ -1,64 +1,59 @@
 members:
   - name: John Doe
-    active: true
     role: Pesquisador de Memética
+    active: true
     bio: Mestrando em Comunicação Social. Pesquisa memes políticos e sua circulação em redes sociais.
     avatar_image: /assets/img/avatars/te5.webp
     avatar_image2x: /assets/img/avatars/te5@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-twitter
-
   - name: Camila Farias
-    active: true
     role: Catalogadora Digital
+    active: true
     bio: Especialista em arquivística digital. Responsável pela indexação e descrição dos itens do acervo.
     avatar_image: /assets/img/avatars/te6.webp
     avatar_image2x: /assets/img/avatars/te6@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-instagram
-
   - name: Bruno Castro
-    active: true
     role: Designer e Desenvolvedor
+    active: true
     bio: Responsável pela identidade visual do museu e pelo desenvolvimento das plataformas digitais.
     avatar_image: /assets/img/avatars/te11.webp
     avatar_image2x: /assets/img/avatars/te11@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-instagram
-      - url: "#"
+      - url: '#'
         icon: uil uil-linkedin
-
   - name: Juliana Rocha
-    active: true
     role: Pesquisadora de Alfabetização Midiática
+    active: true
     bio: Doutoranda em Educação. Desenvolve kits educativos e guias de alfabetização midiática sobre cultura de internet.
     avatar_image: /assets/img/avatars/te8.webp
     avatar_image2x: /assets/img/avatars/te8@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-linkedin
-
-  - name: Thiago Lima
-    active: true
+  - name: Thiago Lima Silva
     role: Pesquisador de Acervo
+    active: true
     bio: Historiador com foco em memória digital. Coordena o levantamento e tratamento de coleções históricas de memes.
     avatar_image: /assets/img/avatars/te9.webp
     avatar_image2x: /assets/img/avatars/te9@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-twitter
-
   - name: Isabela Nunes
-    active: true
     role: Comunicação e Mídias Sociais
+    active: true
     bio: Jornalista especializada em cultura digital. Gerencia a presença do museu nas redes sociais e a produção de conteúdo editorial.
     avatar_image: /assets/img/avatars/te10.webp
     avatar_image2x: /assets/img/avatars/te10@2x.webp
     social:
-      - url: "#"
+      - url: '#'
         icon: uil uil-instagram
-      - url: "#"
+      - url: '#'
         icon: uil uil-twitter

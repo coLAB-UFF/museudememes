@@ -2,18 +2,14 @@
   <h4 class="widget-title mb-3">Palavras-Chaves</h4>
   {% assign pc_values = "" | split: "" %}
   {% for post in site.memes %}
-    {% if post.palavras_chaves %}
-      {% if post.palavras_chaves.first %}
-        {% for val in post.palavras_chaves %}
+    {% if post.palavras_chaves and post.palavras_chaves.size > 0 %}
+      {% for val in post.palavras_chaves %}
+        {% if val and val != "" %}
           {% unless pc_values contains val %}
             {% assign pc_values = pc_values | push: val %}
           {% endunless %}
-        {% endfor %}
-      {% else %}
-        {% unless pc_values contains post.palavras_chaves %}
-          {% assign pc_values = pc_values | push: post.palavras_chaves %}
-        {% endunless %}
-      {% endif %}
+        {% endif %}
+      {% endfor %}
     {% endif %}
   {% endfor %}
   {% assign pc_values = pc_values | sort %}

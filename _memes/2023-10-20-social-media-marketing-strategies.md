@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Social Media Marketing Strategies That Drive Engagement"
-date: 2025-01-28
-last_modified: 2025-03-08
+date: "2025-01-28"
+last_modified: "2025-03-08"
 author: Jane Smith
 category: Marketing
 categoria: "Meme Viral"

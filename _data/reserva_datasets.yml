@@ -1,0 +1,40 @@
+datasets:
+  - id: "memes-eleitorais-2022"
+    icon: "uil uil-chart-line"
+    icon_bg: "bg-primary"
+    title: "Memes Eleitorais 2022"
+    description: "Corpus de memes coletados durante as eleições presidenciais brasileiras de 2022."
+    date: "2024-01-15"
+    entries: 1247
+    format: "CSV + JSON"
+    download_url: ""
+
+  - id: "memes-pandemia-2020-2022"
+    icon: "uil uil-cloud"
+    icon_bg: "bg-violet"
+    title: "Memes da Pandemia (2020–2022)"
+    description: "Acervo de memes produzidos e circulados durante o período da pandemia de COVID-19 no Brasil."
+    date: "2024-03-10"
+    entries: 3854
+    format: "CSV + JSON"
+    download_url: ""
+
+  - id: "memes-politicos-historicos"
+    icon: "uil uil-star"
+    icon_bg: "bg-green"
+    title: "Memes Políticos Históricos"
+    description: "Seleção curada de memes políticos brasileiros entre 2010 e 2020, com metadados de contexto histórico."
+    date: "2023-11-20"
+    entries: 678
+    format: "CSV"
+    download_url: "https://books.scielo.org/id/s5cw9/pdf/gomes-9786556309019.pdf"
+
+  - id: "id-unico-sem-espacos"
+    icon: "uil uil-chart-bar"
+    icon_bg: "bg-primary"
+    title: "Nome do Dataset"
+    description: "Uma frase descrevendo o conteúdo do dataset."
+    date: "2026-01-01"
+    entries: 500
+    format: "CSV"
+    download_url: "https://drive.google.com/uc?export=download&id=ID_DO_ARQUIVO"

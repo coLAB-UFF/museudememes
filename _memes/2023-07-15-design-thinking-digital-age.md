@@ -1,9 +1,9 @@
 ---
 layout: meme/verbete
 title: "Design Thinking in the Digital Age: Transforming User Experiences"
-date: 2025-01-15
-last_modified: 2025-03-05  
-author: [Jane Smith, John Doe]
+date: "2025-01-15"
+last_modified: "2025-03-05"
+author: "Jane Smith"
 moldura: moldura_circle
 category: Design
 categoria: "Meme Político"
@@ -21,7 +21,6 @@ header_style: overlay
 sidebar_position: right
 header_image: /assets/img/photos/bg5.webp
 featured_image: /assets/img/photos/b1.webp
-featured: true
 excerpt: Learn how design thinking has evolved over the past decade and how it is transforming user experiences in the digital age.
 tags: 
   - UX Design

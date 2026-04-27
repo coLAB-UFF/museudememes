@@ -112,19 +112,15 @@ escritorio_final:
       label: "Publicação aberta"
 ---
 <div class="content-wrapper">
-  <header class="wrapper bg-light">
+  <header class="wrapper bg-white">
     {% include components/navbar/navbar.html
-        classList="center-nav transparent navbar-light"
+        classList="center-nav navbar-light"
         centerNav=true
-        logoAlt=true
         otherClassList="w-100 d-flex ms-auto"
         otherBtn=true
         otherBtnClassList="btn btn-sm btn-primary rounded"
-        otherLink=true
-        otherLinkText="Sign In"
-        otherLinkModal="modal-signin"
-        otherBtnText="Sign Up"
-        otherBtnModal="modal-signup"
+        otherBtnText="Área Restrita"
+        otherBtnLink="/museudememes/admin"
     %}
   </header>
 

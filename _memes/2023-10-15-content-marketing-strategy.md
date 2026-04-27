@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Creating an Effective Content Marketing Strategy for 2024"
-date: 2025-01-25
-last_modified: 2025-03-07
+date: "2025-01-25"
+last_modified: "2025-03-07"
 author: John Doe
 category: Marketing
 categoria: "Meme de Marca"

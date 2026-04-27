@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Email Marketing Automation: Building Customer Relationships at Scale"
-date: 2025-01-30
-last_modified: 2025-03-09
+date: "2025-01-30"
+last_modified: "2025-03-09"
 author: John Doe
 category: Marketing
 header_style: standard
@@ -23,6 +23,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b2.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

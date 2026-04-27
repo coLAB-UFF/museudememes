@@ -1,0 +1,247 @@
+# ──────────────────────────────────────────────────────────────────────────────
+#  Sveltia CMS — #MUSEUdeMEMES
+#  Documentação: https://github.com/sveltia/sveltia-cms
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Backend local (desenvolvimento sem GitHub) ─────────────────────────────
+local_backend: true
+
+# ── Backend produção (preencher quando repositório GitHub existir) ──────────
+backend:
+  name: github
+  repo: museudememes/site
+  branch: main
+
+# ── Mídia ──────────────────────────────────────────────────────────────────
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+# ── Interface ──────────────────────────────────────────────────────────────
+locale: pt
+site_url: "http://localhost:4001/museudememes"
+
+# ──────────────────────────────────────────────────────────────────────────────
+#  COLEÇÕES
+# ──────────────────────────────────────────────────────────────────────────────
+collections:
+
+  # ── 1. VERBETES — Acervo de Memes ────────────────────────────────────────
+  - name: "memes"
+    label: "Verbetes — Acervo"
+    label_singular: "Verbete"
+    folder: "_memes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/museudememes/colecoes/{{filename}}/"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data de publicação", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Última modificação", name: "last_modified", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false}
+      - {label: "Curador(a)", name: "author", widget: "string"}
+      - {label: "Excerto", name: "excerpt", widget: "text", required: false, hint: "Resumo curto exibido nos cards de listagem"}
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        required: false
+        options: ["Meme Político", "Meme de Humor", "Meme Técnico", "Meme Estético", "Meme Cultural", "Meme Comportamental", "Meme de Subcultura", "Meme de Marca", "Meme de Nicho", "Meme Viral", "Outro"]
+      - {label: "Tema", name: "tema", widget: "string", required: false}
+      - {label: "Ano de Origem", name: "ano_origem", widget: "string", required: false, hint: "Ex: 2019"}
+      - label: "Formato"
+        name: "formato"
+        widget: "select"
+        required: false
+        options: ["Imagem", "GIF", "Vídeo", "Áudio", "Texto", "Sticker", "Misto", "Outro"]
+      - {label: "Criador / Origem", name: "criador", widget: "string", required: false}
+      - label: "Plataforma"
+        name: "plataforma"
+        widget: "select"
+        required: false
+        options: ["WhatsApp", "Twitter / X", "Twitter", "Facebook", "Instagram", "TikTok", "Reddit", "YouTube", "Telegram", "4chan", "Orkut", "Tumblr", "Pinterest", "LinkedIn", "Outro"]
+      - label: "Palavras-Chave"
+        name: "palavras_chaves"
+        widget: "list"
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - {label: "Imagem Destacada", name: "featured_image", widget: "image", required: false}
+      - {label: "Imagem Hero (banner)", name: "hero_image", widget: "image", required: false}
+      - label: "Galeria de Variações"
+        name: "gallery"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - {label: "Imagem", name: "url", widget: "image"}
+          - {label: "Legenda / Alt", name: "alt", widget: "string", required: false}
+      - {label: "Conteúdo do Verbete", name: "body", widget: "markdown", hint: "Seções: ## Descrição Geral / ## Origens / ## Disseminação / ## Estética e Linguagem / ## Impacto Social e Cultural"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "meme/verbete"}
+
+
+  # ── 2. ENSAIOS E ARTIGOS — Blog ──────────────────────────────────────────
+  - name: "posts"
+    label: "Ensaios e Artigos"
+    label_singular: "Artigo"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/museudememes/blog/{{slug}}/"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Última modificação", name: "last_modified", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false}
+      - {label: "Linha de autoria (exibida no site)", name: "authors_line", widget: "string", hint: "Ex: Jane Smith e João Souza"}
+      - label: "Autores"
+        name: "authors"
+        widget: "list"
+        required: false
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        required: false
+        options: ["Cultura Digital", "Memética", "Pesquisa", "Crítica", "Análise", "Evento", "Entrevista", "Opinião", "Meme Político", "Meme de Humor", "Meme Técnico", "Meme Estético", "Meme Cultural", "Meme de Marca", "Meme de Nicho", "Meme Viral", "Outro"]
+      - {label: "Excerto", name: "excerpt", widget: "text", required: false}
+      - {label: "Imagem Destacada", name: "featured_image", widget: "image", required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - label: "Galeria do Post"
+        name: "galeria_post"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        hint: "Inserida no corpo do post com o include: components/blog/gallery.html (id: galeria_post)"
+        fields:
+          - {label: "Imagem", name: "url", widget: "image"}
+          - {label: "Legenda / Alt", name: "alt", widget: "string", required: false}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "museudememes/artigo"}
+
+
+  # ── 3. EXPOSIÇÕES ────────────────────────────────────────────────────────
+  - name: "exposicoes"
+    label: "Exposições"
+    label_singular: "Exposição"
+    folder: "_exposicoes"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/museudememes/exposicoes/{{slug}}/"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descrição", name: "description", widget: "text"}
+      - {label: "Data", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Período de Realização", name: "data_realizacao", widget: "string", hint: "Ex: Outubro a Dezembro de 2024"}
+      - {label: "Local", name: "local", widget: "string"}
+      - label: "Equipe Curatorial"
+        name: "equipe_curatorial"
+        widget: "list"
+      - {label: "Imagem Portrait (single page)", name: "portrait_image", widget: "image", required: false}
+      - {label: "Thumbnail (listagem)", name: "thumbnail", widget: "image", required: false}
+      - label: "Catálogos — SlideShare"
+        name: "slideshare"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - {label: "ID do SlideShare", name: "id", widget: "string", hint: "Ex: iNiTf2eM7sl9NO"}
+          - {label: "Título", name: "title", widget: "string", required: false}
+      - {label: "Trilha Sonora — ID da playlist Spotify", name: "spotify", widget: "string", required: false, hint: "Ex: 37i9dQZF1DXcBWIGoYBM5M"}
+      - label: "Galeria da Vernissage"
+        name: "galeria_vernissage"
+        widget: "list"
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - {label: "Imagem", name: "url", widget: "image"}
+          - {label: "Legenda / Alt", name: "alt", widget: "string", required: false}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "museudememes/exposicao"}
+
+
+  # ── 4. EQUIPE & AUTORES (_data/team_board.yml + _data/team_members.yml) ────
+  #  Edita diretamente os arquivos YAML que alimentam as páginas da equipe no site.
+  - name: "equipe"
+    label: "Equipe & Autores"
+    files:
+
+      # ── 4a. Conselho / Board ───────────────────────────────────────────────
+      - name: "board"
+        label: "Conselho / Board"
+        file: "_data/team_board.yml"
+        fields:
+          - name: "members"
+            label: "Membros do Conselho"
+            label_singular: "Membro"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Cargo / Posição", name: "role", widget: "string", hint: "Ex: Diretora e Fundadora"}
+              - {label: "Ativo no site", name: "active", widget: "boolean", default: true}
+              - {label: "Bio", name: "bio", widget: "text", hint: "Texto exibido no card da equipe"}
+              - {label: "Avatar (1x)", name: "avatar_image", widget: "image", required: false, hint: "Ex: /assets/img/avatars/te1.webp"}
+              - {label: "Avatar (2x / Retina)", name: "avatar_image2x", widget: "image", required: false, hint: "Ex: /assets/img/avatars/te1@2x.webp"}
+              - name: "social"
+                label: "Redes Sociais"
+                widget: "list"
+                required: false
+                summary: "{{fields.icon}}"
+                fields:
+                  - {label: "URL", name: "url", widget: "string", hint: "Ex: https://instagram.com/usuario"}
+                  - label: "Ícone"
+                    name: "icon"
+                    widget: "select"
+                    hint: "Classe CSS do ícone (Unicons ou Font Awesome). Ex: uil uil-instagram"
+                    options:
+                      - {label: "Instagram", value: "uil uil-instagram"}
+                      - {label: "Twitter / X", value: "uil uil-twitter"}
+                      - {label: "LinkedIn", value: "uil uil-linkedin"}
+                      - {label: "Facebook", value: "uil uil-facebook-f"}
+                      - {label: "YouTube", value: "uil uil-youtube"}
+                      - {label: "GitHub", value: "uil uil-github"}
+                      - {label: "Bluesky", value: "fa-brands fa-bluesky"}
+                      - {label: "Mastodon", value: "fa-brands fa-mastodon"}
+                      - {label: "TikTok", value: "fa-brands fa-tiktok"}
+                      - {label: "ORCID", value: "fa-brands fa-orcid"}
+                      - {label: "ResearchGate", value: "fa-brands fa-researchgate"}
+                      - {label: "Academia.edu", value: "fa-solid fa-a"}
+                      - {label: "Google Scholar", value: "fa-brands fa-google-scholar"}
+                      - {label: "Lattes (CNPq)", value: "uil uil-graduation-cap"}
+                      - {label: "Site / Blog", value: "uil uil-globe"}
+                      - {label: "E-mail", value: "uil uil-envelope"}
+
+  # ── 5. THESAURUS (_data/thesaurus.yml) ──────────────────────────────────
+  - name: "thesaurus"
+    label: "Thesaurus"
+    files:
+      - name: "thesaurus"
+        label: "Verbetes do Thesaurus"
+        file: "_data/thesaurus.yml"
+        fields:
+          - label: "Verbetes"
+            name: "entries"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - {label: "ID (slug)", name: "id", widget: "string", hint: "Identificador único sem espaços nem acentos. Ex: meme-politico"}
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Descrição", name: "description", widget: "text"}
+              - label: "Categoria"
+                name: "category"
+                widget: "select"
+                options: ["Memética", "Semiótica", "Cultura Digital", "Comunicação", "Humor Digital"]
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+              - {label: "Imagem Principal", name: "image", widget: "image", required: false}
+              - label: "Galeria"
+                name: "gallery"
+                widget: "list"
+                required: false
+                summary: "{{fields.alt}}"
+                fields:
+                  - {label: "Imagem", name: "url", widget: "image"}
+                  - {label: "Legenda / Alt", name: "alt", widget: "string", required: false}

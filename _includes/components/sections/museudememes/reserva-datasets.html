@@ -1,0 +1,174 @@
+<section id="datasets" class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+
+    <div class="row text-center mb-10">
+      <div class="col-xl-8 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Acervo de Dados</h2>
+        <h3 class="display-4 mb-3">Datasets disponíveis para pesquisa</h3>
+        <p class="lead">Selecione um dataset para ver os detalhes e solicitar acesso ao download mediante preenchimento do formulário de pesquisa.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+
+        {% for dataset in site.data.reserva_datasets.datasets %}
+        {% assign idx = forloop.index %}
+
+        <div class="card mb-4 shadow-sm lift">
+
+          <!-- Cabeçalho clicável -->
+          <div class="card-body p-5"
+               role="button"
+               style="cursor:pointer;"
+               data-bs-toggle="collapse"
+               data-bs-target="#dataset-form-{{ idx }}"
+               aria-expanded="false"
+               aria-controls="dataset-form-{{ idx }}">
+            <div class="row align-items-center gy-3">
+
+              <!-- Ícone + Título + Descrição -->
+              <div class="col-lg-5 d-flex align-items-center gap-3">
+                <span class="avatar {{ dataset.icon_bg }} text-white flex-shrink-0"
+                      style="width:46px;height:46px;font-size:1.3rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
+                  <i class="{{ dataset.icon }}"></i>
+                </span>
+                <div>
+                  <h5 class="mb-1 lh-sm">{{ dataset.title }}</h5>
+                  <p class="mb-0 text-muted" style="font-size:0.85rem;">{{ dataset.description }}</p>
+                </div>
+              </div>
+
+              <!-- Data -->
+              <div class="col-6 col-lg-2">
+                <div class="text-muted mb-1" style="font-size:0.65rem; letter-spacing:0.03em; text-transform:uppercase; white-space:nowrap;">Data da Coleta</div>
+                <div class="text-body" style="font-size:0.875rem;">
+                  <i class="uil uil-calendar-alt me-1 text-muted"></i>{{ dataset.date | date: "%d/%m/%Y" }}
+                </div>
+              </div>
+
+              <!-- Entradas -->
+              <div class="col-6 col-lg-2">
+                <div class="text-muted mb-1" style="font-size:0.65rem; letter-spacing:0.03em; text-transform:uppercase; white-space:nowrap;">Tamanho da Base</div>
+                <div class="text-body" style="font-size:0.875rem;">
+                  <i class="uil uil-database me-1 text-muted"></i>{{ dataset.entries }} registros
+                </div>
+              </div>
+
+              <!-- Formato -->
+              <div class="col-6 col-lg-2">
+                <div class="text-muted mb-1" style="font-size:0.65rem; letter-spacing:0.03em; text-transform:uppercase; white-space:nowrap;">Formato</div>
+                <span class="badge bg-pale-primary text-primary rounded-pill py-1 px-3">{{ dataset.format }}</span>
+              </div>
+
+              <!-- Indicador -->
+              <div class="col-6 col-lg-1 text-end">
+                <span class="text-primary fw-bold fs-lg">
+                  <i class="uil uil-angle-down"></i>
+                </span>
+              </div>
+
+            </div>
+          </div><!-- /card-body cabeçalho -->
+
+          <!-- Formulário expansível (accordion) -->
+          <div id="dataset-form-{{ idx }}" class="collapse">
+            <div class="card-body border-top p-6 bg-white">
+
+              <p class="mb-4 text-muted" style="font-size:0.9rem;">
+                <i class="uil uil-info-circle me-1"></i>
+                Preencha todos os campos para liberar o download. Seus dados serão registrados conforme nossa
+                <a href="/museudememes/gestao/" class="hover text-primary">Política de Gestão</a>.
+              </p>
+
+              <form class="dataset-request-form needs-validation"
+                    novalidate
+                    data-dataset-id="{{ dataset.id }}"
+                    data-dataset-title="{{ dataset.title | escape }}"
+                    data-download-url="{{ dataset.download_url | escape }}">
+                <div class="row g-3">
+
+                  <div class="col-sm-6">
+                    <input type="text" name="nome" class="form-control"
+                           placeholder="Nome completo *" required />
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <input type="text" name="instituicao" class="form-control"
+                           placeholder="Instituição *" required />
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <input type="text" name="cidade" class="form-control"
+                           placeholder="Cidade *" required />
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <input type="text" name="pais" class="form-control"
+                           placeholder="País *" required />
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <input type="tel" name="telefone" class="form-control"
+                           placeholder="Telefone *" required />
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <input type="email" name="email" class="form-control"
+                           placeholder="E-mail *" required />
+                    <div class="invalid-feedback">Informe um e-mail válido.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input type="checkbox" name="etica" class="form-check-input"
+                             id="etica-check-{{ idx }}" required />
+                      <label class="form-check-label" for="etica-check-{{ idx }}">
+                        Declaro que irei seguir os protocolos éticos de pesquisa do #MUSEUdeMEMES. *
+                      </label>
+                      <div class="invalid-feedback">É necessário aceitar os protocolos éticos.</div>
+                    </div>
+                  </div>
+
+                  {% if site.recaptcha_site_key and site.recaptcha_site_key != "" %}
+                  <div class="col-12">
+                    <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>
+                    <div class="recaptcha-feedback text-danger mt-1" style="display:none;font-size:0.875rem;">
+                      Por favor, complete o reCAPTCHA.
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <div class="col-12">
+                    <div class="form-feedback alert mb-3" style="display:none;" role="alert"></div>
+                    <button type="submit" class="btn btn-primary rounded-pill">
+                      <i class="uil uil-cloud-download me-1"></i> Baixar Dataset
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div><!-- /collapse -->
+
+        </div><!-- /card -->
+        {% endfor %}
+
+        {% if site.data.reserva_datasets.datasets.size == 0 %}
+        <div class="text-center py-10">
+          <img src="/assets/img/icons/lineal/layers.svg"
+               class="svg-inject icon-svg icon-svg-lg text-primary mb-4" alt="" />
+          <p class="lead text-muted">Nenhum dataset disponível no momento. Em breve!</p>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -2,6 +2,9 @@
 layout: default
 title: "Sobre o #MUSEUdeMEMES"
 permalink: /museudememes/sobre/
+redirect_from:
+  - /museudememes/por-que/
+  - /museudememes/nossa-proposta/
 custom_color: museudememes
 custom_font: space
 
@@ -158,11 +161,8 @@ about12:
         otherClassList="w-100 d-flex ms-auto"
         otherBtn=true
         otherBtnClassList="btn btn-sm btn-primary rounded"
-        otherLink=true
-        otherLinkText="Sign In"
-        otherLinkModal="modal-signin"
-        otherBtnText="Sign Up"
-        otherBtnModal="modal-signup"
+        otherBtnText="Área Restrita"
+        otherBtnLink="/museudememes/admin"
     %}
   </header>
 

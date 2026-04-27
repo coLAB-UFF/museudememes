@@ -2,6 +2,8 @@
 layout: default
 title: "Nossas Exposições"
 permalink: /museudememes/exposicoes/
+redirect_from:
+  - /museudememes/museu/por-que/nossas-exposicoes/
 custom_color: museudememes
 custom_font: space
 
@@ -53,11 +55,8 @@ portfolio11:
       otherClassList="w-100 d-flex ms-auto"
       otherBtn=true
       otherBtnClassList="btn btn-sm btn-primary rounded"
-      otherLink=true
-      otherLinkText="Sign In"
-      otherLinkModal="modal-signin"
-      otherBtnText="Sign Up"
-      otherBtnModal="modal-signup"
+      otherBtnText="Área Restrita"
+      otherBtnLink="/museudememes/admin"
   %}
 
   {% include components/sections/demo34/hero.html %}

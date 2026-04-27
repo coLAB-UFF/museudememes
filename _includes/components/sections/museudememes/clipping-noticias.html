@@ -1,0 +1,208 @@
+<section id="noticias" class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+
+    <div class="row text-center mb-10">
+      <div class="col-xl-8 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Clipping</h2>
+        <h3 class="display-4 mb-3">Notícias sobre o #MUSEUdeMEMES</h3>
+        <p class="lead">Acompanhe as reportagens, entrevistas e menções ao #MUSEUdeMEMES nos veículos de comunicação.</p>
+      </div>
+    </div>
+
+    <!-- Estado: carregando -->
+    <div id="clipping-loading" class="text-center py-10">
+      <div class="spinner-border text-primary" role="status" style="width:2.5rem;height:2.5rem;">
+        <span class="visually-hidden">Carregando notícias…</span>
+      </div>
+      <p class="text-muted mt-3 mb-0">Carregando notícias…</p>
+    </div>
+
+    <!-- Estado: erro -->
+    <div id="clipping-error" class="text-center py-10" style="display:none;">
+      <img src="/assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-lg text-muted mb-4" alt="" />
+      <p class="lead text-muted mb-0">Não foi possível carregar as notícias. Tente novamente mais tarde.</p>
+    </div>
+
+    <!-- Estado: sem resultados -->
+    <div id="clipping-empty" class="text-center py-10" style="display:none;">
+      <img src="/assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-4" alt="" />
+      <p class="lead text-muted mb-0">Nenhuma notícia disponível no momento. Em breve!</p>
+    </div>
+
+    <!-- Grid de cards -->
+    <div id="clipping-list" class="row gy-6" style="display:none;"></div>
+
+    <!-- Paginação -->
+    <div id="clipping-pagination" class="d-flex justify-content-center mt-10" style="display:none;"></div>
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghqhZmdjs7G1eVaEoaVpuTeyFqIJANHszteA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var SHEETS_URL  = 'https://docs.google.com/spreadsheets/d/1qzCZkxj9AeJ8LKt5xJp_snYqXixoq93jK2trl3Xnj6Q/export?format=csv';
+  var GH_RAW_BASE = 'https://raw.githubusercontent.com/colab-uff/clipping/main/';
+  var TAG_FILTER  = '#MUSEUdeMEMES';
+  var PER_PAGE    = 12;
+
+  var allItems   = [];
+  var currentPage = 1;
+
+  /* ── Utilitários ─────────────────────────────────────────── */
+
+  function resolveImage(val) {
+    if (!val || val.trim() === '') return null;
+    val = val.trim();
+    if (/^https?:\/\//i.test(val)) return val;           // URL externa — usar como está
+    return GH_RAW_BASE + val.replace(/^\//, '');          // path relativo → raw GitHub
+  }
+
+  function hasMuseuTag(tags) {
+    if (!tags) return false;
+    return tags.split(',').some(function (t) { return t.trim() === TAG_FILTER; });
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    var parts = dateStr.trim().split('-');
+    if (parts.length === 3) return parts[2] + '/' + parts[1] + '/' + parts[0];
+    return dateStr;
+  }
+
+  function esc(str) {
+    return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ── Renderização de card ────────────────────────────────── */
+
+  function renderCard(row) {
+    var imgUrl    = resolveImage(row['Imagem da Notícia']);
+    var titulo    = esc(row['Título da Notícia'] || '');
+    var descricao = esc(row['Descrição'] || '');
+    var categoria = esc(row['Categoria'] || '');
+    var fonte     = esc(row['Fonte'] || '');
+    var autor     = esc(row['Autor(a)'] || '');
+    var data      = formatDate(row['Data']);
+    var link      = row['Link para a Matéria Completa'] || '';
+
+    var imgHtml = imgUrl
+      ? '<img src="' + imgUrl + '" alt="' + titulo + '" class="w-100 h-100" style="object-fit:cover;" loading="lazy">'
+      : '<div class="w-100 h-100 bg-pale-primary d-flex align-items-center justify-content-center">'
+        + '<i class="uil uil-image text-primary" style="font-size:2.5rem;opacity:.4;"></i></div>';
+
+    var meta = '';
+    if (fonte)  meta += '<span class="me-3 text-nowrap"><i class="uil uil-newspaper me-1 text-muted"></i>' + fonte + '</span>';
+    if (autor)  meta += '<span class="me-3 text-nowrap"><i class="uil uil-user me-1 text-muted"></i>' + autor + '</span>';
+    if (data)   meta += '<span class="text-nowrap"><i class="uil uil-calendar-alt me-1 text-muted"></i>' + data + '</span>';
+
+    var btn = link
+      ? '<a href="' + esc(link) + '" target="_blank" rel="noopener noreferrer"'
+        + ' class="btn btn-sm btn-primary rounded-pill mt-auto" style="align-self:start;">'
+        + '<i class="uil uil-external-link-alt me-1"></i>Ler matéria completa</a>'
+      : '';
+
+    return '<div class="col-md-6 col-xl-4">'
+      + '<article class="card border-0 shadow-sm lift h-100">'
+      +   '<figure class="overflow-hidden mb-0" style="height:200px;border-radius:.5rem .5rem 0 0;">' + imgHtml + '</figure>'
+      +   '<div class="card-body p-5 d-flex flex-column">'
+      +     (categoria ? '<span class="badge bg-pale-primary text-primary rounded-pill mb-3" style="align-self:start;">' + categoria + '</span>' : '')
+      +     '<h5 class="mb-2 lh-sm">' + titulo + '</h5>'
+      +     (descricao ? '<p class="text-muted mb-3" style="font-size:.875rem;">' + descricao + '</p>' : '')
+      +     (meta ? '<div class="d-flex flex-wrap gap-2 mt-auto mb-3" style="font-size:.78rem;">' + meta + '</div>' : '<div class="mt-auto"></div>')
+      +     btn
+      +   '</div>'
+      + '</article>'
+      + '</div>';
+  }
+
+  /* ── Paginação ───────────────────────────────────────────── */
+
+  function renderPagination(page) {
+    var total = Math.ceil(allItems.length / PER_PAGE);
+    var pag   = document.getElementById('clipping-pagination');
+
+    if (total <= 1) { pag.style.display = 'none'; return; }
+
+    var html = '<nav aria-label="Paginação de notícias"><ul class="pagination">';
+
+    html += '<li class="page-item' + (page === 1 ? ' disabled' : '') + '">'
+      + '<a class="page-link rounded" href="#noticias" data-page="' + (page - 1) + '" aria-label="Anterior">‹</a></li>';
+
+    for (var i = 1; i <= total; i++) {
+      html += '<li class="page-item' + (i === page ? ' active' : '') + '">'
+        + '<a class="page-link rounded" href="#noticias" data-page="' + i + '">' + i + '</a></li>';
+    }
+
+    html += '<li class="page-item' + (page === total ? ' disabled' : '') + '">'
+      + '<a class="page-link rounded" href="#noticias" data-page="' + (page + 1) + '" aria-label="Próximo">›</a></li>';
+
+    html += '</ul></nav>';
+    pag.innerHTML = html;
+    pag.style.display = '';
+
+    pag.querySelectorAll('[data-page]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var p = parseInt(this.getAttribute('data-page'), 10);
+        if (p >= 1 && p <= total && p !== currentPage) {
+          currentPage = p;
+          renderPage(currentPage);
+          document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  /* ── Renderização de página ──────────────────────────────── */
+
+  function renderPage(page) {
+    var start = (page - 1) * PER_PAGE;
+    var slice = allItems.slice(start, start + PER_PAGE);
+
+    var list  = document.getElementById('clipping-list');
+    list.innerHTML = slice.map(renderCard).join('');
+    list.style.display = '';
+
+    renderPagination(page);
+  }
+
+  /* ── Fetch + parse ───────────────────────────────────────── */
+
+  function load() {
+    fetch(SHEETS_URL)
+      .then(function (r) { return r.text(); })
+      .then(function (text) {
+        var result = Papa.parse(text, { header: true, skipEmptyLines: true });
+
+        allItems = result.data
+          .filter(function (row) { return hasMuseuTag(row['Tags']); })
+          .sort(function (a, b) {
+            return (b['Data'] || '').localeCompare(a['Data'] || '');
+          });
+
+        document.getElementById('clipping-loading').style.display = 'none';
+
+        if (allItems.length === 0) {
+          document.getElementById('clipping-empty').style.display = '';
+        } else {
+          renderPage(1);
+        }
+      })
+      .catch(function () {
+        document.getElementById('clipping-loading').style.display = 'none';
+        document.getElementById('clipping-error').style.display = '';
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', load);
+  } else {
+    load();
+  }
+
+})();
+</script>

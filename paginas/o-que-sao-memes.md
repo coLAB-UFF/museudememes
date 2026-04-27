@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "O que são memes"
-permalink: /museudememes/o-que-sao-memes/
+permalink: /museudememes/o-que/
+redirect_from:
+  - /museudememes/o-que-sao-memes/
 custom_color: museudememes
 custom_font: space
 
@@ -182,19 +184,15 @@ features18:
 <div class="content-wrapper">
 
   <!-- NAVBAR -->
-  <header class="wrapper bg-light">
+  <header class="wrapper bg-white">
     {% include components/navbar/navbar.html
-        classList="center-nav transparent navbar-light"
+        classList="center-nav navbar-light"
         centerNav=true
-        logoAlt=true
         otherClassList="w-100 d-flex ms-auto"
         otherBtn=true
         otherBtnClassList="btn btn-sm btn-primary rounded"
-        otherLink=true
-        otherLinkText="Sign In"
-        otherLinkModal="modal-signin"
-        otherBtnText="Sign Up"
-        otherBtnModal="modal-signup"
+        otherBtnText="Área Restrita"
+        otherBtnLink="/museudememes/admin"
     %}
   </header>
 

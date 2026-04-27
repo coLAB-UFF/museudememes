@@ -1,0 +1,74 @@
+<style>
+  .thesaurus-badge-Memética        { background-color: #ede9f6; color: #605dba; }
+  .thesaurus-badge-Semiótica        { background-color: #e0f0fb; color: #54a8c7; }
+  .thesaurus-badge-CulturaDigital   { background-color: #e4f5ef; color: #45c4a0; }
+  .thesaurus-badge-Comunicação      { background-color: #fff3e0; color: #f78b77; }
+  .thesaurus-badge-HumorDigital     { background-color: #fef3cd; color: #fab758; }
+</style>
+
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-17">
+
+    <div class="row g-6">
+      {% for entry in site.data.thesaurus.entries %}
+
+      {% assign cat_key = entry.category | remove: " " | remove: "." %}
+      {% assign badge_class = "thesaurus-badge-" | append: cat_key %}
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg h-100">
+
+          {% if entry.gallery and entry.gallery.size > 0 %}
+          <div class="row g-1 m-0">
+            {% for item in entry.gallery limit: 4 %}
+            <div class="col-6">
+              <img src="{{ item.url }}" alt="{{ item.alt }}"
+                style="aspect-ratio:1/1; object-fit:cover; width:100%; display:block;">
+            </div>
+            {% endfor %}
+          </div>
+          {% else %}
+          <img src="{{ entry.image }}" alt="{{ entry.title }}"
+            style="aspect-ratio:4/3; object-fit:cover; width:100%; display:block;">
+          {% endif %}
+
+          <div class="card-body">
+
+            <span class="badge rounded-pill mb-2 {{ badge_class }}">{{ entry.category }}</span>
+
+            <h4 class="card-title mb-2">{{ entry.title }}</h4>
+
+            {% assign desc = entry.description | strip %}
+            {% assign desc_short = desc | truncate: 120 %}
+            {% assign desc_rest = desc | slice: 120, 9999 %}
+
+            <p class="mb-0 small text-muted">
+              <span id="desc-{{ entry.id }}-short">{{ desc_short }}</span><span id="desc-{{ entry.id }}-full" style="display:none;">{{ desc_rest }}</span>
+              {% if desc.size > 120 %}
+              <a href="#" class="text-primary ms-1" id="toggle-{{ entry.id }}"
+                onclick="(function(e){
+                  e.preventDefault();
+                  var full = document.getElementById('desc-{{ entry.id }}-full');
+                  var short = document.getElementById('desc-{{ entry.id }}-short');
+                  var link = document.getElementById('toggle-{{ entry.id }}');
+                  if (full.style.display === 'none') {
+                    full.style.display = 'inline';
+                    short.style.display = 'none';
+                    link.textContent = 'ver menos';
+                  } else {
+                    full.style.display = 'none';
+                    short.style.display = 'inline';
+                    link.textContent = 'ver mais';
+                  }
+                })(event)">ver mais</a>
+              {% endif %}
+            </p>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

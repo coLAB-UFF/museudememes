@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Responsive Web Design Principles for Modern Websites"
-date: 2025-01-18
-last_modified: 2025-03-04
+date: "2025-01-18"
+last_modified: "2025-03-04"
 author: Jane Smith
 category: Design
 categoria: "Meme de Nicho"

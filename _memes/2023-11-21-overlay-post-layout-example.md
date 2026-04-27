@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "Overlay Post Layout Example"
-date: 2025-02-13
-last_modified: 2025-03-14
+date: "2025-02-13"
+last_modified: "2025-03-14"
 author: Jane Smith
 category: Marketing
 header_style: overlay
@@ -23,6 +23,13 @@ gallery:
     alt: "Variação 3"
   - url: /assets/img/photos/b5.webp
     alt: "Variação 4"
+categoria: "Outro"
+plataforma: "Outro"
+formato: "Outro"
+tema: ""
+ano_origem: ""
+criador: ""
+palavras_chaves: []
 ---
 
 ## Descrição Geral

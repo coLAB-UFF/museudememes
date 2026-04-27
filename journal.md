@@ -3,6 +3,8 @@ layout: meme/acervo-listing
 title: Acervo
 description: Explore nossa coleção de verbetes sobre memes, cultura digital e memética brasileira.
 permalink: /museudememes/acervo/
+redirect_from:
+  - /museudememes/colecoes/
 custom_color: museudememes
 custom_font: space
 pagination:

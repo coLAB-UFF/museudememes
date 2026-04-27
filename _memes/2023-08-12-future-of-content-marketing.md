@@ -1,8 +1,8 @@
 ---
 layout: meme/verbete
 title: "The Future of Content Marketing: Trends and Strategies for 2025"
-date: 2025-01-10   
-last_modified: 2025-03-04  
+date: "2025-01-10"
+last_modified: "2025-03-04"
 author: John Doe
 category: Marketing
 categoria: "Meme de Marca"

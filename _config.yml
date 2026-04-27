@@ -1,6 +1,14 @@
 baseurl: ""
 url: ""
 
+# Reserva Técnica — preencher após configurar reCAPTCHA e Apps Script
+recaptcha_site_key: "6LfYv8osAAAAAPNOcqHpn-EvMvT0Q8ub5yAzajCe"          # Chave pública do Google reCAPTCHA v2
+google_apps_script_url: "https://script.google.com/macros/s/AKfycbzCbmJxOKMcAFYrnpcEsBbZTWmewGUbhhV7oLr2QQJf0JUah6X552Hkp6rE9eY9K7ET/exec"      # URL de implantação do Google Apps Script web app
+
+# Formspree — formulários de contato (https://formspree.io)
+formspree_doacao_url: "https://formspree.io/f/xlgavkab"          # Ex: https://formspree.io/f/XXXXXXXX  (página Enviar Doação)
+formspree_licenciamento_url: "https://formspree.io/f/xgorqbqp"   # Ex: https://formspree.io/f/YYYYYYYY  (página Licenciamento)
+
 # Build settings
 markdown: kramdown
 #permalink: /museudememes/blog/:year/:month/:day/:title/
@@ -19,7 +27,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-watch
-  - jekyll-toc   #Documentation TOC 
+  - jekyll-toc   #Documentation TOC
+  - jekyll-redirect-from
 
 # TOC Settings for documentation
 toc:
@@ -116,6 +125,7 @@ exclude:
   - tmp
   - .git
   - .github
+  - _lixeira
   - .vscode
 
 # LiveReload settings
