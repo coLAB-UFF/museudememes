@@ -29,6 +29,9 @@
       <p class="lead text-muted mb-0">Nenhuma notícia disponível no momento. Em breve!</p>
     </div>
 
+    <!-- Resumo estatístico -->
+    <div id="clipping-summary" class="text-center text-muted mb-8" style="display:none; font-size:.9rem;"></div>
+
     <!-- Grid de cards -->
     <div id="clipping-list" class="row gy-6" style="display:none;"></div>
 
@@ -38,13 +41,14 @@
   </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghqhZmdjs7G1eVaEoaVpuTeyFqIJANHszteA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" crossorigin="anonymous"></script>
 
 <script>
 (function () {
   'use strict';
 
-  var SHEETS_URL  = 'https://docs.google.com/spreadsheets/d/1qzCZkxj9AeJ8LKt5xJp_snYqXixoq93jK2trl3Xnj6Q/export?format=csv';
+  // gviz/tq endpoint: tem CORS nativo para planilhas públicas (evita o problema do redirect do /export)
+  var SHEETS_URL  = 'https://docs.google.com/spreadsheets/d/1qzCZkxj9AeJ8LKt5xJp_snYqXixoq93jK2trl3Xnj6Q/gviz/tq?tqx=out:csv';
   var GH_RAW_BASE = 'https://raw.githubusercontent.com/colab-uff/clipping/main/';
   var TAG_FILTER  = '#MUSEUdeMEMES';
   var PER_PAGE    = 12;
@@ -94,10 +98,13 @@
       : '<div class="w-100 h-100 bg-pale-primary d-flex align-items-center justify-content-center">'
         + '<i class="uil uil-image text-primary" style="font-size:2.5rem;opacity:.4;"></i></div>';
 
+    var pais = esc((row['País'] || '').trim()) || 'País não indicado';
+
     var meta = '';
     if (fonte)  meta += '<span class="me-3 text-nowrap"><i class="uil uil-newspaper me-1 text-muted"></i>' + fonte + '</span>';
     if (autor)  meta += '<span class="me-3 text-nowrap"><i class="uil uil-user me-1 text-muted"></i>' + autor + '</span>';
-    if (data)   meta += '<span class="text-nowrap"><i class="uil uil-calendar-alt me-1 text-muted"></i>' + data + '</span>';
+    if (data)   meta += '<span class="me-3 text-nowrap"><i class="uil uil-calendar-alt me-1 text-muted"></i>' + data + '</span>';
+    meta += '<span class="text-nowrap"><i class="uil uil-map-marker me-1 text-muted"></i>' + pais + '</span>';
 
     var btn = link
       ? '<a href="' + esc(link) + '" target="_blank" rel="noopener noreferrer"'
@@ -157,6 +164,25 @@
     });
   }
 
+  /* ── Resumo estatístico ──────────────────────────────────── */
+
+  function renderSummary() {
+    var total   = allItems.length;
+    var fontes  = new Set(allItems.map(function(r) { return (r['Fonte'] || '').trim(); }).filter(Boolean)).size;
+    var paises  = new Set(allItems.map(function(r) { return (r['País']  || '').trim(); }).filter(Boolean)).size;
+
+    var txt = '<strong>' + total + '</strong> ' + (total === 1 ? 'notícia' : 'notícias')
+      + ' de <strong>' + fontes + '</strong> ' + (fontes === 1 ? 'fonte noticiosa' : 'fontes noticiosas diferentes');
+
+    if (paises > 0) {
+      txt += ' em <strong>' + paises + '</strong> ' + (paises === 1 ? 'país' : 'países');
+    }
+
+    var el = document.getElementById('clipping-summary');
+    el.innerHTML = txt;
+    el.style.display = '';
+  }
+
   /* ── Renderização de página ──────────────────────────────── */
 
   function renderPage(page) {
@@ -189,6 +215,7 @@
         if (allItems.length === 0) {
           document.getElementById('clipping-empty').style.display = '';
         } else {
+          renderSummary();
           renderPage(1);
         }
       })

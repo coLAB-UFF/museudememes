@@ -4,6 +4,7 @@ url: ""
 # Reserva Técnica — preencher após configurar reCAPTCHA e Apps Script
 recaptcha_site_key: "6LfYv8osAAAAAPNOcqHpn-EvMvT0Q8ub5yAzajCe"          # Chave pública do Google reCAPTCHA v2
 google_apps_script_url: "https://script.google.com/macros/s/AKfycbzCbmJxOKMcAFYrnpcEsBbZTWmewGUbhhV7oLr2QQJf0JUah6X552Hkp6rE9eY9K7ET/exec"      # URL de implantação do Google Apps Script web app
+newsletter_apps_script_url: "https://script.google.com/macros/s/AKfycbwEZwA58DImomaWvYHDHxLzzwpwyQUJGPheynxfQhrLQ7p3Tr0PC9Rbd5GMZt1MABzH/exec"          # URL do Apps Script da newsletter (conta museudememes@gmail.com)
 
 # Formspree — formulários de contato (https://formspree.io)
 formspree_doacao_url: "https://formspree.io/f/xlgavkab"          # Ex: https://formspree.io/f/XXXXXXXX  (página Enviar Doação)

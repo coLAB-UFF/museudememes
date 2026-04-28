@@ -56,20 +56,77 @@
       <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.newsletter.title | default: 'Our Newsletter' }}</h4>
       <p class="mb-5">{{ site.data.footer.newsletter.description | default: 'Subscribe to our newsletter to get our news & deals delivered to you.' }}</p>
       <div class="newsletter-wrapper">
-        {% if site.data.footer.newsletter.custom_form %}
+        {% if site.newsletter_apps_script_url and site.newsletter_apps_script_url != "" %}
+        <!-- Formulário de newsletter — backend Apps Script -->
+        <div id="footer-newsletter">
+          <div class="mc-field-group input-group form-floating">
+            <input type="email" id="footer-nl-email" class="form-control" placeholder="Seu e-mail">
+            <label for="footer-nl-email">Seu e-mail</label>
+            <button id="footer-nl-btn" type="button"
+                    class="btn btn-white {% if include.btnClassList %}{{ include.btnClassList }}{% endif %}">
+              {{ site.data.footer.newsletter.button_text | default: 'Assinar' }}
+            </button>
+          </div>
+          <div id="footer-nl-msg" class="mt-2" style="font-size:.85rem; display:none;"></div>
+        </div>
+        <script>
+        (function () {
+          'use strict';
+          var SCRIPT_URL = '{{ site.newsletter_apps_script_url }}';
+          var btn   = document.getElementById('footer-nl-btn');
+          var input = document.getElementById('footer-nl-email');
+          var msg   = document.getElementById('footer-nl-msg');
+
+          function showMsg(text, ok) {
+            msg.textContent = text;
+            msg.style.color = ok ? '#5cb85c' : '#d9534f';
+            msg.style.display = '';
+          }
+
+          function submit() {
+            var email = input.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              showMsg('Por favor, informe um e-mail válido.', false);
+              return;
+            }
+            btn.disabled = true;
+            var originalText = btn.textContent;
+            btn.textContent = '…';
+            var params = new URLSearchParams({ action: 'newsletter', email: email });
+            fetch(SCRIPT_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' })
+              .then(function () {
+                showMsg('Inscrição realizada! Verifique seu e-mail para confirmar.', true);
+                input.value = '';
+              })
+              .catch(function () {
+                showMsg('Erro ao enviar. Tente novamente mais tarde.', false);
+              })
+              .finally(function () {
+                btn.disabled = false;
+                btn.textContent = originalText;
+              });
+          }
+
+          btn.addEventListener('click', submit);
+          input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') { e.preventDefault(); submit(); }
+          });
+        })();
+        </script>
+        {% elsif site.data.footer.newsletter.custom_form %}
           {{ site.data.footer.newsletter.custom_form }}
         {% else %}
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup">
-          <form action="{{ site.data.footer.newsletter.form_action | default: 'https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a' }}" 
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" 
+          <form action="{{ site.data.footer.newsletter.form_action | default: 'https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a' }}"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                 class="validate {% if include.lightText %}dark-fields{% endif %}" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="mc-field-group input-group form-floating">
                 <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL">
                 <label for="mce-EMAIL">Email Address</label>
-                <input type="submit" value="{{ site.data.footer.newsletter.button_text | default: 'Join' }}" 
-                       name="subscribe" id="mc-embedded-subscribe" 
+                <input type="submit" value="{{ site.data.footer.newsletter.button_text | default: 'Join' }}"
+                       name="subscribe" id="mc-embedded-subscribe"
                        class="btn btn-white {% if include.btnClassList %}{{ include.btnClassList }}{% endif %}">
               </div>
               <div id="mce-responses" class="clear">
