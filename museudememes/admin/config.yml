@@ -14,7 +14,7 @@ backend:
   name: github
   repo: coLAB-UFF/museudememes
   branch: master
-  app_id: ""   # ← ID numérico da GitHub App (ex: 123456)
+  app_id: 3537566
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
 media_folder: "assets/img/uploads"
