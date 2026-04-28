@@ -1,4 +1,4 @@
 # Configurações de produção — GitHub Pages
 # Usado em conjunto com _config.yml no build do CI
 url: "https://colab-uff.github.io"
-baseurl: "/museudememes"
+baseurl: ""

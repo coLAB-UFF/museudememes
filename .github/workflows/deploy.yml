@@ -2,7 +2,7 @@ name: Deploy para GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -28,30 +28,41 @@ jobs:
           bundler-cache: true
 
       - name: Build Jekyll (produção)
+        # _config_prod.yml: url="https://colab-uff.github.io", baseurl=""
+        # Manter baseurl="" evita que relative_url duplique paths que já
+        # começam com /museudememes/ (links da navegação, permalinks, etc.)
         run: bundle exec jekyll build --config _config.yml,_config_prod.yml
         env:
           JEKYLL_ENV: production
 
-      - name: Corrigir caminhos hardcoded de assets
-        # Substitui /assets/ por /museudememes/assets/ nos HTML gerados,
-        # cobrindo as refs que não usam o filtro relative_url do Liquid.
+      - name: Corrigir caminhos de assets para GitHub Pages
+        # Com baseurl="" e o site em /museudememes/, todos os /assets/
+        # precisam virar /museudememes/assets/ nos HTML gerados.
+        # O sed cobre: src=, href=, srcset=, content= (meta OG) e url() inline.
         run: |
-          find _site/museudememes -name "*.html" \
-            -exec sed -i \
-              -e 's|="/assets/|="/museudememes/assets/|g' \
-              -e 's|srcset="/assets/|srcset="/museudememes/assets/|g' \
-            {} \;
+          fix_assets() {
+            sed -i \
+              -e 's|"/assets/|"/museudememes/assets/|g' \
+              -e "s|'/assets/|'/museudememes/assets/|g" \
+              -e 's|url(/assets/|url(/museudememes/assets/|g' \
+              "$1"
+          }
+          export -f fix_assets
+          # Páginas do museudememes
+          find _site/museudememes -name "*.html" -exec bash -c 'fix_assets "$1"' _ {} \;
+          # Página 404 (fica na raiz do _site, fora de museudememes/)
+          [ -f _site/404.html ] && fix_assets _site/404.html
 
       - name: Montar diretório de deploy
-        # Coloca o conteúdo de museudememes/ na raiz + pasta assets/
-        # para que o GitHub Pages sirva corretamente em /museudememes/
+        # Raiz do gh-pages = conteúdo de _site/museudememes/ + _site/assets/
+        # Resultado: colab-uff.github.io/museudememes/ serve o site corretamente
         run: |
           mkdir -p _deploy
           cp -r _site/museudememes/. _deploy/
-          cp -r _site/assets _deploy/assets
-          cp _site/404.html _deploy/ 2>/dev/null || true
-          cp _site/sitemap.xml _deploy/ 2>/dev/null || true
-          cp _site/feed.xml _deploy/ 2>/dev/null || true
+          cp -r _site/assets         _deploy/assets
+          cp    _site/404.html       _deploy/
+          cp    _site/sitemap.xml    _deploy/ 2>/dev/null || true
+          cp    _site/feed.xml       _deploy/ 2>/dev/null || true
           touch _deploy/.nojekyll
 
       - name: Enviar artefato para Pages
