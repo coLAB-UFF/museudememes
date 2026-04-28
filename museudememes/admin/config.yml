@@ -15,7 +15,7 @@ backend:
   name: github
   repo: coLAB-UFF/museudememes
   branch: master
-  auth_type: implicit
+  auth_type: pkce
   client_id: "Ov23licUsjj9ARbo82EP"
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
