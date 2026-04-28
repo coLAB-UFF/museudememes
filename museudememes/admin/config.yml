@@ -16,7 +16,7 @@ backend:
   repo: coLAB-UFF/museudememes
   branch: master
   auth_type: implicit
-  client_id: "Ov23licUsjj9ARbo82EP"   # ← preencher com o Client ID do GitHub OAuth App
+  client_id: "Ov23licUsjj9ARbo82EP"
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
 media_folder: "assets/img/uploads"
