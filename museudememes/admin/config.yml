@@ -3,14 +3,20 @@
 #  Documentação: https://github.com/sveltia/sveltia-cms
 # ──────────────────────────────────────────────────────────────────────────────
 
-# ── Backend local (desenvolvimento sem GitHub) ─────────────────────────────
-local_backend: true
+# ── Backend local (só ativo quando o servidor proxy local estiver rodando) ──
+local_backend: false
 
-# ── Backend produção (preencher quando repositório GitHub existir) ──────────
+# ── Backend produção ────────────────────────────────────────────────────────
+# auth_type: implicit não exige servidor — requer um GitHub OAuth App com
+# Authorization callback URL = https://colab-uff.github.io/museudememes/admin/
+# Crie em: https://github.com/organizations/coLAB-UFF/settings/applications
+# e preencha client_id abaixo.
 backend:
   name: github
-  repo: museudememes/site
-  branch: main
+  repo: coLAB-UFF/museudememes
+  branch: master
+  auth_type: implicit
+  client_id: ""   # ← preencher com o Client ID do GitHub OAuth App
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
 media_folder: "assets/img/uploads"
@@ -18,7 +24,7 @@ public_folder: "/assets/img/uploads"
 
 # ── Interface ──────────────────────────────────────────────────────────────
 locale: pt
-site_url: "http://localhost:4001/museudememes"
+site_url: "https://colab-uff.github.io/museudememes"
 
 # ──────────────────────────────────────────────────────────────────────────────
 #  COLEÇÕES
