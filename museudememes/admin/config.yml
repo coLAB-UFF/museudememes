@@ -7,16 +7,14 @@
 local_backend: false
 
 # ── Backend produção ────────────────────────────────────────────────────────
-# auth_type: implicit não exige servidor — requer um GitHub OAuth App com
-# Authorization callback URL = https://colab-uff.github.io/museudememes/admin/
-# Crie em: https://github.com/organizations/coLAB-UFF/settings/applications
-# e preencha client_id abaixo.
+# Usa GitHub App (não OAuth App) — suporta o fluxo de autenticação do Sveltia CMS.
+# Crie a app em: https://github.com/organizations/coLAB-UFF/settings/apps/new
+# e preencha app_id abaixo com o ID numérico gerado.
 backend:
   name: github
   repo: coLAB-UFF/museudememes
   branch: master
-  auth_type: pkce
-  client_id: "Ov23licUsjj9ARbo82EP"
+  app_id: ""   # ← ID numérico da GitHub App (ex: 123456)
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
 media_folder: "assets/img/uploads"
