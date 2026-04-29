@@ -7,13 +7,14 @@
 local_backend: false
 
 # ── Backend produção ────────────────────────────────────────────────────────
-# Usa GitHub App (não OAuth App) — suporta o fluxo de autenticação do Sveltia CMS.
-# Crie a app em: https://github.com/organizations/coLAB-UFF/settings/apps/new
-# e preencha app_id abaixo com o ID numérico gerado.
+# Autenticação via Sveltia CMS Authenticator (Cloudflare Worker).
+# Worker: https://sveltia-cms-auth.viktor-8cd.workers.dev
+# OAuth App GitHub: MUSEUdeMEMES CMS Auth (github.com/settings/applications/3563822)
 backend:
   name: github
   repo: coLAB-UFF/museudememes
   branch: master
+  base_url: https://sveltia-cms-auth.viktor-8cd.workers.dev
 
 # ── Mídia ──────────────────────────────────────────────────────────────────
 media_folder: "assets/img/uploads"
