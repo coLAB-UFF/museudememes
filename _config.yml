@@ -71,7 +71,7 @@ collections:
   memes:
     output: true
     permalink: /museudememes/colecoes/:path/
-  exposicoes:
+  exhibitions:
     output: true
     permalink: /museudememes/exposicoes/:path/
   authors:
@@ -104,7 +104,7 @@ defaults:
       custom_font: space
   - scope:
       path: ""
-      type: "exposicoes"
+      type: "exhibitions"
     values:
       layout: "museudememes/exposicao"
       custom_color: museudememes

@@ -7,7 +7,7 @@
       </div>
     </div>
     <!-- /.row -->
-    {% assign expo_projects = site.exposicoes | sort: 'date' | reverse %}
+    {% assign expo_projects = site.exhibitions | sort: 'date' | reverse %}
     {% for project in expo_projects limit: 4 %}
     {% assign pcolors = "primary,leaf,violet,fuchsia" | split: "," %}
     {% assign pcolor = pcolors[forloop.index0] %}

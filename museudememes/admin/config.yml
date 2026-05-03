@@ -125,10 +125,10 @@ collections:
 
 
   # ── 3. EXPOSIÇÕES ────────────────────────────────────────────────────────
-  - name: "exposicoes"
+  - name: "exhibitions"
     label: "Exposições"
     label_singular: "Exposição"
-    folder: "_exposicoes"
+    folder: "_exhibitions"
     create: true
     slug: "{{slug}}"
     preview_path: "/museudememes/exposicoes/{{slug}}/"

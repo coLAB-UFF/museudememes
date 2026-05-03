@@ -156,7 +156,7 @@ Não há limite de tags, mas recomenda-se no máximo 5.
 
 ## 6. Molduras SVG (Verbetes do Acervo)
 
-Para os verbetes (`_memes/*.md`), a imagem de destaque pode ser emoldurada com SVGs da pasta `/molduras/`.
+Para os verbetes (`_memes/*.md`), a imagem de destaque pode ser emoldurada com SVGs da pasta `/frames/`.
 
 ```yaml
 feature_meme_image: /assets/img/memes/capivara.webp
@@ -180,7 +180,7 @@ Se `feature_meme_image:` for omitido, usa `hero_image:`; se ausente, usa `featur
 | `moldura_landscape_vermelha` | Paisagem — vermelha |
 | `moldura_portrait_rustica` | Retrato rústico |
 
-Qualquer novo arquivo `.svg` adicionado à pasta `/molduras/` funciona automaticamente — basta indicar o nome (sem `.svg`) no campo `moldura:`.
+Qualquer novo arquivo `.svg` adicionado à pasta `/frames/` funciona automaticamente — basta indicar o nome (sem `.svg`) no campo `moldura:`.
 
 ---
 

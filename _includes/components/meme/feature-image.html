@@ -1,7 +1,7 @@
 {% comment %}
   Feature image do verbete — com ou sem moldura SVG.
   Lê: page.feature_meme_image → page.hero_image → page.featured_image
-  Lê: page.moldura (nome do arquivo SVG em /molduras/, sem extensão)
+  Lê: page.moldura (nome do arquivo SVG em /frames/, sem extensão)
 
   Sem moldura → <img> simples com cantos arredondados.
   Com moldura → SVG renderizado POR CIMA da foto via mix-blend-mode:multiply.
@@ -13,7 +13,7 @@
     a foto fica clipada com precisão na janela. Sem ela ainda funciona — o blend
     já revela a foto; apenas pode haver leve vazamento no cordão acima da moldura.
 
-  Qualquer SVG colocado em /molduras/ é automaticamente suportado — basta indicar
+  Qualquer SVG colocado em /frames/ é automaticamente suportado — basta indicar
   o nome (sem .svg) no front matter. A classe CSS de clip-path é opcional e melhora
   a precisão, mas não é obrigatória para o efeito funcionar.
 {% endcomment %}
@@ -32,7 +32,7 @@
            loading="eager">
     </div>
     {% comment %} SVG: z-index 2, em fluxo (determina altura), mix-blend-mode:multiply {% endcomment %}
-    <img src="{{ '/molduras/' | append: moldura_nome | append: '.svg' | relative_url }}"
+    <img src="{{ '/frames/' | append: moldura_nome | append: '.svg' | relative_url }}"
          class="fmi-frame-svg"
          alt=""
          role="presentation"
