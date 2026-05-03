@@ -10,11 +10,6 @@ custom_font: space
 
 features18:
   enable: true
-  subtitle: "De onde viemos"
-  title:
-    before: "As origens do"
-    highlight: "#MUSEUdeMEMES"
-    after: "e como tudo começou."
   services:
     - title: "Um projeto nascido da internet"
       description: "O #MUSEUdeMEMES surgiu em 2013 como uma iniciativa informal de pesquisadores de comunicação e cultura digital que perceberam que os memes estavam desaparecendo sem deixar rastro. Plataformas mudavam, perfis eram deletados, e a memória coletiva da internet se perdia."
