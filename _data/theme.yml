@@ -25,8 +25,8 @@ logo_1x: "/images_static/logo_short.png"
 logo_2x: "/images_static/logo_short.png"
 black_logo_1x: "/assets/img/logo-dark.webp"
 black_logo_2x: "/assets/img/logo-dark@2x.webp"
-light_logo_1x: "/assets/img/logo-light.webp"
-light_logo_2x: "/assets/img/logo-light@2x.webp"
+light_logo_1x: "/images_static/logo_footer.png"
+light_logo_2x: "/images_static/logo_footer.png"
 
 address: 'Moonshine St. 14/05 Light City, London, United Kingdom'
 address_01: 'Moonshine St. <br>14/05 Light City,<br /> London, United Kingdom'
