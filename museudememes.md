@@ -27,17 +27,17 @@ trusted_clients:
 
 # Showcase Section
 showcase:
-  main_image: "/images_static/header.webp"
-  main_image2x: "/images_static/header.webp"
+  main_image: "/images_static/header.png"
+  main_image2x: "/images_static/header.png"
   floating_images:
-    - image: "/images_static/meme_forninho.webp"
-      image2x: "/images_static/meme_forninho.webp"
+    - image: "/images_static/meme_forninho.png"
+      image2x: "/images_static/meme_forninho.png"
       position: "top: 20%; right:-10%; max-width:30%; height: auto;"
-    - image: "/images_static/meme_mimimi.webp"
-      image2x: "/images_static/meme_mimimi.webp"
+    - image: "/images_static/meme_mimimi.png"
+      image2x: "/images_static/meme_mimimi.png"
       position: "top: 10%; left:-10%; max-width:30%; height: auto;"
-    - image: "/images_static/meme_baleia.webp"
-      image2x: "/images_static/meme_baleia.webp"
+    - image: "/images_static/meme_baleia.png"
+      image2x: "/images_static/meme_baleia.png"
       position: "bottom: 10%; left:-13%; max-width:30%; height: auto;"
 
 # Features Section 1
@@ -50,17 +50,17 @@ features_1:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /images_static/meme_sanduiche.webp
-      image2x: /images_static/meme_sanduiche.webp
+    - image: /images_static/meme_sanduiche.png
+      image2x: /images_static/meme_sanduiche.png
       delay: 300
-    - image: /images_static/meme_choque.webp
-      image2x: /images_static/meme_choque.webp
+    - image: /images_static/meme_choque.png
+      image2x: /images_static/meme_choque.png
       delay: 600
-    - image: /images_static/meme_tombo.webp
-      image2x: /images_static/meme_tombo.webp
+    - image: /images_static/meme_tombo.png
+      image2x: /images_static/meme_tombo.png
       delay: 900
-    - image: /images_static/meme_carreta.webp
-      image2x: /images_static/meme_carreta.webp
+    - image: /images_static/meme_carreta.png
+      image2x: /images_static/meme_carreta.png
       delay: 1200
   color: primary
 
@@ -74,17 +74,17 @@ features_2:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /images_static/meme_grumpy.webp
-      image2x: /images_static/meme_grumpy.webp
+    - image: /images_static/meme_grumpy.png
+      image2x: /images_static/meme_grumpy.png
       delay: 300
-    - image: /images_static/meme_chloe.webp
-      image2x: /images_static/meme_chloe.webp
+    - image: /images_static/meme_chloe.png
+      image2x: /images_static/meme_chloe.png
       delay: 600
-    - image: /images_static/meme_chocolaterain.webp
-      image2x: /images_static/meme_chocolaterain.webp
+    - image: /images_static/meme_chocolaterain.png
+      image2x: /images_static/meme_chocolaterain.png
       delay: 900
-    - image: /images_static/meme_successkid.webp
-      image2x: /images_static/meme_successkid.webp
+    - image: /images_static/meme_successkid.png
+      image2x: /images_static/meme_successkid.png
       delay: 1200
   color: yellow
 
@@ -98,14 +98,14 @@ features_3:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /images_static/meme_arvores.webp
-      image2x: /images_static/meme_arvores.webp
+    - image: /images_static/meme_arvores.png
+      image2x: /images_static/meme_arvores.png
       delay: 300
-    - image: /images_static/meme_bolo.webp
-      image2x: /images_static/meme_bolo.webp
+    - image: /images_static/meme_bolo.png
+      image2x: /images_static/meme_bolo.png
       delay: 900
-    - image: /images_static/meme_substituir.webp
-      image2x: /images_static/meme_substituir.webp
+    - image: /images_static/meme_substituir.png
+      image2x: /images_static/meme_substituir.png
       delay: 1200
   color: fuchsia
 
@@ -113,7 +113,7 @@ features_3:
 video:
   title: Find out everything you need to know about creating a business process model
   video_url: /images_static/video.mp4
-  poster: /images_static/video.webp
+  poster: /images_static/video.png
   webm_url: /images_static/video.mp4
   process_steps:
     - icon: shield
@@ -216,8 +216,8 @@ join_community:
       text: "Happy Customers"
     - count: "4x"
       text: "Revenue Growth"
-  image: "/images_static/footer.webp"
-  image2x: "/images_static/footer.webp"
+  image: "/images_static/footer.png"
+  image2x: "/images_static/footer.png"
   divider: true
   divider_color: "text-soft-primary"
 
