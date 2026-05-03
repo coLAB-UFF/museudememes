@@ -32,13 +32,13 @@ showcase:
   floating_images:
     - image: "/images_static/meme_forninho.png"
       image2x: "/images_static/meme_forninho.png"
-      position: "top: 15%; right:-8%; max-width:22%; height: auto;"
+      position: "top: 30%; right:-8%; max-width:22%; height: auto;"
     - image: "/images_static/meme_mimimi.png"
       image2x: "/images_static/meme_mimimi.png"
-      position: "top: 5%; left:-8%; max-width:22%; height: auto;"
+      position: "top: 2%; left:-8%; max-width:22%; height: auto;"
     - image: "/images_static/meme_baleia.png"
       image2x: "/images_static/meme_baleia.png"
-      position: "bottom: 5%; right:-10%; max-width:22%; height: auto;"
+      position: "bottom: 2%; left:-10%; max-width:22%; height: auto;"
 
 # Features Section 1
 features_1:
