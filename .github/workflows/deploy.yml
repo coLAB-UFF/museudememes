@@ -36,8 +36,9 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Corrigir caminhos de assets para GitHub Pages
-        # Com baseurl="" e o site em /museudememes/, todos os /assets/
-        # precisam virar /museudememes/assets/ nos HTML gerados.
+        # Com baseurl="" e o site em /museudememes/, todos os /assets/ e
+        # /images_static/ precisam virar /museudememes/assets/ e
+        # /museudememes/images_static/ nos HTML gerados.
         # O sed cobre: src=, href=, srcset=, content= (meta OG) e url() inline.
         run: |
           fix_assets() {
@@ -45,6 +46,9 @@ jobs:
               -e 's|"/assets/|"/museudememes/assets/|g' \
               -e "s|'/assets/|'/museudememes/assets/|g" \
               -e 's|url(/assets/|url(/museudememes/assets/|g' \
+              -e 's|"/images_static/|"/museudememes/images_static/|g' \
+              -e "s|'/images_static/|'/museudememes/images_static/|g" \
+              -e 's|url(/images_static/|url(/museudememes/images_static/|g' \
               "$1"
           }
           export -f fix_assets
@@ -54,12 +58,13 @@ jobs:
           [ -f _site/404.html ] && fix_assets _site/404.html
 
       - name: Montar diretório de deploy
-        # Raiz do gh-pages = conteúdo de _site/museudememes/ + _site/assets/
+        # Raiz do gh-pages = conteúdo de _site/museudememes/ + _site/assets/ + _site/images_static/
         # Resultado: colab-uff.github.io/museudememes/ serve o site corretamente
         run: |
           mkdir -p _deploy
           cp -r _site/museudememes/. _deploy/
           cp -r _site/assets         _deploy/assets
+          cp -r _site/images_static  _deploy/images_static
           cp    _site/404.html       _deploy/
           cp    _site/sitemap.xml    _deploy/ 2>/dev/null || true
           cp    _site/feed.xml       _deploy/ 2>/dev/null || true
