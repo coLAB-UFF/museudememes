@@ -21,8 +21,8 @@ font_scheme: # dm , space , thicccboi , urbanist
 font_icons_scheme: # https://unicons.iconscout.com/release/v4.0.8/css/line.css
 
 # Sitewide Logo
-logo_1x: "/assets/img/logo.webp"
-logo_2x: "/assets/img/logo@2x.webp"
+logo_1x: "/images_static/logo_short.webp"
+logo_2x: "/images_static/logo_short.webp"
 black_logo_1x: "/assets/img/logo-dark.webp"
 black_logo_2x: "/assets/img/logo-dark@2x.webp"
 light_logo_1x: "/assets/img/logo-light.webp"

@@ -27,17 +27,17 @@ trusted_clients:
 
 # Showcase Section
 showcase:
-  main_image: "/assets/img/photos/sa1.webp"
-  main_image2x: "/assets/img/photos/sa1@2x.webp"
+  main_image: "/images_static/header.webp"
+  main_image2x: "/images_static/header.webp"
   floating_images:
-    - image: "/assets/img/photos/sa2.webp"
-      image2x: "/assets/img/photos/sa2@2x.webp"
+    - image: "/images_static/meme_forninho.webp"
+      image2x: "/images_static/meme_forninho.webp"
       position: "top: 20%; right:-10%; max-width:30%; height: auto;"
-    - image: "/assets/img/photos/sa3.webp"
-      image2x: "/assets/img/photos/sa3@2x.webp"
+    - image: "/images_static/meme_mimimi.webp"
+      image2x: "/images_static/meme_mimimi.webp"
       position: "top: 10%; left:-10%; max-width:30%; height: auto;"
-    - image: "/assets/img/photos/sa4.webp"
-      image2x: "/assets/img/photos/sa4@2x.webp"
+    - image: "/images_static/meme_baleia.webp"
+      image2x: "/images_static/meme_baleia.webp"
       position: "bottom: 10%; left:-13%; max-width:30%; height: auto;"
 
 # Features Section 1
@@ -50,17 +50,17 @@ features_1:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa5.webp
-      image2x: /assets/img/photos/sa5@2x.webp
+    - image: /images_static/meme_sanduiche.webp
+      image2x: /images_static/meme_sanduiche.webp
       delay: 300
-    - image: /assets/img/photos/sa6.webp
-      image2x: /assets/img/photos/sa6@2x.webp
+    - image: /images_static/meme_choque.webp
+      image2x: /images_static/meme_choque.webp
       delay: 600
-    - image: /assets/img/photos/sa7.webp
-      image2x: /assets/img/photos/sa7@2x.webp
+    - image: /images_static/meme_tombo.webp
+      image2x: /images_static/meme_tombo.webp
       delay: 900
-    - image: /assets/img/photos/sa8.webp
-      image2x: /assets/img/photos/sa8@2x.webp
+    - image: /images_static/meme_carreta.webp
+      image2x: /images_static/meme_carreta.webp
       delay: 1200
   color: primary
 
@@ -74,17 +74,17 @@ features_2:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa9.webp
-      image2x: /assets/img/photos/sa9@2x.webp
+    - image: /images_static/meme_grumpy.webp
+      image2x: /images_static/meme_grumpy.webp
       delay: 300
-    - image: /assets/img/photos/sa10.webp
-      image2x: /assets/img/photos/sa10@2x.webp
+    - image: /images_static/meme_chloe.webp
+      image2x: /images_static/meme_chloe.webp
       delay: 600
-    - image: /assets/img/photos/sa11.webp
-      image2x: /assets/img/photos/sa11@2x.webp
+    - image: /images_static/meme_chocolaterain.webp
+      image2x: /images_static/meme_chocolaterain.webp
       delay: 900
-    - image: /assets/img/photos/sa12.webp
-      image2x: /assets/img/photos/sa12@2x.webp
+    - image: /images_static/meme_successkid.webp
+      image2x: /images_static/meme_successkid.webp
       delay: 1200
   color: yellow
 
@@ -98,23 +98,23 @@ features_3:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa13.webp
-      image2x: /assets/img/photos/sa13@2x.webp
+    - image: /images_static/meme_arvores.webp
+      image2x: /images_static/meme_arvores.webp
       delay: 300
-    - image: /assets/img/photos/sa14.webp
-      image2x: /assets/img/photos/sa14@2x.webp
+    - image: /images_static/meme_bolo.webp
+      image2x: /images_static/meme_bolo.webp
       delay: 900
-    - image: /assets/img/photos/sa15.webp
-      image2x: /assets/img/photos/sa15@2x.webp
+    - image: /images_static/meme_substituir.webp
+      image2x: /images_static/meme_substituir.webp
       delay: 1200
   color: fuchsia
 
 # Video Section
 video:
   title: Find out everything you need to know about creating a business process model
-  video_url: /assets/media/movie.mp4
-  poster: /assets/img/photos/movie.webp
-  webm_url: /assets/media/movie.webm
+  video_url: /images_static/video.mp4
+  poster: /images_static/video.webp
+  webm_url: /images_static/video.mp4
   process_steps:
     - icon: shield
       title: 1. Secured Transactions
@@ -216,8 +216,8 @@ join_community:
       text: "Happy Customers"
     - count: "4x"
       text: "Revenue Growth"
-  image: "/assets/img/illustrations/i32.webp"
-  image2x: "/assets/img/illustrations/i32@2x.webp"
+  image: "/images_static/footer.webp"
+  image2x: "/images_static/footer.webp"
   divider: true
   divider_color: "text-soft-primary"
 
