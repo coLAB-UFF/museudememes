@@ -14,7 +14,18 @@
     {% for service in page.features18.services %}
     <div class="row gy-10 align-items-center {% unless forloop.last %}mb-15 mb-md-17{% endunless %}">
       <div class="col-lg-7 {% if service.image_right %}order-lg-2{% endif %}">
+        {% if service.image_2 %}
+        <div class="row gx-3 gy-3 align-items-center">
+          <div class="col-6">
+            <figure class="mb-0"><img class="img-fluid rounded shadow-sm" src="{{ service.image }}" srcset="{{ service.image_2x }} 2x" alt="{{ service.alt }}" /></figure>
+          </div>
+          <div class="col-6">
+            <figure class="mb-0"><img class="img-fluid rounded shadow-sm" src="{{ service.image_2 }}" srcset="{{ service.image_2_2x }} 2x" alt="{{ service.alt_2 }}" /></figure>
+          </div>
+        </div>
+        {% else %}
         <figure><img class="img-fluid rounded" src="{{ service.image }}" srcset="{{ service.image_2x }} 2x" alt="{{ service.alt }}" /></figure>
+        {% endif %}
       </div>
       <div class="col-lg-4 {% if service.image_right %}me-auto{% else %}ms-auto{% endif %}">
         <div class="svg-bg {{ service.icon_bg }} rounded mb-5">
