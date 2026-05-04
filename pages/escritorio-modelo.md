@@ -35,20 +35,20 @@ features5:
   list_icon: "uil uil-check"
   image_columns:
     - images:
-        - src: "/assets/img/photos/cs1.webp"
+        - src: "/images_static/page_escritorio02.png"
           srcset: ""
           alt: "Escritório Modelo"
           classes: "mb-5"
-        - src: "/assets/img/photos/cs3.webp"
+        - src: "/images_static/page_escritorio04.png"
           srcset: ""
           alt: "Pesquisa de memes"
           classes: ""
     - images:
-        - src: "/assets/img/photos/cs2.webp"
+        - src: "/images_static/page_escritorio03.png"
           srcset: ""
           alt: "Catalogação digital"
           classes: "mb-5"
-        - src: "/assets/img/photos/cs4.webp"
+        - src: "/images_static/page_escritorio05.png"
           srcset: ""
           alt: "Produção de conteúdo"
           classes: ""
@@ -64,7 +64,7 @@ features5:
 
 features6:
   image:
-    src: "/assets/img/photos/cs5.webp"
+    src: "/images_static/page_escritorio01.png"
     srcset: ""
     alt: "Ferramentas do Escritório Modelo"
   title: "Metodologias abertas para a memética digital"
