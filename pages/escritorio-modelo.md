@@ -136,8 +136,8 @@ escritorio_final:
   </section>
 
   {% include components/sections/museudememes/facts-7.html %}
-  {% include components/sections/museudememes/features-5.html %}
   {% include components/sections/museudememes/features-6.html %}
+  {% include components/sections/museudememes/features-5.html %}
   {% include components/sections/museudememes/cta-4.html %}
   {% include components/sections/museudememes/escritorio-final.html %}
   {% include components/sections/demo34/screenshots.html %}
