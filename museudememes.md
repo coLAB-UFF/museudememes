@@ -113,7 +113,7 @@ features_3:
 video:
   title: Find out everything you need to know about creating a business process model
   video_url: /images_static/video.mp4
-  poster: /images_static/video.png
+  poster: /images_static/header.png
   webm_url: /images_static/video.mp4
   process_steps:
     - icon: shield

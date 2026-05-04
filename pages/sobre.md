@@ -9,8 +9,8 @@ custom_color: museudememes
 custom_font: space
 
 about1:
-  image: "/assets/img/photos/about7.webp"
-  image2x: "/assets/img/photos/about7@2x.webp"
+  image: "/images_static/sala_belasartes.png"
+  image2x: "/images_static/sala_belasartes.png"
   image_alt: "Equipe do #MUSEUdeMEMES"
   title: "Quem somos?"
   lead: "Somos um projeto cultural dedicado à pesquisa, preservação e difusão da cultura de internet e dos memes como patrimônio imaterial da era digital."
@@ -25,12 +25,12 @@ about1:
 
 about2:
   icon: "handshake"
-  image1: "/assets/img/photos/ab1.webp"
-  image1_2x: "/assets/img/photos/ab1@2x.webp"
-  image2: "/assets/img/photos/ab2.webp"
-  image2_2x: "/assets/img/photos/ab2@2x.webp"
-  image3: "/assets/img/photos/ab3.webp"
-  image3_2x: "/assets/img/photos/ab3@2x.webp"
+  image1: "/images_static/sala_esportes.png"
+  image1_2x: "/images_static/sala_esportes.png"
+  image2: "/images_static/sala_multimidia.png"
+  image2_2x: "/images_static/sala_multimidia.png"
+  image3: "/images_static/sala_galerias.png"
+  image3_2x: "/images_static/sala_galerias.png"
   years_count: "10+"
   years_label: "Anos de Pesquisa"
   title: "Um projeto cultural colaborativo que acredita na força dos memes como linguagem e como memória coletiva."
@@ -44,8 +44,8 @@ about2:
       label: "Projetos de pesquisa"
 
 about11:
-  image: "/assets/img/photos/about29.webp"
-  image2x: "/assets/img/photos/about29@2x.webp"
+  image: "/images_static/sala_paleomemes.png"
+  image2x: "/images_static/sala_paleomemes.png"
   title: "Nossa Proposta"
   lead: "Construir um museu digital e presencial que trate memes com o mesmo rigor que museus tradicionais dedicam a obras de arte ou documentos históricos."
   description:
@@ -68,12 +68,12 @@ about11:
         description: "Publicação no acervo aberto, exposições temáticas e materiais educativos para pesquisa e ensino."
 
 about8:
-  main_image: "/assets/img/photos/g8.webp"
-  main_image2x: "/assets/img/photos/g8@2x.webp"
-  image2: "/assets/img/photos/g9.webp"
-  image2_2x: "/assets/img/photos/g9@2x.webp"
-  image3: "/assets/img/photos/g10.webp"
-  image3_2x: "/assets/img/photos/g10@2x.webp"
+  main_image: "/images_static/sala_precolombiana.png"
+  main_image2x: "/images_static/sala_precolombiana.png"
+  image2: "/images_static/sala_politica.png"
+  image2_2x: "/images_static/sala_politica.png"
+  image3: "/images_static/sala_colonial.png"
+  image3_2x: "/images_static/sala_colonial.png"
   subtitle: "O que nos diferencia?"
   title_before: "Unimos"
   title_highlight: "rigor acadêmico"
@@ -124,8 +124,8 @@ about12:
       position:
         bottom: "5%"
         left: "-17%"
-  main_image: "/assets/img/photos/about20.webp"
-  main_image2x: "/assets/img/photos/about20@2x.webp"
+  main_image: "/images_static/sala_deboche.png"
+  main_image2x: "/images_static/sala_deboche.png"
   features:
     - title: "Patrimônio Imaterial Digital"
       description: "Memes são parte do patrimônio imaterial da civilização digital. Perdê-los é perder registros insubstituíveis de como vivemos, rimos e nos comunicamos."
