@@ -13,8 +13,8 @@ features18:
   services:
     - title: "Um projeto nascido da internet"
       description: "O #MUSEUdeMEMES surgiu em 2013 como uma iniciativa informal de pesquisadores de comunicação e cultura digital que perceberam que os memes estavam desaparecendo sem deixar rastro. Plataformas mudavam, perfis eram deletados, e a memória coletiva da internet se perdia."
-      image: "/assets/img/photos/about2.webp"
-      image_2x: "/assets/img/photos/about2@2x.webp"
+      image: "/images_static/page_historia01.png"
+      image_2x: "/images_static/page_historia01.png"
       alt: "Origens do MUSEUdeMEMES"
       icon: "/assets/img/icons/solid/cloud-group.svg"
       icon_bg: "bg-pale-primary"
@@ -32,11 +32,11 @@ features18:
 
     - title: "Da pesquisa informal ao projeto cultural"
       description: "O que começou como um grupo de estudos virou projeto de extensão universitária, depois uma organização independente. A parceria com museus, bibliotecas e arquivos públicos veio naturalmente, à medida que a relevância cultural dos memes se tornava inegável."
-      image: "/images_static/outros_escritorio.png"
-      image_2x: "/images_static/outros_escritorio.png"
+      image: "/images_static/page_historia02.png"
+      image_2x: "/images_static/page_historia02.png"
       alt: "Crescimento do projeto"
-      image_2: "/images_static/outros_lives.png"
-      image_2_2x: "/images_static/outros_lives.png"
+      image_2: "/images_static/page_historia03.png"
+      image_2_2x: "/images_static/page_historia03.png"
       alt_2: "Parceria com universidades e museus"
       icon: "/assets/img/icons/solid/badge.svg"
       icon_bg: "bg-pale-yellow"
@@ -92,8 +92,8 @@ process2:
       text: "Publicar o acervo, produzir pesquisa acadêmica e realizar exposições para diferentes públicos."
 
 about14:
-  image: "/assets/img/photos/about12.webp"
-  image2x: "/assets/img/photos/about12@2x.webp"
+  image: "/images_static/page_historia04.png"
+  image2x: "/images_static/page_historia04.png"
   image_alt: "Historia do MUSEUdeMEMES"
   title: "Uma década preservando a memória digital brasileira"
   lead: "Dez anos de trabalho coletivo que transformaram uma iniciativa informal num dos maiores acervos de cultura digital da América Latina."
@@ -151,8 +151,8 @@ process5:
     url: "/museudememes/museu/thesaurus/"
 
 hero14:
-  image: "/assets/img/photos/about18.webp"
-  image2x: "/assets/img/photos/about18@2x.webp"
+  image: "/images_static/page_historia05.png"
+  image2x: "/images_static/page_historia05.png"
   title: "O futuro da memória digital começa agora."
   subtitle: "Junte-se ao #MUSEUdeMEMES e ajude a preservar a cultura digital brasileira para as próximas gerações."
   button:
