@@ -11,8 +11,8 @@ custom_font: space
 features18:
   enable: true
   services:
-    - image: "/assets/img/photos/about11.webp"
-      image_2x: "/assets/img/photos/about11@2x.webp"
+    - image: "/images_static/page_quem01.png"
+      image_2x: "/images_static/page_quem01.png"
       alt: "Equipe do #MUSEUdeMEMES"
       image_right: false
       icon: "/assets/img/icons/solid/employees.svg"
