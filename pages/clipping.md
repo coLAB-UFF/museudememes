@@ -12,8 +12,8 @@ scroll_top_btn:
 features18:
   enable: true
   services:
-    - image: "/assets/img/photos/about3.webp"
-      image_2x: "/assets/img/photos/about3@2x.webp"
+    - image: "/images_static/page_clipping01.png"
+      image_2x: "/images_static/page_clipping01.png"
       alt: "O #MUSEUdeMEMES na Mídia"
       image_right: false
       icon: "/assets/img/icons/lineal/megaphone.svg"
