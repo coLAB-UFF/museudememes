@@ -15,12 +15,15 @@
     <div class="row gy-10 align-items-center {% unless forloop.last %}mb-15 mb-md-17{% endunless %}">
       <div class="col-lg-7 {% if service.image_right %}order-lg-2{% endif %}">
         {% if service.image_2 %}
-        <div class="row gx-3 gy-3 align-items-center">
-          <div class="col-6">
-            <figure class="mb-0"><img class="img-fluid rounded shadow-sm" src="{{ service.image }}" srcset="{{ service.image_2x }} 2x" alt="{{ service.alt }}" /></figure>
-          </div>
-          <div class="col-6">
-            <figure class="mb-0"><img class="img-fluid rounded shadow-sm" src="{{ service.image_2 }}" srcset="{{ service.image_2_2x }} 2x" alt="{{ service.alt_2 }}" /></figure>
+        <div class="position-relative">
+          <div class="shape bg-dot primary rellax w-16 h-16" data-rellax-speed="1" style="top: 0; left: -1rem; z-index: 0;"></div>
+          <div class="row gx-4 align-items-start position-relative">
+            <div class="col-6" data-cue="fadeIn">
+              <figure class="mb-0 rounded shadow overflow-hidden"><img class="img-fluid" src="{{ service.image }}" srcset="{{ service.image_2x }} 2x" alt="{{ service.alt }}" /></figure>
+            </div>
+            <div class="col-6 mt-md-10" data-cue="fadeIn" data-delay="300">
+              <figure class="mb-0 rounded shadow overflow-hidden"><img class="img-fluid" src="{{ service.image_2 }}" srcset="{{ service.image_2_2x }} 2x" alt="{{ service.alt_2 }}" /></figure>
+            </div>
           </div>
         </div>
         {% else %}
