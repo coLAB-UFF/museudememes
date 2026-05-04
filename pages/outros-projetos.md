@@ -7,8 +7,8 @@ custom_font: space
 features18:
   enable: true
   services:
-    - image: /assets/img/photos/about28.webp
-      image_2x: /assets/img/photos/about28@2x.webp
+    - image: /images_static/outros_oficinas.png
+      image_2x: /images_static/outros_oficinas.png
       image_right: false
       icon: /assets/img/icons/lineal/rocket.svg
       icon_bg: bg-pale-primary
@@ -23,8 +23,8 @@ features18:
         url: "/museudememes/escritorio-modelo/"
         text: "Saiba mais"
         class: "primary"
-    - image: /assets/img/photos/about29.webp
-      image_2x: /assets/img/photos/about29@2x.webp
+    - image: /images_static/outros_memeclubes.png
+      image_2x: /images_static/outros_memeclubes.png
       image_right: true
       icon: /assets/img/icons/lineal/browser.svg
       icon_bg: bg-pale-violet
@@ -39,8 +39,8 @@ features18:
         url: "/museudememes/exposicoes/"
         text: "Ver exposições"
         class: "violet"
-    - image: /assets/img/photos/about2.webp
-      image_2x: /assets/img/photos/about2@2x.webp
+    - image: /images_static/outros_lives.png
+      image_2x: /images_static/outros_lives.png
       image_right: false
       icon: /assets/img/icons/lineal/award.svg
       icon_bg: bg-pale-yellow
