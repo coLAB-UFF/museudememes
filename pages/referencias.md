@@ -16,8 +16,8 @@ hero:
       url: "https://docs.google.com/spreadsheets/d/1hBXejeFBPMGAhKx028zAgcgTje5ln35l75npiI7Mfjs/edit"
       class: "btn-lg btn-outline-primary rounded-pill"
 
-  image: /assets/img/photos/sa1.webp
-  image2x: /assets/img/photos/sa1@2x.webp
+  image: /images_static/page_referencias01.png
+  image2x: /images_static/page_referencias01.png
 
 features17:
   enable: true
