@@ -128,7 +128,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/images_static/meme_agoravem.png" srcset="/images_static/meme_agoravem.png 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
+          <img src="/images_static/expo02.png" srcset="/images_static/expo02.png 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 ms-auto">
@@ -224,7 +224,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/images_static/expo02.png" srcset="/images_static/expo02.png 2x" alt="Programa de Pesquisa" class="img-fluid">
+          <img src="/images_static/meme_agoravem.png" srcset="/images_static/meme_agoravem.png 2x" alt="Programa de Pesquisa" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 me-auto">
