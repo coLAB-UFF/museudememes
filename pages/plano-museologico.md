@@ -121,32 +121,32 @@ scroll_top_btn:
   </div>
 </section>
 
-<!-- ── Bloco 3: Programa de Pesquisa — imagem à direita ── -->
-<section class="wrapper bg-light">
+<!-- ── Bloco 6: Gestão e Sustentabilidade — imagem à esquerda ── -->
+<section class="wrapper bg-white">
   <div class="container py-14 py-md-17">
     <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-      <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+      <div class="col-md-8 col-lg-6 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/images_static/expo02.png" srcset="/images_static/expo02.png 2x" alt="Programa de Pesquisa" class="img-fluid">
+          <img src="/images_static/meme_agoravem.png" srcset="/images_static/meme_agoravem.png 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
         </figure>
       </div>
-      <div class="col-lg-6 me-auto">
+      <div class="col-lg-6 ms-auto">
         <div class="d-flex flex-row mb-5">
-          <div><img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div><img src="/assets/img/icons/lineal/balance.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
           <div>
-            <h4 class="mb-1">Pesquisa multidisciplinar</h4>
-            <p class="mb-0">Equipes de comunicação, educação, história e ciência da computação atuam juntas.</p>
+            <h4 class="mb-1">Governança colegiada</h4>
+            <p class="mb-0">Coordenação transparente com prestação de contas periódica à comunidade.</p>
           </div>
         </div>
-        <h2 class="display-4 mb-3">Programa de Pesquisa</h2>
-        <p class="lead fs-lg">Projetos temáticos que articulam acervo, análise e publicação científica em memética digital.</p>
-        <p class="mb-6">O programa de pesquisa estrutura as atividades científicas da instituição, articulando pesquisadores internos, colaboradores externos e estudantes de graduação e pós-graduação em torno de projetos sobre memética digital. Os resultados são publicados em formato aberto e apresentados em eventos científicos nacionais e internacionais.</p>
+        <h2 class="display-4 mb-3">Gestão e Sustentabilidade</h2>
+        <p class="lead fs-lg">Financiamento misto e governança colegiada para garantir a continuidade e a independência institucional.</p>
+        <p class="mb-6">O #MUSEUdeMEMES é uma iniciativa de pesquisa vinculada à FAFICH/UFMG, operando com financiamento misto — recursos universitários, editais de fomento à pesquisa e parcerias institucionais. A sustentabilidade financeira é gerida de forma transparente, com prestação de contas periódica aos financiadores e à comunidade. O presente Plano Museológico é revisado a cada três anos.</p>
         <ul class="icon-list bullet-bg bullet-soft-primary">
-          <li><i class="uil uil-check"></i>Projetos temáticos anuais com equipes multidisciplinares.</li>
-          <li><i class="uil uil-check"></i>Publicação de artigos, capítulos e relatórios em acesso aberto.</li>
-          <li><i class="uil uil-check"></i>Parcerias com grupos de pesquisa nacionais e internacionais.</li>
-          <li><i class="uil uil-check"></i>Programa de bolsas para iniciação científica e pós-graduação.</li>
+          <li><i class="uil uil-check"></i>Financiamento por editais CNPq, FAPEMIG e parcerias institucionais.</li>
+          <li><i class="uil uil-check"></i>Prestação de contas anual publicada no site institucional.</li>
+          <li><i class="uil uil-check"></i>Revisão trienal do Plano Museológico com participação da equipe.</li>
+          <li><i class="uil uil-check"></i>Política de acesso aberto a publicações, acervo e materiais educativos.</li>
         </ul>
       </div>
     </div>
@@ -217,38 +217,37 @@ scroll_top_btn:
   </div>
 </section>
 
-<!-- ── Bloco 6: Gestão e Sustentabilidade — imagem à esquerda ── -->
-<section class="wrapper bg-white">
+<!-- ── Bloco 3: Programa de Pesquisa — imagem à direita ── -->
+<section class="wrapper bg-light">
   <div class="container py-14 py-md-17">
     <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-      <div class="col-md-8 col-lg-6 position-relative">
-        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+      <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
+        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/images_static/meme_agoravem.png" srcset="/images_static/meme_agoravem.png 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
+          <img src="/images_static/expo02.png" srcset="/images_static/expo02.png 2x" alt="Programa de Pesquisa" class="img-fluid">
         </figure>
       </div>
-      <div class="col-lg-6 ms-auto">
+      <div class="col-lg-6 me-auto">
         <div class="d-flex flex-row mb-5">
-          <div><img src="/assets/img/icons/lineal/balance.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
+          <div><img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-sm me-4" alt="" /></div>
           <div>
-            <h4 class="mb-1">Governança colegiada</h4>
-            <p class="mb-0">Coordenação transparente com prestação de contas periódica à comunidade.</p>
+            <h4 class="mb-1">Pesquisa multidisciplinar</h4>
+            <p class="mb-0">Equipes de comunicação, educação, história e ciência da computação atuam juntas.</p>
           </div>
         </div>
-        <h2 class="display-4 mb-3">Gestão e Sustentabilidade</h2>
-        <p class="lead fs-lg">Financiamento misto e governança colegiada para garantir a continuidade e a independência institucional.</p>
-        <p class="mb-6">O #MUSEUdeMEMES é uma iniciativa de pesquisa vinculada à FAFICH/UFMG, operando com financiamento misto — recursos universitários, editais de fomento à pesquisa e parcerias institucionais. A sustentabilidade financeira é gerida de forma transparente, com prestação de contas periódica aos financiadores e à comunidade. O presente Plano Museológico é revisado a cada três anos.</p>
+        <h2 class="display-4 mb-3">Programa de Pesquisa</h2>
+        <p class="lead fs-lg">Projetos temáticos que articulam acervo, análise e publicação científica em memética digital.</p>
+        <p class="mb-6">O programa de pesquisa estrutura as atividades científicas da instituição, articulando pesquisadores internos, colaboradores externos e estudantes de graduação e pós-graduação em torno de projetos sobre memética digital. Os resultados são publicados em formato aberto e apresentados em eventos científicos nacionais e internacionais.</p>
         <ul class="icon-list bullet-bg bullet-soft-primary">
-          <li><i class="uil uil-check"></i>Financiamento por editais CNPq, FAPEMIG e parcerias institucionais.</li>
-          <li><i class="uil uil-check"></i>Prestação de contas anual publicada no site institucional.</li>
-          <li><i class="uil uil-check"></i>Revisão trienal do Plano Museológico com participação da equipe.</li>
-          <li><i class="uil uil-check"></i>Política de acesso aberto a publicações, acervo e materiais educativos.</li>
+          <li><i class="uil uil-check"></i>Projetos temáticos anuais com equipes multidisciplinares.</li>
+          <li><i class="uil uil-check"></i>Publicação de artigos, capítulos e relatórios em acesso aberto.</li>
+          <li><i class="uil uil-check"></i>Parcerias com grupos de pesquisa nacionais e internacionais.</li>
+          <li><i class="uil uil-check"></i>Programa de bolsas para iniciação científica e pós-graduação.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-
 {% include components/footer/footer.html
     style="default"
     bg_color="bg-primary"
