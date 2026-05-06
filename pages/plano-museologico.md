@@ -39,7 +39,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about5.webp" alt="Missão do #MUSEUdeMEMES" class="img-fluid">
+          <img src="/images_static/meme_ceia.png" alt="Missão do #MUSEUdeMEMES" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6">
@@ -96,7 +96,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about11.webp" srcset="/assets/img/photos/about11@2x.webp 2x" alt="Política de Acervo" class="img-fluid">
+          <img src="/images_static/expo01.png" srcset="/images_static/expo01.png 2x" alt="Política de Acervo" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 ms-auto">
@@ -128,7 +128,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about12.webp" srcset="/assets/img/photos/about12@2x.webp 2x" alt="Programa de Pesquisa" class="img-fluid">
+          <img src="/images_static/expo02.png" srcset="/images_static/expo02.png 2x" alt="Programa de Pesquisa" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 me-auto">
@@ -160,7 +160,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about13.webp" srcset="/assets/img/photos/about13@2x.webp 2x" alt="Programa Educativo" class="img-fluid">
+          <img src="/images_static/expo03.png" srcset="/images_static/expo03.png 2x" alt="Programa Educativo" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 ms-auto">
@@ -192,7 +192,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about14.webp" srcset="/assets/img/photos/about14@2x.webp 2x" alt="Política de Comunicação" class="img-fluid">
+          <img src="/images_static/expo04.png" srcset="/images_static/expo04.png 2x" alt="Política de Comunicação" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 me-auto">
@@ -224,7 +224,7 @@ scroll_top_btn:
       <div class="col-md-8 col-lg-6 position-relative">
         <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
         <figure class="rounded">
-          <img src="/assets/img/photos/about15.webp" srcset="/assets/img/photos/about15@2x.webp 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
+          <img src="/images_static/meme_agoravem.png" srcset="/images_static/meme_agoravem.png 2x" alt="Gestão e Sustentabilidade" class="img-fluid">
         </figure>
       </div>
       <div class="col-lg-6 ms-auto">

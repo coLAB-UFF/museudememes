@@ -10,8 +10,8 @@ scroll_top_btn:
 features18:
   enable: true
   services:
-    - image: /assets/img/photos/about10.webp
-      image_2x: /assets/img/photos/about10@2x.webp
+    - image: /images_static/page_thesaurus01.png
+      image_2x: /images_static/page_thesaurus01.png
       alt: "Diagrama de conceitos do Thesaurus de Memes"
       image_right: false
       icon: /assets/img/icons/lineal/agenda.svg

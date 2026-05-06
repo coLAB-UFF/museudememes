@@ -12,8 +12,8 @@ scroll_top_btn:
 features18:
   enable: true
   services:
-    - image: "/images_static/meme_agoravem.png"
-      image_2x: "/images_static/meme_agoravem.png"
+    - image: "/images_static/page_reserva01.png"
+      image_2x: "/images_static/page_reserva01.png"
       alt: "Reserva Técnica do #MUSEUdeMEMES"
       image_right: true
       icon: "/assets/img/icons/lineal/server.svg"
