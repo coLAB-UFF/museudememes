@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_rosa
 layout: meme/verbete
 title: "Responsive Web Design Principles for Modern Websites"
 date: "2025-01-18"

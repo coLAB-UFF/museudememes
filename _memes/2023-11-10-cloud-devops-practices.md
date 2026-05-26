@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_amarela
 layout: meme/verbete
 title: "Cloud Computing and DevOps: Modern Infrastructure Practices"
 date: "2025-02-08"

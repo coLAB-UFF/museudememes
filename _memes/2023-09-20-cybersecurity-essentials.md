@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_paspatur_verde
 layout: meme/verbete
 title: "Cybersecurity Essentials for Small Businesses"
 date: 2025-01-22  # realistic publish date in January

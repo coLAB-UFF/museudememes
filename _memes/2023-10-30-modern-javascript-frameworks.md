@@ -1,4 +1,5 @@
 ---
+moldura: moldura_portrait_rustica
 layout: meme/verbete
 title: "Modern JavaScript Frameworks: Choosing the Right Tool for Your Project"
 date: "2025-02-02"

@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_vermelha
 layout: meme/verbete
 title: "Typography Design Fundamentals: Creating Readable Digital Experiences"
 date: "2025-01-22"

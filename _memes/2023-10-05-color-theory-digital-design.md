@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_verde
 layout: meme/verbete
 title: "Color Theory in Digital Design: Creating Impactful Visual Experiences"
 date: "2025-01-20"

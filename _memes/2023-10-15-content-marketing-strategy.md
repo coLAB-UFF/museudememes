@@ -1,4 +1,5 @@
 ---
+moldura: moldura_laranja
 layout: meme/verbete
 title: "Creating an Effective Content Marketing Strategy for 2024"
 date: "2025-01-25"

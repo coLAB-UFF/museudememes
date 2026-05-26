@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_verde
 layout: meme/verbete
 title: "Sidebar Post Layout Example"
 date: "2025-02-14"

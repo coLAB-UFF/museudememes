@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_paspatur_verde
 layout: meme/verbete
 title: "Standard Post Layout Example"
 date: "2025-02-12"

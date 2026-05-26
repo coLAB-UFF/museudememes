@@ -1,4 +1,5 @@
 ---
+moldura: moldura_landscape_rosa
 layout: meme/verbete
 title: "Overlay Post Layout Example"
 date: "2025-02-13"

@@ -1,4 +1,5 @@
 ---
+moldura: moldura_oval
 layout: meme/verbete
 title: "Email Marketing Automation: Building Customer Relationships at Scale"
 date: "2025-01-30"
