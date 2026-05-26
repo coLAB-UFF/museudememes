@@ -49,6 +49,9 @@ jobs:
               -e 's|"/images_static/|"/museudememes/images_static/|g' \
               -e "s|'/images_static/|'/museudememes/images_static/|g" \
               -e 's|url(/images_static/|url(/museudememes/images_static/|g' \
+              -e 's|"/frames/|"/museudememes/frames/|g' \
+              -e "s|'/frames/|'/museudememes/frames/|g" \
+              -e 's|url(/frames/|url(/museudememes/frames/|g' \
               "$1"
           }
           export -f fix_assets
@@ -65,6 +68,7 @@ jobs:
           cp -r _site/museudememes/. _deploy/
           cp -r _site/assets         _deploy/assets
           cp -r _site/images_static  _deploy/images_static
+          cp -r _site/frames         _deploy/frames
           cp    _site/404.html       _deploy/
           cp    _site/sitemap.xml    _deploy/ 2>/dev/null || true
           cp    _site/feed.xml       _deploy/ 2>/dev/null || true
