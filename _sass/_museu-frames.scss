@@ -299,7 +299,7 @@ $frame-h: 520px;
     height: auto;
     position: relative;
     z-index: 2;
-    mix-blend-mode: normal;
+    mix-blend-mode: multiply;
     pointer-events: none;
     user-select: none;
   }
