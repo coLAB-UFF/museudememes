@@ -259,31 +259,36 @@ $frame-h: 520px;
 // ==========================================================
 // FEATURE-IMAGE COM MOLDURA SVG
 //
-// Arquitetura de camadas (SVG por cima):
-//   z-index 1 → .fmi-photo-layer  — foto preenche inset:0 do wrapper
-//   z-index 2 → .fmi-frame-svg    — SVG por cima com mix-blend-mode:multiply
+// Arquitetura de camadas (SVG atrás, foto por cima clipeada):
+//   z-index 1 → .fmi-frame-svg    — SVG atrás, totalmente opaco, define a altura
+//   z-index 2 → .fmi-photo-layer  — foto por cima, clipada ao miolo via clip-path
 //
-// O multiply torna áreas brancas/cinza-claro do SVG transparentes,
-// deixando a foto aparecer. As cores da moldura ficam visíveis por cima.
-// isolation:isolate confina o blend ao contexto do wrapper (não vaza
-// para o fundo lilás da página).
-//
-// Além do blend, a foto é clipada via clip-path para cada moldura,
-// evitando que a foto sangre pelas bordas onde o SVG não pinta nada.
-// Coordenadas obtidas por análise de pixels renderizados (inset: top right bottom left).
+// A foto cobre apenas a janela interior da moldura (definida pelo clip-path
+// de cada .fmi-moldura_* abaixo). Fora da janela a moldura SVG fica a descoberto,
+// 100% opaca — sem blend mode, sem tingimento.
 // ==========================================================
 
 .fmi-moldura-wrap {
   position: relative;
   display: block;
   width: 100%;
-  isolation: isolate; // confina o mix-blend-mode dentro do wrapper
 
-  // Foto — preenche o wrapper inteiro; clip-path define a janela visível
+  // SVG — em fluxo normal (determina a altura do wrapper), fica atrás
+  .fmi-frame-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  // Foto — posição absoluta sobre o wrapper; clip-path limita ao miolo da moldura
   .fmi-photo-layer {
     position: absolute;
-    inset: 0;           // resolve contra o wrapper (cujo tamanho vem do SVG em fluxo)
-    z-index: 1;
+    inset: 0;
+    z-index: 2;
 
     .fmi-photo {
       display: block;
@@ -292,18 +297,6 @@ $frame-h: 520px;
       object-fit: cover;
       object-position: center;
     }
-  }
-
-  // SVG — em fluxo normal (determina a altura do wrapper) + por cima via z-index
-  .fmi-frame-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 2;
-    mix-blend-mode: multiply; // branco/cinza-claro → transparente; moldura → visível
-    pointer-events: none;
-    user-select: none;
   }
 }
 
