@@ -390,6 +390,16 @@ $frame-h: 520px;
   }
 }
 
+// ----------------------------------------------------------
+// moldura_oval — viewBox 408×615
+// Elipse: cx=197.5 cy=340.5, stroke-width=20 → borda interna rx=156.5 ry=230.5
+// ----------------------------------------------------------
+.fmi-moldura_oval {
+  .fmi-photo-layer {
+    clip-path: ellipse(38.36% 37.48% at 48.41% 55.37%);
+  }
+}
+
 // Sem moldura — imagem simples
 .fmi-simple {
   width: 100%;
