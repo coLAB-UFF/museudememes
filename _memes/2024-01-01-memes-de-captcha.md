@@ -32,6 +32,8 @@ Memes de captcha são aqueles que usam imagens ou captchas como humor. Normalmen
 
 Os memes envolvendo *captchas* começaram a ganhar popularidade a partir da década de 2010, quando esses sistemas de verificação começaram a ser amplamente usados na internet para distinguir humanos de robôs. O formato dos captchas, muitas vezes apresentando imagens estranhas, frases ou desafios incomuns, tornou-se um material fértil para o humor online.
 
+## 
+
 ## Disseminação e Repercussão
 
 A repercussão dos memes de captcha foi bem ampla e rápida, especialmente nas redes sociais como Twitter, Reddit e Instagram. Os memes ganharam popularidade porque captchas são uma experiência quase universal para quem navega na internet, então muita gente se identificou com a frustração ou o humor absurdo envolvido.
@@ -39,6 +41,8 @@ A repercussão dos memes de captcha foi bem ampla e rápida, especialmente nas r
 O crescimento de inteligência artificial e sistemas de segurança digital cada vez mais complexos também foi um combustível para esses memes, já que captchas se tornaram mais frequentes e às vezes difíceis de resolver. As piadas e exageros sobre captchas complicados, como “escolher todas as imagens com carros" onde um pedaço minúsculo de carro aparece em várias imagens, ajudaram a capturar a frustração coletiva.
 
 Outra razão para a repercussão é que os memes de captcha são fáceis de entender visualmente e divertidos de compartilhar. Então, eles acabam se espalhando rapidamente como um comentário irônico sobre a digitalização da nossa vida cotidiana, além de apontar a ironia de testes feitos para “provar" que somos humanos, mas que até humanos têm dificuldade de passar!
+
+## 
 
 ## Gênero e Formatos
 

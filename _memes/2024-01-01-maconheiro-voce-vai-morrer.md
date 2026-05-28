@@ -25,6 +25,8 @@ tags: []
 gallery: []
 ---
 
+***Este verbete foi confeccionado pela alunos de Estudos de Mídia (UFF), Carlos Eduardo de Castro** **e Lara Ribas****, no escopo da disciplina Redes Colaborativas e Produção Cultural.***
+
 ## Origem
 
 O apresentador Sikêra Junior, nascido em Pernambuco e atualmente residente em Manaus, é conhecido por apresentar programas jornalísticos de temática policial e sensacionalista, ao estilo dos apresentadores Datena, Tino Junior e Luiz Bacci. Sikêra já apresentou os programas Plantão Alagoas, seu trabalho de maior duração, e Alerta Amazonas, que se tornou Alerta Nacional quando o apresentador foi contratado pela RedeTV em 2020.

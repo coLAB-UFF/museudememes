@@ -32,6 +32,10 @@ O inquérito, vale dizer, foi suspenso no dia 18 por uma juíza da 38ª Vara Cri
 
 A polêmica com o influenciador veio em um contexto de alta nas médias diárias de mortes e casos de Covid-19 que, consecutivamente, continuam alcançando recordes. O lento processo de vacinação também deve ser considerado, nessa conjuntura, como um fator que, junto ao caso envolvendo Felipe Neto, gerou milhares de manifestações de protesto. Estas giraram, sobretudo, em torno da adjetivação “genocida” ao falar sobre o presidente, Jair Bolsonaro, atuando de modo a apoiar o youtuber e demonstrar indignação perante a tentativa de censura.
 
+## Difusão e repercussão
+
+Nesse contexto, o meme “Bolsonaro genocida” circulou tanto em redes sociais online quanto nas ruas, em cartazes e faixas levantadas por coletivos e grupos de movimentos sociais. Na internet, o meme circulou, sobretudo, no Twitter, alcançando os Trending Topics do Brasil; além de aparecer no Instagram, WhatsApp, TikTok e Facebook. Atores políticos da oposição, perfis de partidos políticos e contas de figuras públicas, além do próprio Felipe Neto, também compartilharam diversas versões do meme “Bolsonaro genocida”.
+
 ## Gênero e Formatos
 
 Como dito anteriormente, este meme circulou em diversos formatos, aparecendo como hashtag, em imagens, apenas em texto ou ainda nas ruas. Em todos, no entanto, a frase “Bolsonaro genocida” esteve presente, como um slogan ou um bordão, podendo este meme ser considerado como um Catchphrase. Além disso, por estimular atitudes e comportamentos a serem desempenhados por audiências que reiteram correntes, também podemos apontar para este caso como um meme de ação popular. Aplicações do tipo Reaction Face, no qual o sujeito reage a uma determinada situação, e Exploitable, referente à composição de montagens gráficas, também foram observadas.

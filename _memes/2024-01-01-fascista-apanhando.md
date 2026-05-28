@@ -53,3 +53,22 @@ Os protestos tiveram atos contrários como resposta. [Pessoas com símbolos da s
 <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 
 Paralelamente, na noite do dia anterior às manifestações, Sara Winter, ex feminista, youtuber e ativista política, [promoveu um ato em Brasília com referências explícitas à Ku Klux Klan](https://politica.estadao.com.br/noticias/geral,grupo-bolsonarista-faz-protesto-em-frente-ao-stf-com-tochas-e-mascaras,70003320263), no qual aproximadamente 30 pessoas caminharam com tochas e máscaras em referência ao grupo supremacista branco norte-americano.
+
+## Difusão e Repercussão
+
+No dia 31 de maio, houve uma exaltação dos ânimos dos que foram para às ruas protestar e daqueles que acompanharam pelas redes sociais online, devido à pandemia de Covid-19. Durante e ao final das manifestações, houve alguns confrontos entre manifestantes antifascistas e pessoas contrárias aos protestos, o que gerou diversos vídeos de indivíduos consideradas fascistas apanhando. Nesse contexto, também foram resgatados antigos vídeos de sujeitos brigando após comentários e/ou atitudes racistas.
+
+Muitas pessoas compartilharam esses conteúdos junto à diferentes trilhas sonoras. Os vídeos mais repercutidos foram o de um homem com a camiseta verde e amarela em Copacabana sendo agredido por flamenguistas, e o de um bolsonarista de Porto Alegre (RS) levando uma rasteira.  
+Alguns vídeos alteram a trilha sonora para além de músicas e colocam áudios como o “centésimo gol do mito” ou o barulho do Windows encerrando. O conteúdo publicado não era apenas do Brasil, mostrando também supostos fascistas e/ ou racistas apanhando em protestos nos Estados Unidos.
+
+## Gênero & Formatos
+
+O meme, que geralmente circula no Facebook, mas se tornou popular no Twitter, foi veiculado como um vídeo o qual mostra uma pessoa considerada fascista e/ou racista sendo agredida por opositores. Assim, tendo como trilha uma música famosa, a legenda muda de acordo com os posts – sempre uma variável de “Fascista apanhando ao som de….", por exemplo: “Nazista apanhando ao som de rain on me lady gaga e ariana grande" ou “Fascista apanhando ao som de Linkin Park". O meme pode ser classificado, então, como uma cathphrase ou um snowclone, pois é uma frase marcante que se repete, a qual pode ter alguns termos trocados e ainda seguir uma fórmula.
+
+<blockquote class="twitter-tweet">
+<p dir="ltr" lang="pt">FACISTA APANHANDO AO SOM DO ? GOL DO <a href="https://twitter.com/hashtag/M1TO?src=hash&amp;ref_src=twsrc%5Etfw">#M1TO</a></p>
+<p>Vídeo do <a href="https://twitter.com/spjeffc?ref_src=twsrc%5Etfw">@spjeffc</a> <a href="https://t.co/fkHhccy3xV">pic.twitter.com/fkHhccy3xV</a></p>
+<p>— SPFC DA DECEPÇÃO (de ?) (@SPFCDaDecepcao) <a href="https://twitter.com/SPFCDaDecepcao/status/1267555557914877954?ref_src=twsrc%5Etfw">June 1, 2020</a></p>
+</blockquote>
+
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>

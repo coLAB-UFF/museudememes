@@ -34,3 +34,13 @@ Dessa forma, a Comissão vêm realizando longas sessões com diversos e relevant
 Embora Wajngarten não seja considerado um nome tão popular ao observarmos a cena política nacional, seu depoimento à Comissão teve uma repercussão enorme, sobretudo, por diversos momentos de discussões, contradições e pedidos de prisão ao depoente. A situação ainda foi ao extremo com o comparecimento repentino do senador Flávio Bolsonaro (Republicanos-RJ) que, mesmo sem ser um dos membros da CPI, demonstrou sua insatisfação mediante ao curso da Comissão, chamando, inclusive, o relator Renan Calheiros de “vagabundo”.
 
 O xingamento veio após Calheiros defender a prisão de Wajngarten que, em diversos momentos, apresentou declarações contraditórias e evasivas, envolvendo tanto campanhas do governo quanto a declaração, dada à Revista Veja, sobre a incompetência do ex-Ministro Pazuello durante a pandemia. O clima tenso levou à realização de muitos comentários em plataformas sociais, como o Twitter, onde também muitos memes se proliferaram.
+
+## Difusão e repercussão
+
+Grande parte dos memes observados circulou pelo Twitter, rede na qual a expressão “TEJE PRESO” entrou para os Trending Topics. Outros memes também circularam amplamente a partir das hashtags #CPIdaCOVID e #CPIdoCirco. Páginas como BuzzFeed Brasil e Sensacionalista compartilharam alguns memes que, por sua vez, foram noticiados também pelo veículo [Poder 360](https://www.poder360.com.br/midia/atuacao-de-renan-calheiros-contra-wajngarten-na-cpi-da-covid-vira-meme/) e pelo UOL.
+
+## Gêneros e formatos
+
+Os memes foram diversos, contudo, alguns se destacaram. Dentre estes, muitas reações, tanto a partir de imagens estáticas quanto de GIFs, aos diferentes momentos do depoimento de Wajngarten. Este foi visto, nessa esteira, como entretenimento, sendo comparado por diversos memes ao reality show Big Brother Brasil.
+
+Além disso, também circularam muitos memes em formato Exploitable, isto é, que apresentam uma sobreposição de imagens, sobretudo, defendendo o posicionamento do relator Renan Calheiros. O senador também protagonizou a circulação de outros memes, dessa vez, em formato Catchphrase, tendo em vista que, após defender e pedir a prisão do ex-secretário de comunicação, a frase “Teje Preso” viralizou nas plataformas sociais com o intuito de ironizar a situação, pedir a prisão de Wajngarten ou ainda criticar a atitude de Calheiros.

@@ -73,6 +73,10 @@ A imagem de capa do single, no entanto, chamou mais atenção: na areia da praia
 
 <script async="" src="//www.instagram.com/embed.js"></script>
 
+## Gêneros e Formatos
+
+Embora diversos, os memes do ônibus de Girl from Rio são muito similares, pois todos apresentam montagens iconográficas com a referida imagem, tratando-se, portanto, de Exploitables. Assim, os memes brincam com a ideia de que não seria Anitta na frente do ônibus, mas outras personalidades, em contextos diversos, com objetivos variados: de Gil do Vigor à Mariah Carey; fazendo brincadeiras e protestos políticos; relembrando cenas clássicas da televisão brasileira ou integrando o marketing de redes de varejo. Todos foram parar na frente do ônibus de Girl from Rio.
+
 ## Disseminação e Repercussão
 
 Circulando amplamente pelo Instagram e pelo Twitter, os memes também foram parar em veículos jornalísticos e de entretenimento: [O Globo](https://oglobo.globo.com/cultura/musica/capa-de-girl-from-rio-de-anitta-inspira-memes-24998316), [Folha de São Paulo](https://hashtag.blogfolha.uol.com.br/2021/04/29/meme-from-brazil-arte-de-girl-from-rio-de-anitta-ganha-montagens-no-twitter/), [Revista Marie Claire](https://revistamarieclaire.globo.com/Celebridades/noticia/2021/04/anitta-divulga-capa-de-girl-rio-e-fas-fazem-memes-divertidos-confira.html), [Portal Popline](https://portalpopline.com.br/girl-from-memes-web-recria-capa-novo-single-anitta/), [IG](https://gente.ig.com.br/celebridades/2021-04-28/girl-from-rio--famosos-fazem-memes-com-a-foto-de-anitta.html.ampstories), [Veja](https://vejario.abril.com.br/beira-mar/prefeito-meme-anitta-boy-eduardo-paes/), dentre outros.

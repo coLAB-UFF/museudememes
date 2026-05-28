@@ -28,6 +28,10 @@ gallery: []
 
 No dia 16 de dezembro de 2014 foi anunciado que os EUA e Cuba declararam a retomada de relações diplomáticas. A internet mais uma vez, dentre as várias nos últimos doze meses, quebrou, ou seja, ficou lotada de comentários, opiniões e, é claro, memes sobre o assunto.
 
-## Gênero e Formatos
+## Difusão e repercussão
+
+Como sempre, não deu nem tempo da notícia ser apresentada e já era comentada pelo mundo, principalmente no Twitter com a hashtag #CubaPolicy, chegando aos Trending Topics mundiais. Como o povo brasileiro não perdoa ninguém, no mesmo dia também surgiram memes para ilustrar esse momento histórico mostrando.
+
+## Gênero e formatos
 
 Em sua maioria, os memes eram imagens de reconciliações de personagens ou fotos de pessoas, conhecidas por não se darem muito bem, sorrindo juntas.

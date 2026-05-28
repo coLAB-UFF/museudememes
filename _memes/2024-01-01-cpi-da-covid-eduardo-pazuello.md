@@ -42,6 +42,6 @@ Os memes sobre o supracitado adiamento solicitado por Pazuello começaram a circ
 
 Já durante o depoimento, os memes também foram muitos. Conforme dados divulgados pelo Nexo Jornal, nas duas primeiras horas da sessão realizada no dia 19, cerca de 165 mil menções a CPI circularam no Twitter. Na rede em questão, os memes sobressaíram, aparecendo junto a #CPIdaCOVID, #CPIdoCirco e #PazuelloDay.
 
-## Gênero e Formatos
+## Gênero e formatos
 
 A CPI da Covid vem sendo acompanhada em tempo real pelos indivíduos que, simultaneamente, comentam as falas e episódios mais marcantes em suas mídias digitais, principalmente, no Twitter. Por isso, muitos dos memes que circularam durante os dois dias de depoimento de Eduardo Pazuello podem ser entendidos como “reaction face” e “reaction GIF”, ou seja, são acionados para expressar reações diversas. Além disso, diversos memes categorizados como “exploitable” foram observados, apresentando, portanto, montagens que associavam Pazuello e outros indivíduos presentes na sessão a imagens diversas.

@@ -39,3 +39,22 @@ Cerca de 12% do comércio global passa pelo canal. Em 2020, aproximadamente 19 m
 O tráfego no Suez já havia sido paralisado outras vezes, mas nessa proporção foi a primeira. A situação inédita instigou a curiosidade e aguçou a criatividade dos usuários das mídias sociais, gerando uma miscelânea de memes de internet.
 
 <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/y164lhho0gI" title="YouTube video player" width="560"></iframe>
+
+## Difusão e Repercussão
+
+No dia após o encalhamento, o assunto passou a ganhar notoriedade em plataformas de mídias sociais e em portais de notícia. No Twitter, o termo “Evergreen” foi parar nos Trending Topics, sendo tema de várias threads que contavam o caso. A dificuldade e a morosidade para a resolução do problema inflamaram a discussão.
+
+<blockquote class="twitter-tweet">
+<p dir="ltr" lang="pt">Essa manhã, estou obcecado com a história do navio de carga gigante que fez uma baliza errada e simplesmente está preso no canal de Suez tem pelo menos 13 horas</p>
+<p>Nenhum navio consegue passar e não dá pra ter ideia de quantos milhões de dólares estão sendo perdidos nisso aí haha <a href="https://t.co/nJx8RzJ4dc">pic.twitter.com/nJx8RzJ4dc</a></p>
+<p>— Felipe Pacheco (@fepacheco) <a href="https://twitter.com/fepacheco/status/1374672073239445504?ref_src=twsrc%5Etfw">March 24, 2021</a></p></blockquote>
+
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+
+Nesse sentido, chamou atenção a pequena escavadeira utilizada no processo de remoção de areia, de modo que a máquina protagonizou, ao lado do navio, uma grande quantidade de memes. Abdullah Abdul-Gawad, operador da escavadeira, [reclamou dos memes](https://noticias.uol.com.br/internacional/ultimas-noticias/2021/04/09/operador-escavadeira-canal-de-suez-ever-given.htm). Segundo ele, o trabalho de 21 horas por dia, sem dormir, não foi motivo de graça. Os memes do navio da Evergreen foram destaque em vários sites noticiosos, como [TecMundo](https://www.tecmundo.com.br/cultura-geek/214555-navio-encalhado-canal-suez-veja-melhores-memes.htm), [Revista Glamour](https://revistaglamour.globo.com/Lifestyle/Must-Share/noticia/2021/03/o-ever-given-desencalhou-hoje-mas-internet-ja-esta-com-saudades-dele-e-dos-memes.html) e [IstoÉ Dinheiro](https://www.istoedinheiro.com.br/veja-aqui-navio-encalhado-no-canal-de-suez-gera-memes/).
+
+## Gêneros & Formatos
+
+A situação incomum serviu de referência para a produção de memes que satirizavam o encalhamento em si, além de outros que refletiam sobre fatos do cotidiano e política. A presença de intertextualidade foi intensa em memes que acionavam elementos do cinema, dos quadrinhos e de desenhos animados, isto é, da cultura pop em geral.
+
+O formato “Exploitable” foi muito utilizado, com adição de elementos característicos de fotomontagens. O “Image Macro” também foi recorrente em memes compostos por uma imagem principal e legendas sobrepostas.

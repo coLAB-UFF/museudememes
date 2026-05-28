@@ -37,6 +37,12 @@ A Bíblia em memes se popularizou pela primeira vez em 2019 a partir de uma publ
 
 <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 
+## Gênero e Formato
+
+A Bíblia em memes utiliza memes já explorados e conhecidos nas mídias sociais para representar visual e ironicamente personagens e acontecimentos marcantes para a doutrina cristã. Originalmente feita por diferentes indivíduos a partir de comentários em uma publicação no Facebook, hoje, a Bíblia em memes circula também por meio de threads e prints no Twitter e Instagram.
+
+Em sua maioria, a Bíblia em memes é ativada a partir do formato Reaction Face, que expressa a reação do personagem após um acontecimento. A frase “o faraó Ramsés vendo o mar vermelho se abrir no meio” junto a uma imagem do popular “garoto-meme”, Gavin Mastodon, chocado e incrédulo é um bom exemplo de como a Bíblia em memes se estrutura. Em alguns casos, os memes utilizados são editados para que melhor se adequem ao contexto bíblico. Estes, por sua vez, também podem ser classificados como Exploitables, pois utilizam recortes e montagens a partir de uma sobreposição de imagens. A fotomontagem que inseriu elementos da representação visual de Noé na modelo Nicole Bahls, protagonista do famoso meme Sai Daqui!, exemplifica esse uso.
+
 ## Disseminação e Repercussão
 
 Ainda que tenha se disseminado inicialmente no primeiro semestre de 2019, a Bíblia em memes volta e meia retorna a circular nas mídias sociais, principalmente no Facebook e no Twitter. No dia 23 de julho de 2020, por exemplo, usuários do Facebook voltaram a engajar, por meio de curtidas, comentários e compartilhamentos, uma antiga publicação, datada de 02 de maio de 2019. Nesta, encontram-se 11 prints que exemplificam a Bíblia em memes. No Twitter, muitas são as threads que se propõem não apenas a compartilhar prints dos memes criados na publicação original do LDRV, mas a criar diferentes e inusitadas associações. Ainda que em menor número, a Bíblia em memes também pode ser encontrada no Instagram, em perfis como o @Bibliaemmemes e a partir da #BibliaemMemes.

@@ -39,12 +39,14 @@ O depoimento de Ernesto, enfim, foi marcado por uma postura muito passiva, até 
 
 Além desse, outro momento marcante da sessão foi a fala da senadora Kátia Abreu (PP-TO), que viralizou na internet. A parlamentar falou por 20 minutos e não mediu palavras para expressar o descontentamento com a atuação de Ernesto frente ao Ministério, chamando-o de “negacionista compulsivo” e “bússola que nos direcionou para o caos”. Sua fala categórica foi altamente repercutida, gerando até fancams da congressista.
 
-## Disseminação e Repercussão
-
-Entendida como uma forma de entretenimento, a CPI costuma levar hashtags aos Trending Topics do Twitter nos dias em que ocorre, sendo algumas delas: #CPIdaCovid, #CPIpalooza e #CPIdoGenocídio. Dentro dessas tags ocorre o compartilhamento de memes e, além disso, constituem um ambiente em que as pessoas podem acompanhar os depoimentos, comentar em tempo real e interagir entre si, configurando a rede de maior disseminação de memes com Ernesto depondo na CPI, que chegaram a repercutir em páginas como o [Buzzfeed](https://buzzfeed.com.br/post/a-katia-abreu-passou-um-trator-em-cima-do-ernesto-araujo-na-cpi-da-covid) e grandes jornais como a [Folha de São Paulo](https://hashtag.blogfolha.uol.com.br/2021/05/18/fala-assertiva-de-katia-abreu-a-ernesto-araujo-na-cpi-da-covid-vira-meme/) e [El País](https://brasil.elpais.com/brasil/2021-05-18/ernesto-araujo-mente-sobre-ataques-a-china-e-transfere-fracasso-na-diplomacia-da-vacina-para-ministerio-da-saude.html).
-
 ## Gênero e Formatos
 
 O depoimento do ex-ministro gerou muitos memes e grande mobilização na internet. Dentro do formato Reaction Face, circularam muitas imagens e GIFS das reações do próprio Ernesto durante a sessão, assim como outros memes já famosos que são usados para descrever emoções. Em um contexto de recém término do BBB, foram feitas muitas comparações com situações do reality.
 
 Foi também muito explorado o formato Exploitable, em que se manipula uma imagem, adicionando texto ou mais imagens, a fim de atingir uma compreensão humorística. Nesse sentido, apareceram diversos memes remetendo ao discurso de Kátia Abreu, ou à postura de Ernesto, que, além de distorcer fatos, aparecia muito nervoso e estremecido.
+
+## Disseminação e Repercussão
+
+Entendida como uma forma de entretenimento, a CPI costuma levar hashtags aos Trending Topics do Twitter nos dias em que ocorre, sendo algumas delas: #CPIdaCovid, #CPIpalooza e #CPIdoGenocídio. Dentro dessas tags ocorre o compartilhamento de memes e, além disso, constituem um ambiente em que as pessoas podem acompanhar os depoimentos, comentar em tempo real e interagir entre si, configurando a rede de maior disseminação de memes com Ernesto depondo na CPI, que chegaram a repercutir em páginas como o [Buzzfeed](https://buzzfeed.com.br/post/a-katia-abreu-passou-um-trator-em-cima-do-ernesto-araujo-na-cpi-da-covid) e grandes jornais como a [Folha de São Paulo](https://hashtag.blogfolha.uol.com.br/2021/05/18/fala-assertiva-de-katia-abreu-a-ernesto-araujo-na-cpi-da-covid-vira-meme/) e [El País](https://brasil.elpais.com/brasil/2021-05-18/ernesto-araujo-mente-sobre-ataques-a-china-e-transfere-fracasso-na-diplomacia-da-vacina-para-ministerio-da-saude.html).
+
+##

@@ -25,6 +25,8 @@ tags: []
 gallery: []
 ---
 
+***Este verbete foi confeccionado pela alunos de Estudos de Mídia (UFF),****Sabrina Dray de Freitas Sant’Anna e Mariana Rocha****, no escopo da disciplina Redes Colaborativas e Produção Cultural.***
+
 ## Origem
 
 Em julho de 2012, acontecia mais uma das edições da feirinha do Largo da Ordem, em Curitiba, no Paraná, onde José, ou, como se tornou conhecido posteriormente, o Menino José, saiu do anonimato para ganhar popularidade nas redes. Entrevistado pela jornalista Karin Gusso, do programa “Boa Tarde Paraná”, o Menino José, com seus sete anos, respondia à jornalista de forma espontânea, sobre sua experiência na feira. No decorrer da conversa, a jornalista questiona José se ele já havia experimentado alguns lanches na feira, e, ao responder que ainda não havia comido, o menino responde de forma direta: “Tô cagado de fome”.

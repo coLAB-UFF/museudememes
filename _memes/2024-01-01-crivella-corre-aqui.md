@@ -35,3 +35,17 @@ No início de setembro de 2019, durante a Bienal do Livro do Rio de Janeiro, o p
 A expressão “Crivella, corre aqui!” já tinha sido usada para exaltar alguns problemas da cidade. Após o episódio da tentativa de censura da revista, sucessivas postagens usaram a expressão junto a imagens de produtos ou obras de arte que remetiam a cenas de cunho sexual ou homoafetiva. O uso da imagem dos dois personagens se beijando também se tornou uma referência ao meme “Crivella, corre aqui”. Postagens enfatizando problemas da cidade, como buracos, obras inacabadas e enchentes, foram realizadas como denúncia, incorporando a figura do beijo da HQ e o jargão — no intuito de chamar a atenção do político, para que ele olhasse os problemas da cidade com a mesma intensidade atribuída à tentativa de censura da publicação.
 
 ![](http://www.museudememes.com.br/wp-content/uploads/2020/04/Crivella_corre_aqui__5-300x224.jpeg)
+
+## Difusão e Repercussão
+
+A expressão #CrivellaCorreAqui pode ser encontrada em diversos sites de redes sociais, como Twitter, Facebook e Instagram. Tanto no Facebook quanto no Instagram, os principais conteúdos obtidos são encontrados pela *hashtag* “#CrivellaCorreAqui”. No Twitter, o perfil @[alocrivella](https://twitter.com/alocrivella/), identificado como #CrivellaCorreAqui, republica os posts que fazem alusão ao tom de denúncia sobre as problemáticas da cidade.
+
+No aplicativo de mensagens WhatsApp, o beijo foi compartilhado por meio do formato de *sticker*. As imagens do aplicativo podiam vir também com o informe sarcástico para seus interlocutores não compartilharem a imagem do beijo gay, conforme o exemplo abaixo.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2020/04/Screen-Shot-2020-04-17-at-3.32.22-PM-300x218.png)
+
+## Gêneros e formatos
+
+O meme “Crivella Corre Aqui" pode ser identificado de duas formas: como *catchphrases*, quando a hashtag #CrivellaCorreAqui é utilizada como um jargão, ou por meio do uso da imagem do beijo dos dois personagens da HQ. Geralmente a ilustração é usada em cima de outra imagem (que escracha algum problema da cidade) e esta também pode seguir junto da frase que virou meme. Neste caso, o formato que se encaixa é o *exploitable*, pois o modelo usa sobreposição de imagens em tom satírico.
+
+Esta família de memes é um produto de discussão pública, pois o uso se deu a partir da conversação nas redes sociais para criticar a tentativa de censura do livro. O uso deste material reverberou em críticas não apenas pela censura, mas também pela má gestão pública do político perante a cidade.

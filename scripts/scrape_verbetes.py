@@ -192,24 +192,24 @@ def collect_section_html(h2_el: Tag) -> str:
     return "\n".join(fragments)
 
 
-def extract_sections(soup: BeautifulSoup) -> dict[str, str]:
+def extract_sections(soup: BeautifulSoup) -> str:
     """
-    Retorna dict com chaves: "Origem", "Disseminação e Repercussão", "Gênero e Formatos"
-    e valores em markdown.
+    Extrai TODO o conteúdo da coluna esquerda (div.ficha-content) como markdown.
+    Preserva todos os headings (h1/h2/etc.), parágrafos, bold, itálico,
+    links, iframes e embeds — independente dos nomes das seções.
     """
-    result = {"Origem": "", "Disseminação e Repercussão": "", "Gênero e Formatos": ""}
+    fc = soup.find("div", class_="ficha-content")
+    if not fc:
+        # Fallback: tentar encontrar pela estrutura kc_col-sm-7
+        fc = soup.find("div", class_=lambda c: c and "kc_col-sm-7" in " ".join(c) and "kc_column" in " ".join(c))
+    if not fc:
+        return ""
 
-    for h2 in soup.find_all("h2"):
-        text  = h2.get_text(strip=True)
-        norm  = normalize(text)
+    # Remover blocos de navegação/rodapé que possam estar dentro
+    for nav in fc.find_all(["nav", "footer"]):
+        nav.decompose()
 
-        canonical = SECTION_NAMES.get(norm)
-        if canonical and canonical in result:
-            html_frag = collect_section_html(h2)
-            if html_frag:
-                result[canonical] = html_to_md(html_frag)
-
-    return result
+    return html_to_md(str(fc))
 
 
 def extract_ficha_tecnica(soup: BeautifulSoup) -> dict:
@@ -308,12 +308,8 @@ gallery: []
 ---"""
 
 
-def build_body(sections: dict[str, str]) -> str:
-    parts = []
-    for heading, content in sections.items():
-        if content:
-            parts.append(f"## {heading}\n\n{content}")
-    return "\n\n".join(parts)
+def build_body(content: str) -> str:
+    return content
 
 
 # ──────────────────────────────────────────────
@@ -337,11 +333,11 @@ def scrape_verbete(url: str) -> tuple[str, str] | None:
         print(f"  BLOQUEADO pelo ModSecurity")
         return None
 
-    date    = extract_date(soup)
-    title   = extract_title(soup)
-    curator = extract_curator(soup)
-    ficha   = extract_ficha_tecnica(soup)
-    sections = extract_sections(soup)
+    date       = extract_date(soup)
+    title      = extract_title(soup)
+    curator    = extract_curator(soup)
+    ficha      = extract_ficha_tecnica(soup)
+    sections   = extract_sections(soup)
 
     front_matter = build_front_matter(title, date, curator, ficha)
     body         = build_body(sections)

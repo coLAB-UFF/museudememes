@@ -39,3 +39,17 @@ No dia 6 de janeiro de 2021, milhares de apoiadores do então presidente dos EUA
 <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
 
 Chamou atenção a aparição de um homem vestido de “viking” na manifestação pró-Trump, bem como a fragilidade e a condescendência com que a segurança do prédio lidou com os eleitores do 46º presidente da história dos EUA, enquanto que em manifestações do movimento “Black Lives Matter” o policiamento de locais conhecidos na capital estadunidense, como o Lincoln Memorial, foi extremamente ostensivo.
+
+## Difusão e repercussão
+
+Grande parte dos memes relacionados ao evento foi compartilhada e popularizada pelo Twitter onde a #InvasãoDeMemes teve muita relevância. As pessoas frisavam nos memes a presença do “viking” no ato organizado por apoiadores de Trump e suas semelhanças com elementos tanto da cultura pop, como o grupo “Village People”, quanto da cultura brasileira, comparando a aparência do homem vestido de “viking” com um folião do bloco de carnaval carioca “Boi Tolo”. Além do Twitter, foram encontrados diversos stickers (figurinhas de WhatsApp) e vídeos no TikTok.
+
+No Brasil, os memes foram destaque em veículos como [Ig](https://gente.ig.com.br/cultura/2021-01-07/invasao-a-casa-do-gusttavo-lima-ou-capitolio-internet-reage-a-ataque-nos-eua.html) e [UOL](https://tvefamosos.uol.com.br/noticias/redacao/2021/01/07/invadiram-minha-casa-gusttavo-lima-faz-meme-com-invasao-do-capitolio.htm). O assunto foi comentado em todo o globo, repercutido pelo TRT World, canal de notícias estatal turco transmitido em inglês.
+
+<iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/AohEfD-eazA" width="560"></iframe>
+
+## Gêneros e formatos
+
+Houveram muitos memes que falavam sobre cada particularidade do ato em apoio a Donald Trump que envolveram o “viking” que esteve presente no protesto, a apatia da polícia em conter os manifestantes, em comparação com a truculência com que trataram os membros do “Black Lives Matter”, além de comparações com elementos da cultura pop.
+
+Os que foram mais reproduzidos foram os memes do tipo “Reaction Face” ou “Reaction GIF”, que consistem em colocar uma imagem – no caso do “Reaction GIF”, são usados GIFs – de alguém/alguma coisa para demonstrar a sua reação àquele acontecimento; e o “Exploitable”, formato no qual as imagens daquele momento são utilizadas para se referir a outra situação completamente diferente, como a comparação do “viking” com o bloco “Boi Tolo”, possível por meio de montagens em sites ou softwares como Photoshop.

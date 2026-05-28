@@ -44,6 +44,16 @@ Em pouco tempo, o vídeo em que o presidente é indagado foi publicado no Twitte
 
 ![](http://www.museudememes.com.br/wp-content/uploads/2020/04/Screen-Shot-2020-04-14-at-6.48.44-PM-300x67.png)
 
+## Difusão e Repercussão
+
+Utilizado principalmente no site de rede social Twitter, o jargão vem acompanhado do vídeo do presidente sendo indagado, mas também de comentários debochando da situação — visto que o indagador é eleitor de Bolsonaro e o mesmo parece não gostar de tal questionamento.
+
+Algumas postagens utilizaram a hashtag #republicatcheca, outras fizeram apenas referência ao nome do país para endossar a expressão e comparar as ações realizadas na República Tcheca com o Brasil, ou para mencionar a atitude de um eleitor situacionista com o próprio Bolsonaro.
+
+Como desdobramento, esse meme também foi utilizado em conjunto com outro meme. Imagens com personagens, que aparentemente eram associados aos perfis tchecos, foram postas junto a uma mão que segura um punhado de dinheiro tcheco (Coroa Tcheca). Tais imagens, com o uso da frase “tem um vídeo da República Tcheca…” ou “#republicatcheca” foram utilizadas para reforçar a crítica ao governo brasileiro sobre as políticas econômicas impostas para enfrentar a pandemia. O meme é relacionado à dificuldade que os brasileiros tiveram para receber auxílio financeiro por conta da obrigatoriedade do isolamento social. No entanto, as imagens utilizadas fazem referência à política do país europeu, para ilustrar um bom exemplo de governança.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2020/04/REP_TCHECA5-300x194.jpeg)
+
 ## Gênero e Formatos
 
 O uso da expressão “tem um vídeo da República Tcheca…” é um meme que pode ser reconhecido pelo formato *catchphrase* — uso de uma expressão que pode ser aplicado a uma imagem que convém ao contexto que for utilizado. Já o uso apenas da frase, como sendo um comentário em específico, pode ser identificado pelo gênero de ação popular, uma vez que a expressão foi tida como referência para outros contextos dentro de um espaço de conversação.

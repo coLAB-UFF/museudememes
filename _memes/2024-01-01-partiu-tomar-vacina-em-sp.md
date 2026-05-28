@@ -33,6 +33,10 @@ Entretanto, mesmo que exista uma ordem e critérios prioritários para o recebim
 
 Nesse contexto, mesmo que a vacina ainda não tenha sido regularizada pela Anvisa, o plano de vacinação de São Paulo e a fala de Dória animaram muitos brasileiros de outros estados, que começaram, por sua vez, a criar e compartilhar memes sobre a possibilidade de visitarem São Paulo. Em meio a isso, também circularam diversos memes entre paulistas, sobretudo de maneira a ironizar uma certa competição com outros estados, como o Rio de Janeiro, reforçando ainda uma suposta superioridade de São Paulo.
 
+## Difusão e Repercussão
+
+Os memes sobre a vacinação em São Paulo tomaram as mídias sociais no mesmo dia no qual foi feito o lançamento do referido plano. Circulando principalmente no Twitter, diversos foram os memes compartilhados, o que fez a expressão “PARTIU SP" ocupar os assuntos mais comentados da rede no contexto brasileiro do dia 7 de dezembro. No TikTok também foram vários os vídeos compartilhados, sobretudo aqueles nos quais indivíduos festejavam a possibilidade de serem vacinados. Além disso, os memes viraram notícia ao serem veiculados por sites como [UOL](https://www.uol.com.br/tilt/colunas/denise-tremura/2020/12/08/partiu-sp.htm), [Catraca Live](https://catracalivre.com.br/entretenimento/doria-anuncia-plano-de-vacinacao-e-web-e-invadida-por-memes/) e [Diário do Rio.](https://diariodorio.com/11-memes-sobre-a-vacina-em-sao-paulo/)
+
 ## Gênero e Formatos
 
 Os memes relacionados à vacinação em São Paulo foram diversos e brincaram com diferentes questões, seja adotando gírias ou palavras do léxico paulista para simular o pertencimento ao Estado, seja compartilhando GIFs, vídeos e imagens para ilustrar diversas reações frente ao lançamento do plano de vacinação.

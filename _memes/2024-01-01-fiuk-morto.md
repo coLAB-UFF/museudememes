@@ -24,6 +24,8 @@ tags: []
 gallery: []
 ---
 
+***Este verbete foi confeccionado pela alunos de Estudos de Mídia (UFF), Caio Soares e Tomás Medina, no escopo da disciplina Redes Colaborativas e Produção Cultural.***
+
 ## Origem
 
 No reality show Big Brother Brasil, transmitido pela Rede Globo desde 2002, a dinâmica consiste em colocar vários participantes dentro de uma casa cenográfica com câmeras ligadas 24 horas por dia. O objetivo do programa é não ser eliminado da casa para conquistar o prêmio final milionário.

@@ -81,3 +81,37 @@ Uma de suas últimas tretas no programa foi com Camilla de Lucas, quando elas es
 </blockquote>
 
 <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+
+## Difusão e Repercussão
+
+Depois de muitas tretas e mentiras, Karol foi indicada ao quarto paredão pela líder Sarah e saiu com recorde de rejeição, mas também ficou conhecida por ser uma pessoa tóxica e manipuladora. Foi comparada diversas vezes com a personagem Wanda Maximoff, da nova série da Marvel, WandaVision, pois ambas criaram uma realidade alternativa repleta de mentiras e manipulações.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-13-1-280x300.jpg)
+
+O último paredão antes do dela teve Nego Di como eliminado, também com recorde de rejeição, 98,76%. Em ambos os paredões, foi comum o uso de bolão de porcentagem em vários posts de empresas. Por exemplo, o primeiro que acertasse qual seria o índice de rejeição ganhava frete grátis em uma compra.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-300x300.png)
+
+Além de promoções, várias promessas de brincadeira também rolaram. Como por exemplo, Phoebe Waller-Bridge prometendo que se Karol Conká fosse eliminada, faria a terceira temporada de Fleabag.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-53-1-266x300.jpg)
+
+A assessoria de imprensa da Karol e a Rede Globo, numa tentativa de amenizar os danos causados às imagem de Karol, começaram a apresentá-la como vilã carismática, porém, a tática não deu muito certo.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-2-300x284.png)
+
+Ela foi a única participante eliminada que esperou por um intervalo comercial para falar com Thiago Leifert, apresentador do programa e, além da tradicional participação no Mais Você, Karol vem aparecendo nos mais diversos programas, como Domingão do Faustão e Fantástico, para se redimir e pedir desculpas por suas atitudes.
+
+Karol e seu filho de 15 anos, infelizmente, também foram vítimas de ataques e ameaças de morte devido às atitudes questionáveis dela no programa.
+
+## Gêneros & Formatos
+
+Vários memes diferentes sobre a eliminação da Karol Conká circularam. Os principais foram exploitables, montagens com diversas pessoas diferentes, como a cantora Billie Elish ou o Eduardo Cunha no celular votando na Karol.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-50-1-300x298.jpg)
+
+Também circularam diversas piadas sobre a Ana Maria Braga não querer encontrá-la no Café com o Eliminado, que acontece toda quarta-feira após a eliminação.
+
+![](http://www.museudememes.com.br/wp-content/uploads/2021/03/karol-conka-8-300x258.jpg)
+
+Outra piada recorrente eram tweets alegando que famosos fizeram promessas caso a Karol Conká saísse.
