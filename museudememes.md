@@ -66,13 +66,13 @@ features_1:
 
 # Features Section 2
 features_2:
-  title: We make spending stress free so you have the perfect control.
-  text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.
+  title: "Mas o #MUSEUdeMEMES é de fato um museu?"
+  text: "O #MUSEUdeMEMES é um webmuseu universitário, criado em 2015, e reconhecido pelo Instituto Brasileiro de Museus (IBRAM), através do Sistema Brasileiro de Museus (SBM). Oficialmente, trata-se de um projeto desenvolvido inteiramente em ambiente digital, que conjuga pesquisa, ensino e extensão no âmbito da universidade."
   features:
-    - text: Aenean quam ornare curabitur blandit consectetur.
-    - text: Nullam quis risus eget urna mollis ornare aenean leo.
-    - text: Etiam porta euismod malesuada mollis nisl ornare.
-    - text: Vivamus sagittis lacus augue rutrum maecenas odio.
+    - text: "O #MUSEUdeMEMES não possui sede física; todas as suas atividades são realizadas em ambiente laboratorial."
+    - text: "Com mais de dez anos de existência, o projeto é referência nacional e internacional na preservação de acervos nato-digitais."
+    - text: "Reconhecido como uma experiência pioneira, o projeto já foi notícia em veículos de comunicação de mais de 20 países diferentes."
+    - text: "O #MUSEUdeMEMES já formou uma geração inteira de pesquisadores e pesquisadoras e já foi também objeto de estudo de vários investigadores acadêmicos."
   images:
     - image: /images_static/meme_grumpy.png
       image2x: /images_static/meme_grumpy.png
