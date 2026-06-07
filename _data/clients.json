@@ -1,43 +1,38 @@
 {
   "clients": [
     {
-      "name": "Client 1",
-      "image": "/assets/img/brands/c1.webp",
+      "name": "CAPES",
+      "image": "/assets/img/brands/client_capes.webp",
       "url": "#"
     },
     {
-      "name": "Client 2",
-      "image": "/assets/img/brands/c2.webp",
+      "name": "CNPq",
+      "image": "/assets/img/brands/client_cnpq.webp",
       "url": "#"
     },
     {
-      "name": "Client 3",
-      "image": "/assets/img/brands/c3.webp",
+      "name": "FAPERJ",
+      "image": "/assets/img/brands/client_faperj.webp",
       "url": "#"
     },
     {
-      "name": "Client 4",
-      "image": "/assets/img/brands/c4.webp",
+      "name": "INCT-DD",
+      "image": "/assets/img/brands/client_inctdd.webp",
       "url": "#"
     },
     {
-      "name": "Client 5",
-      "image": "/assets/img/brands/c5.webp",
+      "name": "ISHS",
+      "image": "/assets/img/brands/client_ishs.webp",
       "url": "#"
     },
     {
-      "name": "Client 6",
-      "image": "/assets/img/brands/c6.webp",
+      "name": "PPGCOM",
+      "image": "/assets/img/brands/client_ppgcom.webp",
       "url": "#"
     },
     {
-      "name": "Client 7",
-      "image": "/assets/img/brands/c7.webp",
-      "url": "#"
-    },
-    {
-      "name": "Client 8",
-      "image": "/assets/img/brands/c8.webp",
+      "name": "UFF",
+      "image": "/assets/img/brands/client_uff.webp",
       "url": "#"
     }
   ]
