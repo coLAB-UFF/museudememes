@@ -42,7 +42,7 @@ showcase:
 
 # Features Section 1
 features_1:
-  title: "O que é e para que serve um #MUSEUdeMEMES"
+  title: "O que é e para que serve um #MUSEUdeMEMES?"
   text: "O #MUSEUdeMEMES é um projeto desenvolvido na Universidade Federal Fluminense, que tem como finalidades principais:"
   features:
     - text: A constituição de um acervo de memes digitais que foram criados ou circularam pela memesfera brasileira.
