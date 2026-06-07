@@ -21,11 +21,6 @@
       "url": "#"
     },
     {
-      "name": "ISHS",
-      "image": "/assets/img/brands/client_ishs.webp",
-      "url": "#"
-    },
-    {
       "name": "PPGCOM",
       "image": "/assets/img/brands/client_ppgcom.webp",
       "url": "#"
@@ -33,6 +28,11 @@
     {
       "name": "UFF",
       "image": "/assets/img/brands/client_uff.webp",
+      "url": "#"
+    },
+    {
+      "name": "PROEX",
+      "image": "/assets/img/brands/client_proex.webp",
       "url": "#"
     }
   ]

@@ -22,7 +22,7 @@ hero:
 
 # Trusted Clients Section
 trusted_clients:
-  title: "Trusted by over 5000 clients"
+  title: "Orgulhosamente apoiado por"
   title_class: "fs-16 text-uppercase text-muted mb-8 text-center"
 
 # Showcase Section
