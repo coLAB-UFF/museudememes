@@ -9,18 +9,16 @@ scroll_top_btn:
 
 # Hero Section
 hero:
-  title: "Apenas um <span class=\"underline-3 style-1 grape\">museu</span> de grandes novidades"
+  title: "Apenas um <span class=\"underline-3 style-1 primary\">museu</span> de grandes novidades"
   title_class: "display-1 ls-sm mb-4"
   subtitle: "Desafiar o museu para preservar o cotidiano digital, deslocar o lugar-comum para o lugar de memória"
   buttons:
     - label: "O que são memes"
       url: "/museudememes/o-que/"
-      class: "btn btn-lg btn-grape btn-icon btn-icon-end rounded-xl mx-md-1 mb-2 mb-md-0"
-      icon: "uil uil-arrow-right"
+      class: "btn btn-primary rounded mx-1"
     - label: "Nossas coleções"
       url: "/museudememes/colecoes/"
-      class: "btn btn-lg btn-yellow btn-icon btn-icon-end rounded-xl mx-md-1"
-      icon: "uil uil-arrow-right"
+      class: "btn btn-yellow rounded mx-1"
 
 # Trusted Clients Section
 trusted_clients:
