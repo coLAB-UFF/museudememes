@@ -1,8 +1,28 @@
 {
   "clients": [
     {
-      "name": "CAPES",
-      "image": "/assets/img/brands/client_capes.webp",
+      "name": "UFF",
+      "image": "/assets/img/brands/client_uff.webp",
+      "url": "#"
+    },
+    {
+      "name": "PPGCOM",
+      "image": "/assets/img/brands/client_ppgcom.webp",
+      "url": "#"
+    },
+    {
+      "name": "Estudos de Mídia",
+      "image": "/assets/img/brands/client_midia.webp",
+      "url": "#"
+    },
+    {
+      "name": "coLAB",
+      "image": "/assets/img/brands/client_colab.webp",
+      "url": "#"
+    },
+    {
+      "name": "INCT-DD",
+      "image": "/assets/img/brands/client_inctdd.webp",
       "url": "#"
     },
     {
@@ -16,18 +36,8 @@
       "url": "#"
     },
     {
-      "name": "INCT-DD",
-      "image": "/assets/img/brands/client_inctdd.webp",
-      "url": "#"
-    },
-    {
-      "name": "PPGCOM",
-      "image": "/assets/img/brands/client_ppgcom.webp",
-      "url": "#"
-    },
-    {
-      "name": "UFF",
-      "image": "/assets/img/brands/client_uff.webp",
+      "name": "CAPES",
+      "image": "/assets/img/brands/client_capes.webp",
       "url": "#"
     },
     {
