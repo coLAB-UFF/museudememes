@@ -2,3 +2,10 @@
 .accordion-wrapper .card-header button {
     box-shadow: none;
 }
+
+// Exibir o círculo (underline-3 style-1) em todas as resoluções
+// O tema padrão oculta abaixo de 1400px — removemos essa restrição.
+.underline-3.style-1:before,
+.underline-3.style-1:after {
+  display: block !important;
+}

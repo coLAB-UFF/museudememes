@@ -14,18 +14,17 @@ banner:
 
 # Hero Section
 hero:
-  title: "Create a powerful but effortless website for <br /><span class=\"rotator-fade text-primary\">your business.,your portfolio.,your startup.,digital marketing.</span>"
-  subtitle: "You can create your website in minutes with the help of countless amazing features of Sandbox."
+  title: "Apenas um <span class=\"underline-3 style-1 grape\">museu</span> de grandes novidades"
+  subtitle: "Desafiar o museu para preservar o cotidiano digital, deslocar o lugar-comum para o lugar de memória"
   buttons:
-    - label: "See Demo Pages"
-      url: "#demos"
-      class: "btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl mx-md-1 mb-2 mb-md-0 scroll"
-      icon: "uil uil-arrow-down-right"
-    - label: "Wordpress Version"
-      url: "#"
-      class: "btn btn-lg btn-fuchsia btn-icon btn-icon-end rounded-xl mx-md-1"
-      icon: "uil uil-arrow-up-right"
-      target: "_blank"
+    - label: "O que são memes"
+      url: "/museudememes/o-que/"
+      class: "btn btn-lg btn-grape btn-icon btn-icon-end rounded-xl mx-md-1 mb-2 mb-md-0"
+      icon: "uil uil-arrow-right"
+    - label: "Nossas coleções"
+      url: "/museudememes/colecoes/"
+      class: "btn btn-lg btn-yellow btn-icon btn-icon-end rounded-xl mx-md-1"
+      icon: "uil uil-arrow-right"
   shapes:
     - position: "top: -5%; left: -15%;"
       image: "/assets/img/svg/pie.svg"
