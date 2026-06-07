@@ -42,13 +42,13 @@ showcase:
 
 # Features Section 1
 features_1:
-  title: We have considered our solutions to support every stage of growth.
-  text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.
+  title: O que é e para que serve um #MUSEUdeMEMES?
+  text: "O #MUSEUdeMEMES é um projeto desenvolvido na Universidade Federal Fluminense, que tem como finalidades principais:"
   features:
-    - text: Aenean quam ornare curabitur blandit consectetur.
-    - text: Nullam quis risus eget urna mollis ornare aenean leo.
-    - text: Etiam porta euismod malesuada mollis nisl ornare.
-    - text: Vivamus sagittis lacus augue rutrum maecenas odio.
+    - text: A constituição de um acervo de memes digitais que foram criados ou circularam pela memesfera brasileira.
+    - text: A pesquisa e a produção de dados sobre a cultura de memes no Brasil e em outras partes do mundo, a partir de estudos e investigações desenvolvidos com rigor científico e metodológico.
+    - text: A organização de uma base de referências bibliográficas sobre memes disponível livremente para consulta de pesquisadores e pesquisadoras.
+    - text: A realização de eventos e exposições, físicas ou virtuais, com curadoria especializada sobre o tema.
   images:
     - image: /images_static/meme_sanduiche.png
       image2x: /images_static/meme_sanduiche.png
