@@ -90,7 +90,7 @@ features_2:
 
 # Features Section 3
 features_3:
-  title: We bring solutions to manage your finance the way works best.
+  title: "E por que é importante um #MUSEUdeMEMES?"
   text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.
   features:
     - text: Aenean quam ornare curabitur blandit consectetur.
