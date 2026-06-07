@@ -9,16 +9,18 @@ scroll_top_btn:
 
 # Hero Section
 hero:
-  title: "<span class=\"underline-3 style-1 primary\"><em>Staying</em></span> on top of your bills never been this easy"
+  title: "Apenas um <span class=\"underline-3 style-1 grape\">museu</span> de grandes novidades"
   title_class: "display-1 ls-sm mb-4"
-  subtitle: Easily achieve your saving goals. Have all your recurring and one time expenses and incomes in one place.
+  subtitle: "Desafiar o museu para preservar o cotidiano digital, deslocar o lugar-comum para o lugar de memória"
   buttons:
-    - label: Get Started
-      url: "#"
-      class: btn btn-primary rounded mx-1
-    - label: Free Trial
-      url: "#"
-      class: btn btn-yellow rounded mx-1
+    - label: "O que são memes"
+      url: "/museudememes/o-que/"
+      class: "btn btn-lg btn-grape btn-icon btn-icon-end rounded-xl mx-md-1 mb-2 mb-md-0"
+      icon: "uil uil-arrow-right"
+    - label: "Nossas coleções"
+      url: "/museudememes/colecoes/"
+      class: "btn btn-lg btn-yellow btn-icon btn-icon-end rounded-xl mx-md-1"
+      icon: "uil uil-arrow-right"
 
 # Trusted Clients Section
 trusted_clients:
