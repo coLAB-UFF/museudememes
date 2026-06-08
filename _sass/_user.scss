@@ -10,7 +10,9 @@
   display: block !important;
 }
 
-// Contraste no hover do email do rodapé
-.link-body:hover {
-  color: var(--bs-primary) !important;
+// Contraste no hover do email do rodapé (fundo bg-primary/text-inverse)
+footer.bg-primary a:hover,
+footer.bg-primary a:focus {
+  color: rgba(255, 255, 255, 0.65) !important;
+  text-decoration: underline;
 }
