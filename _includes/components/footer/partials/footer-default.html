@@ -8,7 +8,7 @@
         <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
              srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
       {% endif %}
-      <p class="mb-4">© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. <br class="d-none d-lg-block" />All rights reserved.</p>
+      <p class="mb-4">(cc) 2015 {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. <br class="d-none d-lg-block" />Alguns direitos reservados.</p>
       <nav class="nav social {% if include.lightText %}social-white{% endif %}">
         {% for social in site.data.social.social_accounts.links | default: site.data.theme.social_accounts.links %}
           <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
@@ -26,7 +26,7 @@
       <a href="mailto:{{ site.data.footer.column_2.email | default: site.data.theme.email | default: 'info@email.com' }}" {% if !include.lightText %}class="link-body"{% endif %}>
         {{ site.data.footer.column_2.email | default: site.data.theme.email | default: 'info@email.com' }}
       </a><br /> 
-      {{ site.data.footer.column_2.phone | default: site.data.theme.phone | default: '00 (123) 456 78 90' }}
+      {% if site.data.footer.column_2.phone %}{{ site.data.footer.column_2.phone }}{% endif %}
     </div>
     <!-- /.widget -->
   </div>
