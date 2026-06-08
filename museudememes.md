@@ -91,12 +91,12 @@ features_2:
 # Features Section 3
 features_3:
   title: "E por que é importante um #MUSEUdeMEMES?"
-  text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo.
+  text: "Embora os memes sejam frequentemente descritos como objetos frugais e desimportantes, gracejos despretensiosos e modismos efêmeros, seu papel na conformação de identidades coletivas e na construção de uma memória da cultura nativa digital é essencial. Sem prejuízo de outras funções, o #MUSEUdeMEMES dedica-se a:"
   features:
-    - text: Aenean quam ornare curabitur blandit consectetur.
-    - text: Nullam quis risus eget urna mollis ornare aenean leo.
-    - text: Etiam porta euismod malesuada mollis nisl ornare.
-    - text: Vivamus sagittis lacus augue rutrum maecenas odio.
+    - text: Documentar e catalogar famílias e coleções de memes de acordo com seus gêneros, formatos e principais características e períodos de disseminação.
+    - text: Reconhecer variadas expressões de um mesmo meme em diferentes plataformas em que circulou, seus efeitos, apropriações, e adaptações a outros suportes midiáticos.
+    - text: Compreender as agendas e discursos evocados por conteúdos e práticas meméticas, e o modo como articulam repertórios estratégicos que facilitam a produção de pertencimento e a delimitação de fronteiras e divisões, inclusive transnacionais e transculturais.
+    - text: Avaliar de que maneiras os memes consolidam ou adaptam imaginários sociais e políticos e se traduzem como patrimônio imaterial digital.
   images:
     - image: /images_static/meme_arvores.png
       image2x: /images_static/meme_arvores.png
@@ -111,7 +111,7 @@ features_3:
 
 # Video Section
 video:
-  title: Find out everything you need to know about creating a business process model
+  title: "Um museu onde dinossauros fanhos convivem harmonicamente com gatos fofos"
   video_url: /images_static/video.mp4
   poster: /images_static/header.png
   webm_url: /images_static/video.mp4
