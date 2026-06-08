@@ -9,3 +9,8 @@
 .underline-3.style-1:after {
   display: block !important;
 }
+
+// Contraste no hover do email do rodapé
+.link-body:hover {
+  color: var(--bs-primary) !important;
+}
