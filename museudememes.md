@@ -142,6 +142,7 @@ livros:
   livros:
     - titulo: "Genealogia do Lol"
       etiqueta: "Leitura Anterior"
+      capa: "/assets/img/livros/genealogia-do-lol.svg"
       autor: "Ana Claudia Ferreira"
       ano: "2019 · Editora Midiática"
       cor: "#6c5ce7"
@@ -151,6 +152,7 @@ livros:
       destaque: false
     - titulo: "O Arquivo do Efêmero"
       etiqueta: "Leitura em Andamento"
+      capa: "/assets/img/livros/arquivo-do-efemero.svg"
       autor: "Pedro Henrique Moura"
       ano: "2022 · Editora Vernáculo"
       cor: "#044c50"
@@ -160,6 +162,7 @@ livros:
       destaque: true
     - titulo: "Virais, Variações e Vernáculos"
       etiqueta: "Próxima Leitura"
+      capa: "/assets/img/livros/virais-variacoes-vernaculos.svg"
       autor: "Juliana Santos · Rodrigo Melo"
       ano: "2024 · Editora Plataforma"
       cor: "#e17055"

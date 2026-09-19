@@ -1,0 +1,69 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b84a2a"/>
+      <stop offset="100%" stop-color="#e17055"/>
+    </linearGradient>
+    <pattern id="hatch3" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="16" x2="16" y2="0" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg3)"/>
+  <rect width="400" height="500" fill="url(#hatch3)"/>
+
+  <!-- Spine shadow -->
+  <rect x="0" y="0" width="14" height="500" fill="rgba(0,0,0,0.22)"/>
+  <rect x="14" y="0" width="3" height="500" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Decorative: propagation wave / network nodes -->
+  <!-- Central node -->
+  <circle cx="200" cy="160" r="10" fill="rgba(255,255,255,0.25)"/>
+  <!-- First ring nodes -->
+  <circle cx="200" cy="95"  r="6" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="255" cy="130" r="6" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="255" cy="190" r="6" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="200" cy="225" r="6" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="145" cy="190" r="6" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="145" cy="130" r="6" fill="rgba(255,255,255,0.18)"/>
+  <!-- Second ring nodes (partial, clipped) -->
+  <circle cx="200" cy="52"  r="4" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="296" cy="107" r="4" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="296" cy="213" r="4" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="104" cy="213" r="4" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="104" cy="107" r="4" fill="rgba(255,255,255,0.1)"/>
+  <!-- Connecting lines -->
+  <line x1="200" y1="160" x2="200" y2="95"  stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="160" x2="255" y2="130" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="160" x2="255" y2="190" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="160" x2="200" y2="225" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="160" x2="145" y2="190" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="160" x2="145" y2="130" stroke="rgba(255,255,255,0.14)" stroke-width="1.2"/>
+  <line x1="200" y1="95"  x2="200" y2="52"  stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="255" y1="130" x2="296" y2="107" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="255" y1="190" x2="296" y2="213" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="145" y1="190" x2="104" y2="213" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="145" y1="130" x2="104" y2="107" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Horizontal rule -->
+  <line x1="36" y1="270" x2="364" y2="270" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+  <!-- Title: three "V" words stacked with different weights -->
+  <text x="36" y="308" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="0.5">Virais,</text>
+  <text x="36" y="338" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="0.5">Variações</text>
+  <text x="36" y="368" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="0.5">e Vernáculos</text>
+
+  <!-- Subtitle -->
+  <text x="36" y="393" font-size="11" fill="rgba(255,255,255,0.6)" letter-spacing="1.3" font-style="italic">A Gramática dos Memes</text>
+
+  <!-- Divider -->
+  <line x1="36" y1="414" x2="120" y2="414" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+  <!-- Authors -->
+  <text x="36" y="435" font-size="12.5" fill="rgba(255,255,255,0.85)" letter-spacing="0.3">Juliana Santos</text>
+  <text x="36" y="453" font-size="12.5" fill="rgba(255,255,255,0.85)" letter-spacing="0.3">Rodrigo Melo</text>
+
+  <!-- Publisher -->
+  <text x="36" y="484" font-size="10" fill="rgba(255,255,255,0.35)" letter-spacing="1.5" font-family="Arial, sans-serif">EDITORA PLATAFORMA</text>
+</svg>

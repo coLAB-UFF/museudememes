@@ -1,0 +1,47 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a3080"/>
+      <stop offset="100%" stop-color="#9b59b6"/>
+    </linearGradient>
+    <pattern id="dots1" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg1)"/>
+  <rect width="400" height="500" fill="url(#dots1)"/>
+
+  <!-- Spine shadow -->
+  <rect x="0" y="0" width="14" height="500" fill="rgba(0,0,0,0.25)"/>
+  <rect x="14" y="0" width="3" height="500" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Decorative element: overlapping laugh circles -->
+  <circle cx="200" cy="185" r="90" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <circle cx="170" cy="195" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <circle cx="230" cy="195" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- "LOL" large faded lettermark -->
+  <text x="200" y="215" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="90" font-weight="900" fill="rgba(255,255,255,0.09)" letter-spacing="-4">LOL</text>
+
+  <!-- Horizontal rule -->
+  <line x1="36" y1="290" x2="364" y2="290" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="36" y="328" font-size="30" font-weight="700" fill="#ffffff" letter-spacing="0.5">Genealogia</text>
+  <text x="36" y="362" font-size="30" font-weight="700" fill="#ffffff" letter-spacing="0.5">do Lol</text>
+
+  <!-- Subtitle line -->
+  <text x="36" y="392" font-size="12" fill="rgba(255,255,255,0.65)" letter-spacing="1.5" font-style="italic">Humor, Ironia e Identidade</text>
+  <text x="36" y="409" font-size="12" fill="rgba(255,255,255,0.65)" letter-spacing="1.5" font-style="italic">na Memesfera Brasileira</text>
+
+  <!-- Divider -->
+  <line x1="36" y1="432" x2="120" y2="432" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="36" y="453" font-size="13" fill="rgba(255,255,255,0.85)" letter-spacing="0.5">Ana Claudia Ferreira</text>
+
+  <!-- Publisher -->
+  <text x="36" y="484" font-size="10" fill="rgba(255,255,255,0.4)" letter-spacing="1.5" font-family="Arial, sans-serif">EDITORA MIDIÁTICA</text>
+</svg>

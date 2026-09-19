@@ -1,0 +1,54 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#021f22"/>
+      <stop offset="100%" stop-color="#044c50"/>
+    </linearGradient>
+    <pattern id="grid2" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bg2)"/>
+  <rect width="400" height="500" fill="url(#grid2)"/>
+
+  <!-- Spine shadow -->
+  <rect x="0" y="0" width="14" height="500" fill="rgba(0,0,0,0.35)"/>
+  <rect x="14" y="0" width="3" height="500" fill="rgba(255,255,255,0.04)"/>
+
+  <!-- Decorative: fading archive boxes / stacked rectangles -->
+  <rect x="80" y="60" width="240" height="160" rx="3" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+  <rect x="92" y="72" width="216" height="136" rx="2" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <rect x="104" y="84" width="192" height="112" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"/>
+  <rect x="116" y="96" width="168" height="88" rx="2" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="1.5"/>
+  <rect x="128" y="108" width="144" height="64" rx="2" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+
+  <!-- Small icon in innermost box: a pixel-art floppy / file -->
+  <rect x="182" y="122" width="36" height="36" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="188" y="122" width="18" height="10" rx="1" fill="rgba(255,255,255,0.35)"/>
+  <rect x="186" y="138" width="28" height="16" rx="1" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+
+  <!-- Horizontal rule -->
+  <line x1="36" y1="270" x2="364" y2="270" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="36" y="310" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="0.3">O Arquivo</text>
+  <text x="36" y="344" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="0.3">do Efêmero</text>
+
+  <!-- Subtitle -->
+  <text x="36" y="374" font-size="11.5" fill="rgba(255,255,255,0.55)" letter-spacing="1.4" font-style="italic">Memória e Preservação</text>
+  <text x="36" y="390" font-size="11.5" fill="rgba(255,255,255,0.55)" letter-spacing="1.4" font-style="italic">da Cultura Digital</text>
+
+  <!-- Divider -->
+  <line x1="36" y1="414" x2="120" y2="414" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="36" y="436" font-size="13" fill="rgba(255,255,255,0.8)" letter-spacing="0.4">Pedro Henrique Moura</text>
+
+  <!-- Publisher -->
+  <text x="36" y="484" font-size="10" fill="rgba(255,255,255,0.3)" letter-spacing="1.5" font-family="Arial, sans-serif">EDITORA VERNÁCULO</text>
+
+  <!-- Accent stripe at top -->
+  <rect x="36" y="42" width="48" height="3" fill="rgba(0,210,180,0.6)"/>
+</svg>
