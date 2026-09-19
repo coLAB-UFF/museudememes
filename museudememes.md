@@ -135,64 +135,38 @@ testimonials:
     number: 5000+
     text: Satisfied Customers
 
-# Pricing Section
-pricing:
-  title: We offer great prices, premium products and quality service for your business.
-  pricing_plans:
-    - title: Basic Plan
-      icon: shopping-basket
-      monthly_price: 9
-      yearly_price: 99
-      features:
-        - content: "<strong>1</strong> Project"
-          enabled: true
-        - content: "<strong>100K</strong> API Access"
-          enabled: true
-        - content: "<strong>100MB</strong> Storage"
-          enabled: true
-        - content: "Weekly <strong>Reports</strong>"
-          enabled: false
-        - content: "7/24 <strong>Support</strong>"
-          enabled: false
-      button_text: Choose Plan
+# Livros Section
+livros:
+  title: "O que estamos lendo"
+  subtitle: "Referências que nutrem a pesquisa e a curadoria do #MUSEUdeMEMES"
+  livros:
+    - titulo: "Genealogia do Lol"
+      etiqueta: "Leitura Anterior"
+      autor: "Ana Claudia Ferreira"
+      ano: "2019 · Editora Midiática"
+      cor: "#6c5ce7"
+      sinopse: "Um mapeamento histórico das práticas de humor na internet brasileira — de correntes de e-mail aos primeiros fóruns —, rastreando como o riso coletivo forjou identidades e fronteiras na memesfera nacional."
+      button_text: "Leitura Anterior"
       button_url: "#"
-      popular: false
-    - title: Premium Plan
-      icon: home
-      monthly_price: 19
-      yearly_price: 199
-      features:
-        - content: "<strong>5</strong> Projects"
-          enabled: true
-        - content: "<strong>100K</strong> API Access"
-          enabled: true
-        - content: "<strong>200MB</strong> Storage"
-          enabled: true
-        - content: "Weekly <strong>Reports</strong>"
-          enabled: true
-        - content: "7/24 <strong>Support</strong>"
-          enabled: false
-      button_text: Choose Plan
+      destaque: false
+    - titulo: "O Arquivo do Efêmero"
+      etiqueta: "Leitura em Andamento"
+      autor: "Pedro Henrique Moura"
+      ano: "2022 · Editora Vernáculo"
+      cor: "#044c50"
+      sinopse: "Como preservar objetos nascidos para desaparecer? Moura discute as tensões entre efemeridade e memória na curadoria de acervos nato-digitais, propondo metodologias de arquivamento para memes e outros conteúdos virais."
+      button_text: "Leitura em Andamento"
       button_url: "#"
-      popular: true
-    - title: Corporate Plan
-      icon: briefcase-2
-      monthly_price: 49
-      yearly_price: 499
-      features:
-        - content: "<strong>20</strong> Projects"
-          enabled: true
-        - content: "<strong>300K</strong> API Access"
-          enabled: true
-        - content: "<strong>500MB</strong> Storage"
-          enabled: true
-        - content: "Weekly <strong>Reports</strong>"
-          enabled: true
-        - content: "7/24 <strong>Support</strong>"
-          enabled: true
-      button_text: Choose Plan
+      destaque: true
+    - titulo: "Virais, Variações e Vernáculos"
+      etiqueta: "Próxima Leitura"
+      autor: "Juliana Santos · Rodrigo Melo"
+      ano: "2024 · Editora Plataforma"
+      cor: "#e17055"
+      sinopse: "Uma gramática dos memes: como templates se propagam, mutam e se adaptam a diferentes contextos culturais. A obra examina padrões de variação memética à luz da linguística, da semiótica e dos estudos de mídia."
+      button_text: "Próxima Leitura"
       button_url: "#"
-      popular: false
+      destaque: false
 
 # Ensaios e Artigos Section
 projects:
@@ -263,7 +237,7 @@ blog2:
 </section>
 
 {% include components/sections/museudememes/testimonials.html %}
-{% include components/sections/demo5/pricing.html %}
+{% include components/sections/museudememes/livros.html %}
 
 <section class="wrapper bg-light">
   <div class="container pt-0">

@@ -1,0 +1,39 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-14 pb-18 pt-md-17 pb-md-22 text-center">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+        <h3 class="display-4 mb-3 px-lg-10">{{ page.livros.title }}</h3>
+        {% if page.livros.subtitle %}<p class="lead mb-0">{{ page.livros.subtitle }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="pricing-wrapper position-relative mt-n22 mt-md-n24">
+      <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
+      <div class="shape rounded-circle bg-line red rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
+      <div class="row gy-6 mt-3 mt-md-5 justify-content-center">
+        {% for livro in page.livros.livros %}
+        <div class="col-md-6 col-lg-4{% if livro.destaque %} popular{% endif %}">
+          <div class="pricing card shadow-lg text-center h-100">
+            <div class="book-cover" style="background-color: {{ livro.cor }}; min-height: 200px; border-radius: .4rem .4rem 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: rgba(0,0,0,0.15);"></div>
+              <div style="position: absolute; top: 0; left: 8px; width: 3px; height: 100%; background: rgba(255,255,255,0.1);"></div>
+              <p class="mb-1" style="font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,0.7);">{{ livro.etiqueta }}</p>
+              <h4 class="mb-0" style="color: #fff; font-size: 1.1rem; line-height: 1.35; font-weight: 700;">{{ livro.titulo }}</h4>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="mb-0 fw-bold text-dark">{{ livro.autor }}</p>
+              <p class="mb-3" style="font-size: .8rem; color: #aaa;">{{ livro.ano }}</p>
+              <p class="mb-5 text-start flex-grow-1" style="font-size: .9rem;">{{ livro.sinopse }}</p>
+              <a href="{{ livro.button_url | default: '#' }}" class="btn btn-primary rounded mt-auto">{{ livro.button_text }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
